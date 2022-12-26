@@ -1,0 +1,13 @@
+.text-text {
+  font-size: 20px;
+}
+
+.text-text.small {
+  font-size: 15px;
+}
+.text-text.medium {
+  font-size: 20px;
+}
+.text-text.large {
+  font-size: 25px;
+}
