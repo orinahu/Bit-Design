@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Text, TrafficLights } from "./in";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Display Bit design components: </h1>
+      <div className="table-container">
+        <table>
+          <tr>
+            <th className="label-title">Name</th>
+            <th className="label-title">Component view</th>
+          </tr>
+          <tr>
+            <td>Text</td>
+            <td className="component-table">
+              <Text text="This is a text component" />
+            </td>
+          </tr>
+          <tr>
+            <td>TrafficLights</td>
+            <td className="component-table">
+              <TrafficLights medium textValue="80" color="red" />
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
   );
 }

@@ -1,38 +1,66 @@
+/* :root {
+  --background-color-1: #2e2e47;
+  --background-color-2: #46b2d0;
+} */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+#root,
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.label-title {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 25px;
+}
+
+.table-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+tr { 
+  width: 30%;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+td {
+  font-size: 20px;
+}
+
+.component-table {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
