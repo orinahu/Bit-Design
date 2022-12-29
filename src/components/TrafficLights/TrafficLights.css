@@ -1,9 +1,3 @@
-.traffic-lights-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .trafficLights-circle {
   background-color:red;
   border:2px solid black;    
@@ -12,20 +6,4 @@
   border-radius:50%;
   -moz-border-radius:50%;
   -webkit-border-radius:50%;
-}
-
-.trafficLights-text {
-  padding-right: 5px;
-  font-size: 13px;
-
-}
-
-.trafficLights-text.small {
-  font-size: 10px;
-}
-.trafficLights-text.medium {
-  font-size: 15px;
-}
-.trafficLights-text.large {
-  font-size: 20px;
 }

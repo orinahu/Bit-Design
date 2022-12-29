@@ -2,36 +2,15 @@ import React from "react";
 import "./TrafficLights.css";
 
 interface props {
-  color: string;
-  textValue: string;
-  small?: boolean | null;
-  medium?: boolean | null;
-  large?: boolean | null;
+  circleColor: string;
 }
 
-const TrafficLights = ({
-  color = "red",
-  textValue,
-  small,
-  medium,
-  large,
-}: props) => {
+const TrafficLights = ({ circleColor = "red" }: props) => {
   const circleStyle: React.CSSProperties = {
-    backgroundColor: color,
+    backgroundColor: circleColor,
   };
 
-  return (
-    <div className="traffic-lights-container">
-      <span
-        className={`trafficLights-text ${small && "small"} ${
-          medium && "medium"
-        } ${large && "large"}`}
-      >
-        {textValue}
-      </span>
-      <div className="trafficLights-circle" style={circleStyle}></div>
-    </div>
-  );
+  return <div className="trafficLights-circle" style={circleStyle}></div>;
 };
 
 export { TrafficLights };
