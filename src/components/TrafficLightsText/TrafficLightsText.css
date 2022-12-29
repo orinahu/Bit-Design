@@ -1,0 +1,9 @@
+.traffic-lights-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-traffic {
+  padding-right: 5px;
+}
