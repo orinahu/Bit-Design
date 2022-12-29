@@ -1,23 +1,14 @@
-import React from "react";
 import "./Text.css";
 
+export type TextSize = "small" | "medium" | "large";
+
 interface props {
-  text: string;
-  small?: boolean | null;
-  medium?: boolean | null;
-  large?: boolean | null;
+  textValue: string;
+  size?: TextSize;
 }
 
-const Text = ({ text, small, medium, large }: props) => {
-  return (
-    <span
-      className={`text-text ${small && "small"} ${medium && "medium"} ${
-        large && "large"
-      }`}
-    >
-      {text}
-    </span>
-  );
+const Text = ({ textValue, size='medium' }: props) => {
+  return <span className={`text-text ${size}`}>{textValue}</span>;
 };
 
-export { Text};
+export { Text };
