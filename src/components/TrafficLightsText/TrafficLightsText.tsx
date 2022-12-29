@@ -6,14 +6,14 @@ import { Text, TextSize } from "../Text/Text";
 interface props {
   circleColor: string;
   textValue: string;
-  size?: TextSize;
+  textSize?: TextSize;
 }
 
-const TrafficLightsText = ({ circleColor, size, textValue }: props) => {
+const TrafficLightsText = ({ circleColor, textSize, textValue }: props) => {
   return (
     <div className="traffic-lights-container">
       <div className="text-traffic">
-        <Text textValue={textValue} size={size} />
+        <Text textValue={textValue} textSize={textSize} />
       </div>
       <TrafficLights circleColor={circleColor} />
     </div>

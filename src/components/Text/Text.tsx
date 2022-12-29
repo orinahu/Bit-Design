@@ -4,11 +4,11 @@ export type TextSize = "small" | "medium" | "large";
 
 interface props {
   textValue: string;
-  size?: TextSize;
+  textSize?: TextSize;
 }
 
-const Text = ({ textValue, size='medium' }: props) => {
-  return <span className={`text-text ${size}`}>{textValue}</span>;
+const Text = ({ textValue, textSize = "medium" }: props) => {
+  return <span className={`text-text ${textSize}`}>{textValue}</span>;
 };
 
 export { Text };

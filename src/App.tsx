@@ -7,20 +7,20 @@ function App() {
     <div className="App">
       <h1>Display Bit design components: </h1>
       <div className="grid-container">
-        <div className="grid-item">Name</div>
-        <div className="grid-item">Component view</div>
-        <div className="grid-item">Component Attribute</div>
+        <div className="grid-item title">Name</div>
+        <div className="grid-item title">Component view</div>
+        <div className="grid-item title">Component Attribute</div>
 
         {/* Text */}
         <div className="grid-item">Text</div>
         <div className="grid-item">
-          <Text textValue="This is a text component" size="small" />
+          <Text textValue="This is a text component" textSize="small" />
         </div>
         <div className="grid-item">
           <div>
             <span>textValue: string;</span>
             <br />
-            <span> size?: TextSize</span>
+            <span> textSize?: TextSize</span>
             <br />
             <br />
             <span>TextSize - "small" | "medium" | "large";</span>
@@ -37,10 +37,18 @@ function App() {
         {/* TrafficLightsText */}
         <div className="grid-item">TrafficLightsText</div>
         <div className="grid-item">
-          <TrafficLightsText textValue="80" size="small" circleColor="red" />
+          <TrafficLightsText
+            textValue="80"
+            textSize="small"
+            circleColor="red"
+          />
         </div>
         <div className="grid-item">
-          <span>circleColor: string; textValue: string; size?: TextSize;</span>
+          <span>circleColor: string;</span>
+          <br />
+          <span> textValue: string;</span>
+          <br />
+          <span> textSize?: TextSize;</span>
           <br />
           <br />
           <span>TextSize - "small" | "medium" | "large";</span>
@@ -49,12 +57,14 @@ function App() {
         {/* Icon */}
         <div className="grid-item">Icon</div>
         <div className="grid-item">
-          <Icon iconName="camera" iconSize="lg" iconColor="black" />
+          <Icon iconName="camera" iconSize="lg" iconColor="grey" />
         </div>
         <div className="grid-item">
-          <span>
-            iconColor?: string; iconSize?: IconSize; iconName: string;
-          </span>
+          <span>iconColor?: string;</span>
+          <br />
+          <span>iconSize?: IconSize;</span>
+          <br />
+          <span> iconName: string;</span>
           <br />
           <br />
           <span>iconName - "2xs" | "xs" | "sm" | "lg" | "xl" | "2xl";</span>
