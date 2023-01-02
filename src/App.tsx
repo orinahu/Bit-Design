@@ -1,5 +1,11 @@
 import "./App.css";
-import { Text, TrafficLights, TrafficLightsText, Icon } from "./in";
+import {
+  Text,
+  TrafficLights,
+  TrafficLightsText,
+  Icon,
+  MainListRightItem,
+} from "./in";
 import "font-awesome/css/font-awesome.min.css";
 
 function App() {
@@ -57,7 +63,7 @@ function App() {
         {/* Icon */}
         <div className="grid-item">Icon</div>
         <div className="grid-item">
-          <Icon iconName="camera" iconSize="lg" iconColor="grey" />
+          <Icon iconName="camera" iconSize="2xl" iconColor="grey" />
         </div>
         <div className="grid-item">
           <span>iconColor?: string;</span>
@@ -67,14 +73,43 @@ function App() {
           <span> iconName: string;</span>
           <br />
           <br />
-          <span>iconName - "2xs" | "xs" | "sm" | "lg" | "xl" | "2xl";</span>
+          <span>iconSize - "2xs" | "xs" | "sm" | "lg" | "xl" | "2xl";</span>
+          <br />
+          <span>IconStyle = "solid" | "regular" | "light";</span>
         </div>
 
-        {/*  */}
-        {/* <div className="grid-item">4</div>
-        <div className="grid-item">5</div>
-        <div className="grid-item">6</div>
-        <div className="grid-item">7</div> */}
+        {/* MainListRightItem */}
+        <div className="grid-item">Main List Right Item</div>
+        <div className="grid-item">
+          <MainListRightItem
+            circleColor="red"
+            iconName="image"
+            textValue="רכיב 1"
+            iconStyle="regular"
+          />
+        </div>
+        <div className="grid-item">
+          {" "}
+          <span>circleColor: string;</span>
+          <br />
+          <span>iconColor?: string;</span>
+          <br />
+          <span>iconSize?: IconSize;</span>
+          <br />
+          <span>iconStyle?: IconStyle;</span>
+          <br />
+          <span>iconName: string;</span>
+          <br />
+          <span>textValue: string;</span>
+          <br />
+          <span>textSize?: TextSize;</span>
+          <br />
+          <br />
+          <span>iconSize - "2xs" | "xs" | "sm" | "lg" | "xl" | "2xl";</span>
+          <br />
+          <span>IconStyle = "solid" | "regular" | "light";</span>
+        </div>
+        {/* <div className="grid-item">7</div> */}
       </div>
     </div>
   );
