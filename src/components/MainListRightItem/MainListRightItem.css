@@ -1,0 +1,7 @@
+.main-list-right-container {
+  display: flex;
+  direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
