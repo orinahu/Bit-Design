@@ -1,9 +1,22 @@
-.trafficLights-circle {
+.trafficLights-circle{
   background-color:red;
   border:2px solid black;    
-  height:15px;
-  width:15px;
   border-radius:50%;
   -moz-border-radius:50%;
   -webkit-border-radius:50%;
+}
+
+.trafficLights-circle.small {
+  height:16px;
+  width:16px;
+}
+
+.trafficLights-circle.regular {
+  height:18px;
+  width:18px;
+}
+
+.trafficLights-circle.large {
+  height:20px;
+  width:20px;
 }
