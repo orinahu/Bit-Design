@@ -12,6 +12,7 @@ interface props {
   textValue: string;
   textSize?: TextSize;
   circleSize?: CircleSize;
+  textColor?: string;
 }
 
 const MainListRightItem = ({
@@ -23,10 +24,11 @@ const MainListRightItem = ({
   textValue,
   textSize,
   circleSize,
+  textColor,
 }: props) => {
   return (
     <div className="main-list-right-container">
-      <Text textValue={textValue} textSize={textSize} />
+      <Text textColor={textColor} textValue={textValue} textSize={textSize} />
       <Icon
         iconName={iconName}
         iconStyle={iconStyle}
