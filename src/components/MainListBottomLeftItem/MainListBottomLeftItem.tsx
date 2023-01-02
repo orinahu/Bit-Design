@@ -1,6 +1,7 @@
 import "./MainListBottomLeftItem.css";
 import { Icon, IconSize, IconStyle } from "../../in";
 import { Text, TextSize } from "../../in";
+import { dateFormatMainList } from "../../helper/date";
 
 interface props {
   iconName?: string;
@@ -10,6 +11,7 @@ interface props {
   textValue: string;
   textSize?: TextSize;
   textColor?: string;
+  mainListDate: Date;
 }
 
 const MainListBottomLeftItem = ({
@@ -17,13 +19,17 @@ const MainListBottomLeftItem = ({
   iconSize = "lg",
   iconStyle,
   iconName = "calendar",
-  textValue,
+  mainListDate,
   textSize = "small",
   textColor = "#606060",
 }: props) => {
   return (
     <div className="main-list-upper-left-container">
-      <Text textColor={textColor} textValue={textValue} textSize={textSize} />
+      <Text
+        textColor={textColor}
+        textValue={dateFormatMainList(mainListDate)}
+        textSize={textSize}
+      />
       <Icon
         iconName={iconName}
         iconStyle={iconStyle}

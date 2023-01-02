@@ -74,6 +74,13 @@ const AllDataOptions = {
     isRequired: "false",
     defaultValue: "solid",
   },
+  mainListDate: {
+    name: "mainListDate",
+    type: "Date",
+    typeOptions: `-`,
+    isRequired: "true",
+    defaultValue: "-",
+  },
 };
 
 const diffDefaultValue = {
@@ -180,5 +187,6 @@ export const propertiesData: AllPropertiesData = {
       ...diffDefaultValue.MainListBottomLeftItem.textSize,
     },
     AllDataOptions.textValue,
+    AllDataOptions.mainListDate
   ],
 };
