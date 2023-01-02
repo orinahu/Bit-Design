@@ -4,6 +4,7 @@ export { TrafficLightsText } from "./components/TrafficLightsText/TrafficLightsT
 export { Icon } from "./components/Icon/Icon";
 export { MainListRightItem } from "./components/MainListRightItem/MainListRightItem";
 export { MainListUpperLeftItem } from "./components/MainListUpperLeftItem/MainListUpperLeftItem";
+export { MainListBottomLeftItem } from "./components/MainListBottomLeftItem/MainListBottomLeftItem";
 
 // Types
 export type { TextSize } from "./components/Text/Text";
