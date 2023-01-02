@@ -8,6 +8,7 @@ interface props {
   textValue: string;
   textSize?: TextSize;
   circleSize?: CircleSize;
+  textColor?: string;
 }
 
 const TrafficLightsText = ({
@@ -15,11 +16,12 @@ const TrafficLightsText = ({
   textSize,
   textValue,
   circleSize,
+  textColor
 }: props) => {
   return (
     <div className="traffic-lights-container">
       <div className="text-traffic">
-        <Text textValue={textValue} textSize={textSize} />
+        <Text textColor={textColor} textValue={textValue} textSize={textSize} />
       </div>
       <TrafficLights circleColor={circleColor} circleSize={circleSize} />
     </div>

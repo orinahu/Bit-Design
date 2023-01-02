@@ -8,7 +8,7 @@ interface props {
   circleSize?: CircleSize
 }
 
-const TrafficLights = ({ circleColor = "red", circleSize = 'regular' }: props) => {
+const TrafficLights = ({ circleColor , circleSize = 'regular' }: props) => {
   const circleStyle: React.CSSProperties = {
     backgroundColor: circleColor,
   };
