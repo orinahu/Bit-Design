@@ -1,21 +1,28 @@
 import React from "react";
 
-type IconSize = "2xs" | "xs" | "sm" | "lg" | "xl" | "2xl";
+export type IconSize = "2xs" | "xs" | "sm" | "lg" | "xl" | "2xl";
+export type IconStyle = "solid" | "regular" | "light";
 
 interface props {
   iconColor?: string;
   iconSize?: IconSize;
+  iconStyle?: IconStyle;
   iconName: string;
 }
 
-const Icon = ({ iconColor = "black", iconSize = "sm", iconName }: props) => {
-  const iconStyle: React.CSSProperties = {
+const Icon = ({
+  iconColor = "black",
+  iconSize = "sm",
+  iconStyle = "solid",
+  iconName,
+}: props) => {
+  const iconDesign: React.CSSProperties = {
     color: iconColor,
   };
 
   return (
-    <span className="icon-container" style={iconStyle}>
-      <i className={`fa-solid fa-${iconName}  fa-${iconSize}`}></i>
+    <span className="icon-container" style={iconDesign}>
+      <i className={`fa-${iconStyle} fa-${iconName}  fa-${iconSize}`}></i>
     </span>
   );
 };
