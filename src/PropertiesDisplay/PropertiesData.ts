@@ -87,17 +87,18 @@ const diffDefaultValue = {
   MainListUpperLeftItem: {
     iconColor: { defaultValue: "#52517A" },
     iconSize: { defaultValue: "lg" },
-    iconName: { defaultValue: "id-card" },
+    iconName: { defaultValue: "id-card", isRequired: "false" },
     textSize: { defaultValue: "small" },
     textColor: { defaultValue: "#606060" },
   },
   MainListRightItem: {
     iconSize: { defaultValue: "lg" },
+    iconName: { defaultValue: "image", isRequired: "false" },
   },
   MainListBottomLeftItem: {
-    iconColor: { defaultValue: "red" },
+    iconColor: { defaultValue: "red", isRequired: "true" },
     iconSize: { defaultValue: "lg" },
-    iconName: { defaultValue: "calendar" },
+    iconName: { defaultValue: "calendar", isRequired: "false" },
     textSize: { defaultValue: "small" },
     textColor: { defaultValue: "#606060" },
   },
@@ -132,7 +133,10 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.textSize,
     AllDataOptions.textColor,
 
-    AllDataOptions.iconName,
+    {
+      ...AllDataOptions.iconName,
+      ...diffDefaultValue.MainListRightItem.iconName,
+    },
     AllDataOptions.iconColor,
     {
       ...AllDataOptions.iconSize,
@@ -186,7 +190,6 @@ export const propertiesData: AllPropertiesData = {
       ...AllDataOptions.textSize,
       ...diffDefaultValue.MainListBottomLeftItem.textSize,
     },
-    AllDataOptions.textValue,
-    AllDataOptions.mainListDate
+    AllDataOptions.mainListDate,
   ],
 };

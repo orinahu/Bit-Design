@@ -8,7 +8,7 @@ interface props {
   iconColor?: string;
   iconSize?: IconSize;
   iconStyle?: IconStyle;
-  iconName: string;
+  iconName?: string;
   textValue: string;
   textSize?: TextSize;
   circleSize?: CircleSize;
@@ -20,7 +20,7 @@ const MainListRightItem = ({
   iconColor,
   iconSize = "lg",
   iconStyle,
-  iconName,
+  iconName = "image",
   textValue,
   textSize,
   circleSize,

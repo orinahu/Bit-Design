@@ -69,7 +69,6 @@ function App() {
         <div className="grid-item">
           <MainListRightItem
             circleColor="red"
-            iconName="image"
             textValue="רכיב 1"
             iconStyle="regular"
           />
@@ -96,8 +95,8 @@ function App() {
         <div className="grid-item">
           <MainListBottomLeftItem
             mainListDate={new Date()}
-            textValue="347A"
             iconStyle="regular"
+            iconColor="green"
           />
         </div>
         <div className="grid-item">

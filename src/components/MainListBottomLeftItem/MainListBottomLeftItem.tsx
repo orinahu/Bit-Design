@@ -5,10 +5,9 @@ import { dateFormatMainList } from "../../helper/date";
 
 interface props {
   iconName?: string;
-  iconColor?: string;
+  iconColor: string;
   iconSize?: IconSize;
   iconStyle?: IconStyle;
-  textValue: string;
   textSize?: TextSize;
   textColor?: string;
   mainListDate: Date;
