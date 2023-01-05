@@ -24,16 +24,16 @@ const MainListBottomLeftItem = ({
 }: props) => {
   return (
     <div className="main-list-upper-left-container">
-      <Text
-        textColor={textColor}
-        textValue={dateFormatMainList(mainListDate)}
-        textSize={textSize}
-      />
       <Icon
         iconName={iconName}
         iconStyle={iconStyle}
         iconSize={iconSize}
         iconColor={iconColor}
+      />
+      <Text
+        textColor={textColor}
+        textValue={dateFormatMainList(mainListDate)}
+        textSize={textSize}
       />
     </div>
   );

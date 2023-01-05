@@ -57,10 +57,23 @@ const MainListItem = ({
   rightItemTextSize,
   rightItemCircleSize,
   rightItemTextColor,
-  selected=false,
+  selected = false,
 }: props) => {
   return (
-    <div className={`main-list-item-container ${selected && 'selected'}`}>
+    <div className={`main-list-item-container ${selected && "selected"}`}>
+      <div className="main-list-right-item-container">
+        <MainListRightItem
+          circleColor={rightItemCircleColor}
+          iconColor={rightItemIconColor}
+          iconStyle={rightItemIconStyle}
+          iconName={rightItemIconName}
+          textValue={rightItemTextValue}
+          textSize={rightItemTextSize}
+          circleSize={rightItemCircleSize}
+          textColor={rightItemTextColor}
+          iconSize={rightItemIconSize}
+        />
+      </div>
       <div className="main-list-left-item-container">
         <MainListUpperLeftItem
           iconColor={upperLeftIconColor}
@@ -80,19 +93,6 @@ const MainListItem = ({
           mainListDate={bottomLeftMainListDate}
           textSize={bottomLeftTextSize}
           textColor={bottomLeftTextColor}
-        />
-      </div>
-      <div className="main-list-right-item-container">
-        <MainListRightItem
-          circleColor={rightItemCircleColor}
-          iconColor={rightItemIconColor}
-          iconStyle={rightItemIconStyle}
-          iconName={rightItemIconName}
-          textValue={rightItemTextValue}
-          textSize={rightItemTextSize}
-          circleSize={rightItemCircleSize}
-          textColor={rightItemTextColor}
-          iconSize={rightItemIconSize}
         />
       </div>
     </div>

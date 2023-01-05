@@ -20,10 +20,10 @@ const TrafficLightsText = ({
 }: props) => {
   return (
     <div className="traffic-lights-container">
+      <TrafficLights circleColor={circleColor} circleSize={circleSize} />
       <div className="text-traffic">
         <Text textColor={textColor} textValue={textValue} textSize={textSize} />
       </div>
-      <TrafficLights circleColor={circleColor} circleSize={circleSize} />
     </div>
   );
 };

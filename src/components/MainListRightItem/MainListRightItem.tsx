@@ -28,17 +28,16 @@ const MainListRightItem = ({
 }: props) => {
   return (
     <div className="main-list-right-container">
-      <Text textColor={textColor} textValue={textValue} textSize={textSize} />
+      <TrafficLights circleColor={circleColor} circleSize={circleSize} />
       <Icon
         iconName={iconName}
         iconStyle={iconStyle}
         iconSize={iconSize}
         iconColor={iconColor}
       />
-      <TrafficLights circleColor={circleColor} circleSize={circleSize} />
+      <Text textColor={textColor} textValue={textValue} textSize={textSize} />
     </div>
   );
 };
 
 export { MainListRightItem };
-
