@@ -7,6 +7,7 @@ import {
   MainListRightItem,
   MainListUpperLeftItem,
   MainListBottomLeftItem,
+  MainListItem,
 } from "./in";
 import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
@@ -103,6 +104,20 @@ function App() {
           <PropertiesDisplay
             propertiesObject={propertiesData.MainListBottomLeftItem}
           />
+        </div>
+        {/* MainListItem */}
+        <div className="grid-item">Main List Item</div>
+        <div className="grid-item">
+          <MainListItem
+            bottomLeftIconColor="red"
+            bottomLeftMainListDate={new Date()}
+            upperLeftTextValue="id123"
+            rightItemCircleColor="red"
+            rightItemTextValue="רכיב 1"
+          />
+        </div>
+        <div className="grid-item">
+          <PropertiesDisplay propertiesObject={propertiesData.MainListItem} />
         </div>
         {/* <div className="grid-item">7</div>
         <div className="grid-item">7</div> */}

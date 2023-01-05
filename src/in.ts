@@ -5,6 +5,7 @@ export { Icon } from "./components/Icon/Icon";
 export { MainListRightItem } from "./components/MainListRightItem/MainListRightItem";
 export { MainListUpperLeftItem } from "./components/MainListUpperLeftItem/MainListUpperLeftItem";
 export { MainListBottomLeftItem } from "./components/MainListBottomLeftItem/MainListBottomLeftItem";
+export { MainListItem } from "./components/MainListItem/MainListItem";
 
 // Types
 export type { TextSize } from "./components/Text/Text";
