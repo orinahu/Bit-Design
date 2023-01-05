@@ -3,8 +3,8 @@ export { TrafficLights } from "./components/TrafficLights/TrafficLights";
 export { TrafficLightsText } from "./components/TrafficLightsText/TrafficLightsText";
 export { Icon } from "./components/Icon/Icon";
 export { MainListLeftItem } from "./components/MainListLeftItem/MainListLeftItem";
-export { MainListUpperLeftItem } from "./components/MainListUpperLeftItem/MainListUpperLeftItem";
-export { MainListBottomLeftItem } from "./components/MainListBottomLeftItem/MainListBottomLeftItem";
+export { MainListUpperRightItem } from "./components/MainListUpperRightItem/MainListUpperRightItem";
+export { MainListBottomRightItem } from "./components/MainListBottomRightItem/MainListBottomRightItem";
 export { MainListItem } from "./components/MainListItem/MainListItem";
 export { MainListBottom } from "./components/MainListBottom/MainListBottom";
 

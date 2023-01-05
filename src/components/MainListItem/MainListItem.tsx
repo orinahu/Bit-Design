@@ -1,26 +1,26 @@
 import {
-  MainListBottomLeftItem,
-  MainListUpperLeftItem,
+  MainListBottomRightItem,
+  MainListUpperRightItem,
   MainListLeftItem,
 } from "../../in";
 import { TextSize, IconSize, IconStyle, CircleSize } from "../../in";
 import "./MainListItem.css";
 
 interface props {
-  bottomLeftIconName?: string;
-  bottomLeftIconColor: string;
-  bottomLeftIconSize?: IconSize;
-  bottomLeftIconStyle?: IconStyle;
-  bottomLeftTextSize?: TextSize;
-  bottomLeftTextColor?: string;
-  bottomLeftMainListDate: Date;
-  upperLeftIconName?: string;
-  upperLeftIconColor?: string;
-  upperLeftIconSize?: IconSize;
-  upperLeftIconStyle?: IconStyle;
-  upperLeftTextValue: string;
-  upperLeftTextSize?: TextSize;
-  upperLeftTextColor?: string;
+  bottomRightIconName?: string;
+  bottomRightIconColor: string;
+  bottomRightIconSize?: IconSize;
+  bottomRightIconStyle?: IconStyle;
+  bottomRightTextSize?: TextSize;
+  bottomRightTextColor?: string;
+  bottomRightMainListDate: Date;
+  upperRightIconName?: string;
+  upperRightIconColor?: string;
+  upperRightIconSize?: IconSize;
+  upperRightIconStyle?: IconStyle;
+  upperRightTextValue: string;
+  upperRightTextSize?: TextSize;
+  upperRightTextColor?: string;
   leftItemCircleColor: string;
   leftItemIconColor?: string;
   leftItemIconSize?: IconSize;
@@ -34,20 +34,20 @@ interface props {
 }
 
 const MainListItem = ({
-  bottomLeftIconName,
-  bottomLeftIconColor,
-  bottomLeftIconSize,
-  bottomLeftIconStyle,
-  bottomLeftTextSize,
-  bottomLeftTextColor,
-  bottomLeftMainListDate,
-  upperLeftIconName,
-  upperLeftIconColor,
-  upperLeftIconSize,
-  upperLeftIconStyle,
-  upperLeftTextValue,
-  upperLeftTextSize,
-  upperLeftTextColor,
+  bottomRightIconName,
+  bottomRightIconColor,
+  bottomRightIconSize,
+  bottomRightIconStyle,
+  bottomRightTextSize,
+  bottomRightTextColor,
+  bottomRightMainListDate,
+  upperRightIconName,
+  upperRightIconColor,
+  upperRightIconSize,
+  upperRightIconStyle,
+  upperRightTextValue,
+  upperRightTextSize,
+  upperRightTextColor,
   leftItemCircleColor,
   leftItemIconColor,
   leftItemIconSize,
@@ -61,7 +61,7 @@ const MainListItem = ({
 }: props) => {
   return (
     <div className={`main-list-item-container ${selected && "selected"}`}>
-      <div className="main-list-right-item-container">
+      <div className="main-list-left-item-container">
         <MainListLeftItem
           circleColor={leftItemCircleColor}
           iconColor={leftItemIconColor}
@@ -74,25 +74,25 @@ const MainListItem = ({
           iconSize={leftItemIconSize}
         />
       </div>
-      <div className="main-list-left-item-container">
-        <MainListUpperLeftItem
-          iconColor={upperLeftIconColor}
-          iconSize={upperLeftIconSize}
-          iconStyle={upperLeftIconStyle}
-          iconName={upperLeftIconName}
-          textValue={upperLeftTextValue}
-          textSize={upperLeftTextSize}
-          textColor={upperLeftTextColor}
+      <div className="main-list-right-item-container">
+        <MainListUpperRightItem
+          iconColor={upperRightIconColor}
+          iconSize={upperRightIconSize}
+          iconStyle={upperRightIconStyle}
+          iconName={upperRightIconName}
+          textValue={upperRightTextValue}
+          textSize={upperRightTextSize}
+          textColor={upperRightTextColor}
         />
         <div className="main-list-right-item-divider"></div>
-        <MainListBottomLeftItem
-          iconColor={bottomLeftIconColor}
-          iconSize={bottomLeftIconSize}
-          iconStyle={bottomLeftIconStyle}
-          iconName={bottomLeftIconName}
-          mainListDate={bottomLeftMainListDate}
-          textSize={bottomLeftTextSize}
-          textColor={bottomLeftTextColor}
+        <MainListBottomRightItem
+          iconColor={bottomRightIconColor}
+          iconSize={bottomRightIconSize}
+          iconStyle={bottomRightIconStyle}
+          iconName={bottomRightIconName}
+          mainListDate={bottomRightMainListDate}
+          textSize={bottomRightTextSize}
+          textColor={bottomRightTextColor}
         />
       </div>
     </div>

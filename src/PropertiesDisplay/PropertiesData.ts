@@ -91,7 +91,7 @@ const AllDataOptions = {
 };
 
 const diffDefaultValue = {
-  MainListUpperLeftItem: {
+  MainListUpperRightItem: {
     iconColor: { defaultValue: "#52517A" },
     iconSize: { defaultValue: "lg" },
     iconName: { defaultValue: "id-card", isRequired: "false" },
@@ -102,7 +102,7 @@ const diffDefaultValue = {
     iconSize: { defaultValue: "lg" },
     iconName: { defaultValue: "image", isRequired: "false" },
   },
-  MainListBottomLeftItem: {
+  MainListBottomRightItem: {
     iconColor: { defaultValue: "red", isRequired: "true" },
     iconSize: { defaultValue: "lg" },
     iconName: { defaultValue: "calendar", isRequired: "false" },
@@ -110,101 +110,101 @@ const diffDefaultValue = {
     textColor: { defaultValue: "#606060" },
   },
   MainListItem: {
-    bottomLeftIconName: {
+    bottomRightIconName: {
       ...AllDataOptions.iconName,
-      name: "bottomLeftIconName",
+      name: "bottomRightIconName",
       isRequired: "false",
     },
-    bottomLeftIconColor: {
+    bottomRightIconColor: {
       ...AllDataOptions.iconColor,
-      name: "bottomLeftIconColor",
+      name: "bottomRightIconColor",
       isRequired: "true",
     },
-    bottomLeftIconSize: {
+    bottomRightIconSize: {
       ...AllDataOptions.iconSize,
-      name: "bottomLeftIconSize",
+      name: "bottomRightIconSize",
     },
-    bottomLeftIconStyle: {
+    bottomRightIconStyle: {
       ...AllDataOptions.iconStyle,
-      name: "bottomLeftIconStyle",
+      name: "bottomRightIconStyle",
     },
-    bottomLeftTextSize: {
+    bottomRightTextSize: {
       ...AllDataOptions.textSize,
-      name: "bottomLeftTextSize",
+      name: "bottomRightTextSize",
     },
-    bottomLeftTextColor: {
+    bottomRightTextColor: {
       ...AllDataOptions.textColor,
-      name: "bottomLeftTextColor",
+      name: "bottomRightTextColor",
     },
-    bottomLeftMainListDate: {
+    bottomRightMainListDate: {
       ...AllDataOptions.mainListDate,
-      name: "bottomLeftMainListDate",
+      name: "bottomRightMainListDate",
     },
-    upperLeftIconName: {
+    upperRightIconName: {
       ...AllDataOptions.iconName,
-      name: "upperLeftIconName",
+      name: "upperRightIconName",
       isRequired: "false",
     },
-    upperLeftIconColor: {
+    upperRightIconColor: {
       ...AllDataOptions.iconColor,
-      name: "upperLeftIconColor",
+      name: "upperRightIconColor",
     },
-    upperLeftIconSize: {
+    upperRightIconSize: {
       ...AllDataOptions.iconSize,
-      name: "upperLeftIconSize",
+      name: "upperRightIconSize",
     },
-    upperLeftIconStyle: {
+    upperRightIconStyle: {
       ...AllDataOptions.iconStyle,
-      name: "upperLeftIconStyle",
+      name: "upperRightIconStyle",
     },
-    upperLeftTextValue: {
+    upperRightTextValue: {
       ...AllDataOptions.textValue,
-      name: "upperLeftTextValue",
+      name: "upperRightTextValue",
     },
-    upperLeftTextSize: {
+    upperRightTextSize: {
       ...AllDataOptions.textSize,
-      name: "upperLeftTextSize",
+      name: "upperRightTextSize",
     },
-    upperLeftTextColor: {
+    upperRightTextColor: {
       ...AllDataOptions.textColor,
-      name: "upperLeftTextColor",
+      name: "upperRightTextColor",
     },
-    rightItemCircleColor: {
+    leftItemCircleColor: {
       ...AllDataOptions.circleColor,
-      name: "rightItemCircleColor",
+      name: "leftItemCircleColor",
     },
-    rightItemIconColor: {
+    leftItemIconColor: {
       ...AllDataOptions.iconColor,
-      name: "rightItemIconColor",
+      name: "leftItemIconColor",
     },
-    rightItemIconSize: {
+    leftItemIconSize: {
       ...AllDataOptions.iconSize,
-      name: "rightItemIconSize",
+      name: "leftItemIconSize",
     },
-    rightItemIconStyle: {
+    leftItemIconStyle: {
       ...AllDataOptions.iconStyle,
-      name: "rightItemIconStyle",
+      name: "leftItemIconStyle",
     },
-    rightItemIconName: {
+    leftItemIconName: {
       ...AllDataOptions.iconName,
-      name: "rightItemIconName",
+      name: "leftItemIconName",
       isRequired: "false",
     },
-    rightItemTextValue: {
+    leftItemTextValue: {
       ...AllDataOptions.textValue,
-      name: "rightItemTextValue",
+      name: "leftItemTextValue",
     },
-    rightItemTextSize: {
+    leftItemTextSize: {
       ...AllDataOptions.textSize,
-      name: "rightItemTextSize",
+      name: "leftItemTextSize",
     },
-    rightItemCircleSize: {
+    leftItemCircleSize: {
       ...AllDataOptions.circleSize,
-      name: "rightItemCircleSize",
+      name: "leftItemCircleSize",
     },
-    rightItemTextColor: {
+    leftItemTextColor: {
       ...AllDataOptions.textColor,
-      name: "rightItemTextColor",
+      name: "leftItemTextColor",
     },
   },
 };
@@ -249,79 +249,79 @@ export const propertiesData: AllPropertiesData = {
     },
     AllDataOptions.iconStyle,
   ],
-  MainListUpperLeftItem: [
+  MainListUpperRightItem: [
     {
       ...AllDataOptions.iconName,
-      ...diffDefaultValue.MainListUpperLeftItem.iconName,
+      ...diffDefaultValue.MainListUpperRightItem.iconName,
     },
     {
       ...AllDataOptions.iconSize,
-      ...diffDefaultValue.MainListUpperLeftItem.iconSize,
+      ...diffDefaultValue.MainListUpperRightItem.iconSize,
     },
     {
       ...AllDataOptions.iconColor,
-      ...diffDefaultValue.MainListUpperLeftItem.iconColor,
+      ...diffDefaultValue.MainListUpperRightItem.iconColor,
     },
     AllDataOptions.iconStyle,
     {
       ...AllDataOptions.textColor,
-      ...diffDefaultValue.MainListUpperLeftItem.textColor,
+      ...diffDefaultValue.MainListUpperRightItem.textColor,
     },
     {
       ...AllDataOptions.textSize,
-      ...diffDefaultValue.MainListUpperLeftItem.textSize,
+      ...diffDefaultValue.MainListUpperRightItem.textSize,
     },
     AllDataOptions.textValue,
   ],
-  MainListBottomLeftItem: [
+  MainListBottomRightItem: [
     {
       ...AllDataOptions.iconName,
-      ...diffDefaultValue.MainListBottomLeftItem.iconName,
+      ...diffDefaultValue.MainListBottomRightItem.iconName,
     },
     {
       ...AllDataOptions.iconSize,
-      ...diffDefaultValue.MainListBottomLeftItem.iconSize,
+      ...diffDefaultValue.MainListBottomRightItem.iconSize,
     },
     {
       ...AllDataOptions.iconColor,
-      ...diffDefaultValue.MainListBottomLeftItem.iconColor,
+      ...diffDefaultValue.MainListBottomRightItem.iconColor,
     },
     AllDataOptions.iconStyle,
     {
       ...AllDataOptions.textColor,
-      ...diffDefaultValue.MainListBottomLeftItem.textColor,
+      ...diffDefaultValue.MainListBottomRightItem.textColor,
     },
     {
       ...AllDataOptions.textSize,
-      ...diffDefaultValue.MainListBottomLeftItem.textSize,
+      ...diffDefaultValue.MainListBottomRightItem.textSize,
     },
     AllDataOptions.mainListDate,
   ],
   MainListItem: [
-    { ...diffDefaultValue.MainListItem.bottomLeftIconColor },
-    { ...diffDefaultValue.MainListItem.bottomLeftIconName },
-    { ...diffDefaultValue.MainListItem.bottomLeftIconSize },
-    { ...diffDefaultValue.MainListItem.bottomLeftIconStyle },
-    { ...diffDefaultValue.MainListItem.bottomLeftMainListDate },
-    { ...diffDefaultValue.MainListItem.bottomLeftTextColor },
-    { ...diffDefaultValue.MainListItem.bottomLeftTextSize },
-    { ...diffDefaultValue.MainListItem.rightItemCircleColor },
-    { ...diffDefaultValue.MainListItem.rightItemCircleSize },
-    { ...diffDefaultValue.MainListItem.rightItemIconColor },
-    { ...diffDefaultValue.MainListItem.upperLeftIconName },
-    { ...diffDefaultValue.MainListItem.rightItemIconSize },
-    { ...diffDefaultValue.MainListItem.rightItemTextValue },
-    { ...diffDefaultValue.MainListItem.rightItemIconStyle },
-    { ...diffDefaultValue.MainListItem.rightItemIconName },
-    { ...diffDefaultValue.MainListItem.rightItemTextSize },
-    { ...diffDefaultValue.MainListItem.rightItemTextColor },
+    { ...diffDefaultValue.MainListItem.bottomRightIconColor },
+    { ...diffDefaultValue.MainListItem.bottomRightIconName },
+    { ...diffDefaultValue.MainListItem.bottomRightIconSize },
+    { ...diffDefaultValue.MainListItem.bottomRightIconStyle },
+    { ...diffDefaultValue.MainListItem.bottomRightMainListDate },
+    { ...diffDefaultValue.MainListItem.bottomRightTextColor },
+    { ...diffDefaultValue.MainListItem.bottomRightTextSize },
+    { ...diffDefaultValue.MainListItem.leftItemCircleColor },
+    { ...diffDefaultValue.MainListItem.leftItemCircleSize },
+    { ...diffDefaultValue.MainListItem.leftItemIconColor },
+    { ...diffDefaultValue.MainListItem.upperRightIconName },
+    { ...diffDefaultValue.MainListItem.leftItemIconSize },
+    { ...diffDefaultValue.MainListItem.leftItemTextValue },
+    { ...diffDefaultValue.MainListItem.leftItemIconStyle },
+    { ...diffDefaultValue.MainListItem.leftItemIconName },
+    { ...diffDefaultValue.MainListItem.leftItemTextSize },
+    { ...diffDefaultValue.MainListItem.leftItemTextColor },
     { ...AllDataOptions.selected },
-    { ...diffDefaultValue.MainListItem.upperLeftIconColor },
-    { ...diffDefaultValue.MainListItem.upperLeftIconSize },
-    { ...diffDefaultValue.MainListItem.upperLeftIconStyle },
-    { ...diffDefaultValue.MainListItem.upperLeftIconStyle },
-    { ...diffDefaultValue.MainListItem.upperLeftTextColor },
-    { ...diffDefaultValue.MainListItem.upperLeftTextSize },
-    { ...diffDefaultValue.MainListItem.upperLeftTextValue },
+    { ...diffDefaultValue.MainListItem.upperRightIconColor },
+    { ...diffDefaultValue.MainListItem.upperRightIconSize },
+    { ...diffDefaultValue.MainListItem.upperRightIconStyle },
+    { ...diffDefaultValue.MainListItem.upperRightIconStyle },
+    { ...diffDefaultValue.MainListItem.upperRightTextColor },
+    { ...diffDefaultValue.MainListItem.upperRightTextSize },
+    { ...diffDefaultValue.MainListItem.upperRightTextValue },
   ],
 };

@@ -19,9 +19,9 @@ export const randomListItem = (n = 10) => {
     const color =randomColor();
     array.push(
       <MainListItem
-        bottomLeftIconColor={color}
-        bottomLeftMainListDate={new Date()}
-        upperLeftTextValue={`id${Math.floor(Math.random() * 201 + 100)}`}
+        bottomRightIconColor={color}
+        bottomRightMainListDate={new Date()}
+        upperRightTextValue={`id${Math.floor(Math.random() * 201 + 100)}`}
         leftItemCircleColor={color}
         leftItemTextValue={`component ${i + 1}`}
       />

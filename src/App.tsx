@@ -5,8 +5,8 @@ import {
   TrafficLightsText,
   Icon,
   MainListLeftItem,
-  MainListUpperLeftItem,
-  MainListBottomLeftItem,
+  MainListUpperRightItem,
+  MainListBottomRightItem,
   MainListItem,
   MainListBottom,
 } from "./in";
@@ -82,21 +82,21 @@ function App() {
           />
         </div>
 
-        {/* MainListUpperLeftItem */}
+        {/* MainListUpperRightItem */}
         <div className="grid-item">Main List Upper Left Item</div>
         <div className="grid-item">
-          <MainListUpperLeftItem textValue="347A" />
+          <MainListUpperRightItem textValue="347A" />
         </div>
         <div className="grid-item">
           <PropertiesDisplay
-            propertiesObject={propertiesData.MainListUpperLeftItem}
+            propertiesObject={propertiesData.MainListUpperRightItem}
           />
         </div>
 
-        {/* MainListBottomLeftItem */}
+        {/* MainListBottomRightItem */}
         <div className="grid-item">Main List Bottom Left Item</div>
         <div className="grid-item">
-          <MainListBottomLeftItem
+          <MainListBottomRightItem
             mainListDate={new Date()}
             iconStyle="regular"
             iconColor="green"
@@ -104,16 +104,16 @@ function App() {
         </div>
         <div className="grid-item">
           <PropertiesDisplay
-            propertiesObject={propertiesData.MainListBottomLeftItem}
+            propertiesObject={propertiesData.MainListBottomRightItem}
           />
         </div>
         {/* MainListItem */}
         <div className="grid-item">Main List Item</div>
         <div className="grid-item">
           <MainListItem
-            bottomLeftIconColor="green"
-            bottomLeftMainListDate={new Date()}
-            upperLeftTextValue="id123"
+            bottomRightIconColor="green"
+            bottomRightMainListDate={new Date()}
+            upperRightTextValue="id123"
             leftItemCircleColor="red"
             leftItemTextValue="component 1"
           />
@@ -125,8 +125,8 @@ function App() {
         <div className="grid-item">
           <MainListBottom>{randomListItem(10)}</MainListBottom>
         </div>
-        <div className="grid-item">7</div>
-        <div className="grid-item">7</div>
+        {/* <div className="grid-item">7</div> */}
+        {/* <div className="grid-item">7</div> */}
         {/* <div className="grid-item">7</div> */}
       </div>
     </div>
