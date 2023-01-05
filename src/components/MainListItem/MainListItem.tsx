@@ -1,7 +1,7 @@
 import {
   MainListBottomLeftItem,
   MainListUpperLeftItem,
-  MainListRightItem,
+  MainListLeftItem,
 } from "../../in";
 import { TextSize, IconSize, IconStyle, CircleSize } from "../../in";
 import "./MainListItem.css";
@@ -21,15 +21,15 @@ interface props {
   upperLeftTextValue: string;
   upperLeftTextSize?: TextSize;
   upperLeftTextColor?: string;
-  rightItemCircleColor: string;
-  rightItemIconColor?: string;
-  rightItemIconSize?: IconSize;
-  rightItemIconStyle?: IconStyle;
-  rightItemIconName?: string;
-  rightItemTextValue: string;
-  rightItemTextSize?: TextSize;
-  rightItemCircleSize?: CircleSize;
-  rightItemTextColor?: string;
+  leftItemCircleColor: string;
+  leftItemIconColor?: string;
+  leftItemIconSize?: IconSize;
+  leftItemIconStyle?: IconStyle;
+  leftItemIconName?: string;
+  leftItemTextValue: string;
+  leftItemTextSize?: TextSize;
+  leftItemCircleSize?: CircleSize;
+  leftItemTextColor?: string;
   selected?: boolean;
 }
 
@@ -48,30 +48,30 @@ const MainListItem = ({
   upperLeftTextValue,
   upperLeftTextSize,
   upperLeftTextColor,
-  rightItemCircleColor,
-  rightItemIconColor,
-  rightItemIconSize,
-  rightItemIconStyle,
-  rightItemIconName,
-  rightItemTextValue,
-  rightItemTextSize,
-  rightItemCircleSize,
-  rightItemTextColor,
+  leftItemCircleColor,
+  leftItemIconColor,
+  leftItemIconSize,
+  leftItemIconStyle,
+  leftItemIconName,
+  leftItemTextValue,
+  leftItemTextSize,
+  leftItemCircleSize,
+  leftItemTextColor,
   selected = false,
 }: props) => {
   return (
     <div className={`main-list-item-container ${selected && "selected"}`}>
       <div className="main-list-right-item-container">
-        <MainListRightItem
-          circleColor={rightItemCircleColor}
-          iconColor={rightItemIconColor}
-          iconStyle={rightItemIconStyle}
-          iconName={rightItemIconName}
-          textValue={rightItemTextValue}
-          textSize={rightItemTextSize}
-          circleSize={rightItemCircleSize}
-          textColor={rightItemTextColor}
-          iconSize={rightItemIconSize}
+        <MainListLeftItem
+          circleColor={leftItemCircleColor}
+          iconColor={leftItemIconColor}
+          iconStyle={leftItemIconStyle}
+          iconName={leftItemIconName}
+          textValue={leftItemTextValue}
+          textSize={leftItemTextSize}
+          circleSize={leftItemCircleSize}
+          textColor={leftItemTextColor}
+          iconSize={leftItemIconSize}
         />
       </div>
       <div className="main-list-left-item-container">

@@ -1,7 +1,7 @@
 import "./MainListBottomLeftItem.css";
 import { Icon, IconSize, IconStyle } from "../../in";
 import { Text, TextSize } from "../../in";
-import { dateFormatMainList } from "../../helper/date";
+import { dateFormatMainList } from "../../helper/helper";
 
 interface props {
   iconName?: string;

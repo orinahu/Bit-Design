@@ -230,7 +230,7 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.iconSize,
     AllDataOptions.iconStyle,
   ],
-  MainListRightItem: [
+  MainListLeftItem: [
     AllDataOptions.circleColor,
     AllDataOptions.circleSize,
 

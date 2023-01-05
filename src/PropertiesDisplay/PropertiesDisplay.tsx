@@ -17,7 +17,6 @@ const PropertiesDisplay = ({ propertiesObject }: props) => {
             </div>
           );
         });
-        console.log([...acc, ...propertyValues]);
         return [...acc, ...propertyValues];
       },
       []

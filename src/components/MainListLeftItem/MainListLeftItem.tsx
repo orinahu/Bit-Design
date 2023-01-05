@@ -1,4 +1,4 @@
-import "./MainListRightItem.css";
+import "./MainListLeftItem.css";
 import { TrafficLights, CircleSize } from "../../in";
 import { Icon, IconSize, IconStyle } from "../../in";
 import { Text, TextSize } from "../../in";
@@ -15,7 +15,7 @@ interface props {
   textColor?: string;
 }
 
-const MainListRightItem = ({
+const MainListLeftItem = ({
   circleColor,
   iconColor,
   iconSize = "lg",
@@ -40,4 +40,4 @@ const MainListRightItem = ({
   );
 };
 
-export { MainListRightItem };
+export { MainListLeftItem };

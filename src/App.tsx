@@ -4,14 +4,16 @@ import {
   TrafficLights,
   TrafficLightsText,
   Icon,
-  MainListRightItem,
+  MainListLeftItem,
   MainListUpperLeftItem,
   MainListBottomLeftItem,
   MainListItem,
+  MainListBottom,
 } from "./in";
 import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
 import { propertiesData } from "./PropertiesDisplay/PropertiesData";
+import { randomListItem } from "./helper/helper";
 
 function App() {
   return (
@@ -65,10 +67,10 @@ function App() {
           <PropertiesDisplay propertiesObject={propertiesData.Icon} />
         </div>
 
-        {/* MainListRightItem */}
-        <div className="grid-item">Main List Right Item</div>
+        {/* MainListLeftItem */}
+        <div className="grid-item">Main List Left Item</div>
         <div className="grid-item">
-          <MainListRightItem
+          <MainListLeftItem
             circleColor="red"
             textValue="component 1"
             iconStyle="regular"
@@ -76,7 +78,7 @@ function App() {
         </div>
         <div className="grid-item">
           <PropertiesDisplay
-            propertiesObject={propertiesData.MainListRightItem}
+            propertiesObject={propertiesData.MainListLeftItem}
           />
         </div>
 
@@ -112,15 +114,20 @@ function App() {
             bottomLeftIconColor="green"
             bottomLeftMainListDate={new Date()}
             upperLeftTextValue="id123"
-            rightItemCircleColor="red"
-            rightItemTextValue="component 1"
+            leftItemCircleColor="red"
+            leftItemTextValue="component 1"
           />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.MainListItem} />
         </div>
-        {/* <div className="grid-item">7</div>
-        <div className="grid-item">7</div> */}
+        <div className="grid-item">Main List Bottom</div>
+        <div className="grid-item">
+          <MainListBottom>{randomListItem(10)}</MainListBottom>
+        </div>
+        <div className="grid-item">7</div>
+        <div className="grid-item">7</div>
+        {/* <div className="grid-item">7</div> */}
       </div>
     </div>
   );
