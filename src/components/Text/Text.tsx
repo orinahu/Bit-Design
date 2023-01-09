@@ -14,7 +14,6 @@ const Text = ({
   textValue,
   textSize = "medium",
 }: props) => {
-  
   const style: React.CSSProperties = {
     color: textColor,
   };

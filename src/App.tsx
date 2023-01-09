@@ -112,7 +112,7 @@ function App() {
         <div className="grid-item">Main List Item</div>
         <div className="grid-item">
           <MainListItem
-            bottomRightIconColor="green"
+            bottomRightIconColor="red"
             bottomRightMainListDate={new Date()}
             upperRightTextValue="id123"
             leftItemCircleColor="red"
@@ -135,7 +135,7 @@ function App() {
 
         <div className="grid-item">DropDown</div>
         <div className="grid-item">
-          <Dropdown />
+          <Dropdown options={["status", "name"]} />
         </div>
         <div className="grid-item">7</div>
         {/* <div className="grid-item">7</div> */}
