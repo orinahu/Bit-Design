@@ -24,8 +24,3 @@
   border-radius: 10px;
   height: 30px;
 }
-
-/* Handle on hover */
-.smain-list-bottom::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
-}

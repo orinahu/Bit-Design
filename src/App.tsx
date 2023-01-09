@@ -9,6 +9,7 @@ import {
   MainListBottomRightItem,
   MainListItem,
   MainListBottom,
+  Dropdown,
 } from "./in";
 import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
@@ -125,8 +126,18 @@ function App() {
         <div className="grid-item">
           <MainListBottom>{randomListItem(10)}</MainListBottom>
         </div>
-        {/* <div className="grid-item">7</div> */}
-        {/* <div className="grid-item">7</div> */}
+        <div className="grid-item table">
+          {" "}
+          <PropertiesDisplay propertiesObject={propertiesData.MainListBottom} />
+        </div>
+
+        {/* DropDown */}
+
+        <div className="grid-item">DropDown</div>
+        <div className="grid-item">
+          <Dropdown />
+        </div>
+        <div className="grid-item">7</div>
         {/* <div className="grid-item">7</div> */}
       </div>
     </div>

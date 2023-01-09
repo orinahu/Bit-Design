@@ -40,6 +40,10 @@ body {
   align-items: center;
 }
 
+.grid-item.table {
+  justify-content: flex-start;
+}
+
 .grid-container-inside {
   display: grid;
   grid-template-rows: auto;

@@ -7,6 +7,7 @@ export { MainListUpperRightItem } from "./components/MainListUpperRightItem/Main
 export { MainListBottomRightItem } from "./components/MainListBottomRightItem/MainListBottomRightItem";
 export { MainListItem } from "./components/MainListItem/MainListItem";
 export { MainListBottom } from "./components/MainListBottom/MainListBottom";
+export { Dropdown } from "./components/Dropdown/Dropdown";
 
 // Types
 export type { TextSize } from "./components/Text/Text";

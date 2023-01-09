@@ -88,6 +88,13 @@ const AllDataOptions = {
     isRequired: "false",
     defaultValue: "false",
   },
+  MainListItem: {
+    name: "react-children",
+    type: "JSX.Element[] | JSX.Element",
+    typeOptions: `-`,
+    isRequired: "false",
+    defaultValue: "",
+  },
 };
 
 const diffDefaultValue = {
@@ -229,6 +236,9 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.iconColor,
     AllDataOptions.iconSize,
     AllDataOptions.iconStyle,
+  ],
+  MainListBottom: [
+    AllDataOptions.MainListItem
   ],
   MainListLeftItem: [
     AllDataOptions.circleColor,
