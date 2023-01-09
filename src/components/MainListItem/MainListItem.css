@@ -42,3 +42,11 @@
   border-top: var(--main-list-item-container-border);
   width: 153px;
 }
+
+.main-list-upper-right-item {
+  padding-bottom: 10px;
+}
+
+.main-list-bottom-right-item {
+  padding-top: 10px;
+}

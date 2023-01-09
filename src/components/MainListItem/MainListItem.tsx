@@ -75,16 +75,19 @@ const MainListItem = ({
         />
       </div>
       <div className="main-list-right-item-container">
-        <MainListUpperRightItem
-          iconColor={upperRightIconColor}
-          iconSize={upperRightIconSize}
-          iconStyle={upperRightIconStyle}
-          iconName={upperRightIconName}
-          textValue={upperRightTextValue}
-          textSize={upperRightTextSize}
-          textColor={upperRightTextColor}
-        />
+        <div className="main-list-upper-right-item">
+          <MainListUpperRightItem
+            iconColor={upperRightIconColor}
+            iconSize={upperRightIconSize}
+            iconStyle={upperRightIconStyle}
+            iconName={upperRightIconName}
+            textValue={upperRightTextValue}
+            textSize={upperRightTextSize}
+            textColor={upperRightTextColor}
+          />
+        </div>
         <div className="main-list-right-item-divider"></div>
+        <div className="main-list-bottom-right-item">
         <MainListBottomRightItem
           iconColor={bottomRightIconColor}
           iconSize={bottomRightIconSize}
@@ -94,6 +97,7 @@ const MainListItem = ({
           textSize={bottomRightTextSize}
           textColor={bottomRightTextColor}
         />
+        </div>
       </div>
     </div>
   );
