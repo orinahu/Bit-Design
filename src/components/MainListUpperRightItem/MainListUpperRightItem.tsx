@@ -1,12 +1,12 @@
 import "./MainListUpperRightItem.css";
-import { Icon, IconSize, IconStyle } from "../../in";
+import { Icon, IconSize, IconForm } from "../../in";
 import { Text, Size } from "../../in";
 
 interface props {
   iconName?: string;
   iconColor?: string;
   iconSize?: IconSize;
-  iconStyle?: IconStyle;
+  iconStyle?: IconForm;
   textValue: string;
   textSize?: Size;
   textColor?: string;
@@ -25,7 +25,7 @@ const MainListUpperRightItem = ({
     <div className="main-list-upper-left-container">
       <Icon
         iconName={iconName}
-        iconStyle={iconStyle}
+        iconForm={iconStyle}
         iconSize={iconSize}
         iconColor={iconColor}
       />

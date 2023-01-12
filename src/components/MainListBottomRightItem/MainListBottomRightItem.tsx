@@ -1,5 +1,5 @@
 import "./MainListBottomRightItem.css";
-import { Icon, IconSize, IconStyle } from "../../in";
+import { Icon, IconSize, IconForm } from "../../in";
 import { Text, Size } from "../../in";
 import { dateFormatMainList } from "../../helper/helper";
 
@@ -7,7 +7,7 @@ interface props {
   iconName?: string;
   iconColor: string;
   iconSize?: IconSize;
-  iconStyle?: IconStyle;
+  iconStyle?: IconForm;
   textSize?: Size;
   textColor?: string;
   mainListDate: Date;
@@ -26,7 +26,7 @@ const MainListBottomRightItem = ({
     <div className="main-list-upper-left-container">
       <Icon
         iconName={iconName}
-        iconStyle={iconStyle}
+        iconForm={iconStyle}
         iconSize={iconSize}
         iconColor={iconColor}
       />

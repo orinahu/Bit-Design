@@ -10,4 +10,4 @@ export { Dropdown } from "./components/Dropdown/Dropdown";
 
 // Types
 export type { Size } from "./components/Text/Text";
-export type { IconSize, IconStyle } from "./components/Icon/Icon";
+export type { IconSize, IconForm } from "./components/Icon/Icon";

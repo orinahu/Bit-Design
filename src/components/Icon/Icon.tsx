@@ -1,19 +1,19 @@
 import React from "react";
 
 export type IconSize = "2xs" | "xs" | "sm" | "lg" | "xl" | "2xl";
-export type IconStyle = "solid" | "regular" | "light";
+export type IconForm = "solid" | "regular" | "light";
 
 interface props {
   iconColor?: string;
   iconSize?: IconSize;
-  iconStyle?: IconStyle;
+  iconForm?: IconForm;
   iconName: string;
 }
 
 const Icon = ({
   iconColor = "black",
   iconSize = "sm",
-  iconStyle = "solid",
+  iconForm = "solid",
   iconName,
 }: props) => {
   const iconDesign: React.CSSProperties = {
@@ -22,7 +22,7 @@ const Icon = ({
 
   return (
     <span className="icon-container" style={iconDesign}>
-      <i className={`fa-${iconStyle} fa-${iconName}  fa-${iconSize}`}></i>
+      <i className={`fa-${iconForm} fa-${iconName}  fa-${iconSize}`}></i>
     </span>
   );
 };

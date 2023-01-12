@@ -3,28 +3,28 @@ import {
   MainListUpperRightItem,
   MainListLeftItem,
 } from "../../in";
-import { Size, IconSize, IconStyle } from "../../in";
+import { Size, IconSize, IconForm } from "../../in";
 import "./MainListItem.css";
 
 interface props {
   bottomRightIconName?: string;
   bottomRightIconColor: string;
   bottomRightIconSize?: IconSize;
-  bottomRightIconStyle?: IconStyle;
+  bottomRightIconStyle?: IconForm;
   bottomRightTextSize?: Size;
   bottomRightTextColor?: string;
   bottomRightMainListDate: Date;
   upperRightIconName?: string;
   upperRightIconColor?: string;
   upperRightIconSize?: IconSize;
-  upperRightIconStyle?: IconStyle;
+  upperRightIconStyle?: IconForm;
   upperRightTextValue: string;
   upperRightTextSize?: Size;
   upperRightTextColor?: string;
   leftItemCircleColor: string;
   leftItemIconColor?: string;
   leftItemIconSize?: IconSize;
-  leftItemIconStyle?: IconStyle;
+  leftItemIconStyle?: IconForm;
   leftItemIconName?: string;
   leftItemTextValue: string;
   leftItemTextSize?: Size;

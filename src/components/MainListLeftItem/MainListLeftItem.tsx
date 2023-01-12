@@ -1,13 +1,13 @@
 import "./MainListLeftItem.css";
 import { TrafficLight } from "../../in";
-import { Icon, IconSize, IconStyle } from "../../in";
+import { Icon, IconSize, IconForm } from "../../in";
 import { Text, Size } from "../../in";
 
 interface props {
   circleColor: string;
   iconColor?: string;
   iconSize?: IconSize;
-  iconStyle?: IconStyle;
+  iconStyle?: IconForm;
   iconName?: string;
   textValue: string;
   textSize?: Size;
@@ -31,7 +31,7 @@ const MainListLeftItem = ({
       <TrafficLight circleColor={circleColor} size={circleSize} />
       <Icon
         iconName={iconName}
-        iconStyle={iconStyle}
+        iconForm={iconStyle}
         iconSize={iconSize}
         iconColor={iconColor}
       />
