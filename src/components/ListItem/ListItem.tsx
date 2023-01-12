@@ -55,8 +55,8 @@ const ListItem = ({
   className,
 }: props) => {
   return (
-    <div className={`main-list-item-container ${className} ${selected && "selected"}`}>
-      <div className="main-list-left-item-container">
+    <div className={`bit-list-item ${className} ${selected && "selected"}`}>
+      <div className="bit-list-item-status-container">
         <Status
           circleColor={statusCircleColor}
           iconColor={statusIconColor}
@@ -67,8 +67,8 @@ const ListItem = ({
           iconSize={statusIconSize}
         />
       </div>
-      <div className="main-list-right-item-container">
-        <div className="main-list-upper-right-item">
+      <div className="bit-list-item-right-container">
+        <div className="bit-list-item-id-container">
           <Id
             iconColor={IdIconColor}
             iconSize={IdIconSize}
@@ -78,8 +78,8 @@ const ListItem = ({
             size={IdSize}
           />
         </div>
-        <div className="main-list-right-item-divider"></div>
-        <div className="main-list-bottom-right-item">
+        <div className="bit-list-item-right-divider"></div>
+        <div className="bit-list-item-DateTime-container">
         <DateTime
           iconColor={DateTimeIconColor}
           iconSize={DateTimeIconSize}

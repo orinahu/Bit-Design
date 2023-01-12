@@ -96,8 +96,23 @@ const AllDataOptions = {
     defaultValue: "false",
   },
   ListItem: {
-    name: "react-children",
-    type: "JSX.Element[] | JSX.Element",
+    name: "items",
+    type: "{ color, date, id, text }",
+    typeOptions: `-`,
+    isRequired: "false",
+    defaultValue: "",
+  },
+  callback: {
+    name: "items",
+    type: `({ color, date, id, text }: any) => (
+      <ListItem
+        key={id}
+        statusCircleColor={color}
+        date={date}
+        IdText={id}
+        statusText={text}
+      />
+    )`,
     typeOptions: `-`,
     isRequired: "false",
     defaultValue: "",
@@ -241,7 +256,7 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.className,
     AllDataOptions.style,
   ],
-  MainListBottom: [AllDataOptions.ListItem],
+  MainListBottom: [AllDataOptions.ListItem, AllDataOptions.callback],
   Status: [
     AllDataOptions.className,
     AllDataOptions.circleColor,

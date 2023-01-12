@@ -10,6 +10,7 @@ interface props {
   text: string;
   size?: Size;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const Id = ({
@@ -20,9 +21,10 @@ const Id = ({
   text,
   size = "small",
   className,
+  style
 }: props) => {
   return (
-    <div className={`main-list-upper-left-container ${className}`}>
+    <div className={`bit-id ${className}`} style={style}>
       <Icon
         iconName={iconName}
         iconForm={iconForm}

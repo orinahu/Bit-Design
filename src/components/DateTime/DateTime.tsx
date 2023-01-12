@@ -11,6 +11,8 @@ interface props {
   text?: Size;
   date: Date;
   className?: string;
+  style?: React.CSSProperties;
+
 }
 
 const DateTime = ({
@@ -20,10 +22,11 @@ const DateTime = ({
   iconName = "calendar",
   date,
   text = "small",
-  className
+  className,
+  style
 }: props) => {
   return (
-    <div className={`main-list-upper-left-container ${className}`}>
+    <div className={`bit-date-time ${className}`} style={style}>
       <Icon
         iconName={iconName}
         iconForm={iconForm}

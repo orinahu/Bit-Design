@@ -17,7 +17,7 @@ const TrafficLight = ({style, className, text = "", circleColor, size = "medium"
   };
 
   return (
-    <div className={`traffic-lights-container ${className}`}>
+    <div className={`bit-traffic-lights-container ${className}`}>
       <div className={`trafficLights-circle ${size}`} style={circleStyle}></div>{" "}
       <div className="text-traffic">
         <Text text={text} size={size} />

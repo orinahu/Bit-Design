@@ -12,6 +12,7 @@ interface props {
   text: string;
   size?: Size;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const Status = ({
@@ -23,9 +24,10 @@ const Status = ({
   text,
   size,
   className,
+  style,
 }: props) => {
   return (
-    <div className={`main-list-right-container ${className}`}>
+    <div className={`bit-status ${className}`} style={style}>
       <TrafficLight circleColor={circleColor} size={size} />
       <Icon
         iconName={iconName}

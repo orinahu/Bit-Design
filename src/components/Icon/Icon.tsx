@@ -26,7 +26,7 @@ const Icon = ({
   };
 
   return (
-    <span className={`icon-container ${className}`} style={iconDesign}>
+    <span className={`bit-icon-container ${className}`} style={iconDesign}>
       <i className={`fa-${iconForm} fa-${iconName}  fa-${iconSize}`}></i>
     </span>
   );
