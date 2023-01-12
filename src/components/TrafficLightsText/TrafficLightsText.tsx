@@ -1,28 +1,26 @@
 import React from "react";
 import "./TrafficLightsText.css";
-import { TrafficLights, CircleSize } from "../../in";
-import { Text, TextSize } from "../../in";
+import { TrafficLights } from "../../in";
+import { Text, Size } from "../../in";
 
 interface props {
   circleColor: string;
   textValue: string;
-  textSize?: TextSize;
-  circleSize?: CircleSize;
+  size?: Size ;
   textColor?: string;
 }
 
 const TrafficLightsText = ({
   circleColor,
-  textSize,
   textValue,
-  circleSize,
-  textColor
+  textColor,
+  size,
 }: props) => {
   return (
     <div className="traffic-lights-container">
-      <TrafficLights circleColor={circleColor} circleSize={circleSize} />
+      <TrafficLights circleColor={circleColor} size={size} />
       <div className="text-traffic">
-        <Text textColor={textColor} textValue={textValue} textSize={textSize} />
+        <Text color={textColor} text={textValue} size={size} />
       </div>
     </div>
   );

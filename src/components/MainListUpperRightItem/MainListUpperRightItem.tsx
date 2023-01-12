@@ -1,6 +1,6 @@
 import "./MainListUpperRightItem.css";
 import { Icon, IconSize, IconStyle } from "../../in";
-import { Text, TextSize } from "../../in";
+import { Text, Size } from "../../in";
 
 interface props {
   iconName?: string;
@@ -8,7 +8,7 @@ interface props {
   iconSize?: IconSize;
   iconStyle?: IconStyle;
   textValue: string;
-  textSize?: TextSize;
+  textSize?: Size;
   textColor?: string;
 }
 
@@ -29,7 +29,7 @@ const MainListUpperRightItem = ({
         iconSize={iconSize}
         iconColor={iconColor}
       />
-      <Text textColor={textColor} textValue={textValue} textSize={textSize} />
+      <Text color={textColor} text={textValue} size={textSize} />
     </div>
   );
 };

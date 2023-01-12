@@ -3,7 +3,7 @@ import {
   MainListUpperRightItem,
   MainListLeftItem,
 } from "../../in";
-import { TextSize, IconSize, IconStyle, CircleSize } from "../../in";
+import { Size, IconSize, IconStyle } from "../../in";
 import "./MainListItem.css";
 
 interface props {
@@ -11,7 +11,7 @@ interface props {
   bottomRightIconColor: string;
   bottomRightIconSize?: IconSize;
   bottomRightIconStyle?: IconStyle;
-  bottomRightTextSize?: TextSize;
+  bottomRightTextSize?: Size;
   bottomRightTextColor?: string;
   bottomRightMainListDate: Date;
   upperRightIconName?: string;
@@ -19,7 +19,7 @@ interface props {
   upperRightIconSize?: IconSize;
   upperRightIconStyle?: IconStyle;
   upperRightTextValue: string;
-  upperRightTextSize?: TextSize;
+  upperRightTextSize?: Size;
   upperRightTextColor?: string;
   leftItemCircleColor: string;
   leftItemIconColor?: string;
@@ -27,8 +27,8 @@ interface props {
   leftItemIconStyle?: IconStyle;
   leftItemIconName?: string;
   leftItemTextValue: string;
-  leftItemTextSize?: TextSize;
-  leftItemCircleSize?: CircleSize;
+  leftItemTextSize?: Size;
+  leftItemCircleSize?: Size;
   leftItemTextColor?: string;
   selected?: boolean;
 }

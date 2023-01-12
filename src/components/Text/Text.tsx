@@ -1,26 +1,27 @@
 import React from "react";
 import "./Text.css";
 
-export type TextSize = "small" | "medium" | "large";
+export type Size = "small" | "medium" | "large";
 
 interface props {
-  textValue: string;
-  textSize?: TextSize;
-  textColor?: string;
+  text: string;
+  size?: Size;
+  color?: string;
+  style?: React.CSSProperties 
 }
 
 const Text = ({
-  textColor = "black",
-  textValue,
-  textSize = "medium",
+  text,
+  size = "medium",
+  style
 }: props) => {
-  const style: React.CSSProperties = {
-    color: textColor,
+  const propStyle: React.CSSProperties = {
+    ...style
   };
 
   return (
-    <span style={style} className={`text-text ${textSize}`}>
-      {textValue}
+    <span style={propStyle} className={`bit-text ${size}`}>
+      {text}
     </span>
   );
 };

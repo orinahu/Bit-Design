@@ -10,6 +10,5 @@ export { MainListBottom } from "./components/MainListBottom/MainListBottom";
 export { Dropdown } from "./components/Dropdown/Dropdown";
 
 // Types
-export type { TextSize } from "./components/Text/Text";
+export type { Size } from "./components/Text/Text";
 export type { IconSize, IconStyle } from "./components/Icon/Icon";
-export type { CircleSize } from "./components/TrafficLights/TrafficLights";

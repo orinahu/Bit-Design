@@ -1,7 +1,7 @@
 import "./MainListLeftItem.css";
-import { TrafficLights, CircleSize } from "../../in";
+import { TrafficLights } from "../../in";
 import { Icon, IconSize, IconStyle } from "../../in";
-import { Text, TextSize } from "../../in";
+import { Text, Size } from "../../in";
 
 interface props {
   circleColor: string;
@@ -10,8 +10,8 @@ interface props {
   iconStyle?: IconStyle;
   iconName?: string;
   textValue: string;
-  textSize?: TextSize;
-  circleSize?: CircleSize;
+  textSize?: Size;
+  circleSize?: Size;
   textColor?: string;
 }
 
@@ -28,14 +28,14 @@ const MainListLeftItem = ({
 }: props) => {
   return (
     <div className="main-list-right-container">
-      <TrafficLights circleColor={circleColor} circleSize={circleSize} />
+      <TrafficLights circleColor={circleColor} size={circleSize} />
       <Icon
         iconName={iconName}
         iconStyle={iconStyle}
         iconSize={iconSize}
         iconColor={iconColor}
       />
-      <Text textColor={textColor} textValue={textValue} textSize={textSize} />
+      <Text color={textColor} text={textValue} size={textSize} />
     </div>
   );
 };

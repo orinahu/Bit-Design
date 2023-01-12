@@ -1,6 +1,6 @@
 import "./MainListBottomRightItem.css";
 import { Icon, IconSize, IconStyle } from "../../in";
-import { Text, TextSize } from "../../in";
+import { Text, Size } from "../../in";
 import { dateFormatMainList } from "../../helper/helper";
 
 interface props {
@@ -8,7 +8,7 @@ interface props {
   iconColor: string;
   iconSize?: IconSize;
   iconStyle?: IconStyle;
-  textSize?: TextSize;
+  textSize?: Size;
   textColor?: string;
   mainListDate: Date;
 }
@@ -31,9 +31,9 @@ const MainListBottomRightItem = ({
         iconColor={iconColor}
       />
       <Text
-        textColor={textColor}
-        textValue={dateFormatMainList(mainListDate)}
-        textSize={textSize}
+        color={textColor}
+        text={dateFormatMainList(mainListDate)}
+        size={textSize}
       />
     </div>
   );

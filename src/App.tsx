@@ -29,7 +29,7 @@ function App() {
         {/* Text */}
         <div className="grid-item">Text</div>
         <div className="grid-item">
-          <Text textValue="This is a text component" textSize="small" />
+          <Text text="This is a text component" size="small" />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.Text} />
@@ -38,7 +38,7 @@ function App() {
         {/* TrafficLights */}
         <div className="grid-item">TrafficLights</div>
         <div className="grid-item">
-          <TrafficLights circleColor="green" circleSize="regular" />
+          <TrafficLights circleColor="green" size="medium" text="80" />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.TrafficLights} />
@@ -47,12 +47,7 @@ function App() {
         {/* TrafficLightsText */}
         <div className="grid-item">TrafficLightsText</div>
         <div className="grid-item">
-          <TrafficLightsText
-            textValue="80"
-            textSize="small"
-            circleColor="red"
-            circleSize="regular"
-          />
+          <TrafficLightsText textValue="80" size="small" circleColor="red" />
         </div>
         <div className="grid-item">
           <PropertiesDisplay

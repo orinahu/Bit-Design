@@ -7,6 +7,7 @@ interface props {
   options: string[];
 }
 
+
 const Dropdown = ({ options }: props) => {
   const [choseOption, setChoseOption] = useState(options[0]);
 

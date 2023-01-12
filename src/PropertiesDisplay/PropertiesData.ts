@@ -12,18 +12,25 @@ interface AllPropertiesData {
 
 const AllDataOptions = {
   textValue: {
-    name: "textValue",
+    name: "text",
     type: "string",
     typeOptions: "-",
     isRequired: "true",
     defaultValue: "-",
   },
   textSize: {
-    name: "textSize",
-    type: "TextSize",
+    name: "size",
+    type: "Size",
     typeOptions: `"small" | "medium" | "large"`,
     isRequired: "false",
     defaultValue: "medium",
+  },
+  style: {
+    name: "style",
+    type: "css-object",
+    typeOptions: `-`,
+    isRequired: "false",
+    defaultValue: "-",
   },
   textColor: {
     name: "textColor",
@@ -41,10 +48,10 @@ const AllDataOptions = {
   },
   circleSize: {
     name: "circleSize",
-    type: "CircleSize",
-    typeOptions: `'small' | 'regular' | 'large'`,
+    type: "Size",
+    typeOptions: `'small' | 'medium' | 'large'`,
     isRequired: "false",
-    defaultValue: "regular",
+    defaultValue: "medium",
   },
   iconColor: {
     name: "iconColor",
@@ -220,7 +227,7 @@ export const propertiesData: AllPropertiesData = {
   Text: [
     AllDataOptions.textValue,
     AllDataOptions.textSize,
-    AllDataOptions.textColor,
+    AllDataOptions.style,
   ],
   TrafficLights: [AllDataOptions.circleColor, AllDataOptions.circleSize],
   TrafficLightsText: [

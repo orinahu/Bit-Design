@@ -1,3 +1,14 @@
+.traffic-lights-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-traffic {
+  margin-left: 3px;
+}
+
+
 .trafficLights-circle{
   background-color:red;
   border:2px solid black;    
@@ -11,7 +22,7 @@
   width:16px;
 }
 
-.trafficLights-circle.regular {
+.trafficLights-circle.medium {
   height:18px;
   width:18px;
 }
