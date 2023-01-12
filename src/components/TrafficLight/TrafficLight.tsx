@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, Size } from "../../in";
-import "./TrafficLights.css";
+import "./TrafficLight.css";
 
 interface props {
   circleColor: string;
@@ -8,7 +8,7 @@ interface props {
   text?: string;
 }
 
-const TrafficLights = ({ text = "", circleColor, size = "medium" }: props) => {
+const TrafficLight = ({ text = "", circleColor, size = "medium" }: props) => {
   const circleStyle: React.CSSProperties = {
     backgroundColor: circleColor,
   };
@@ -23,4 +23,4 @@ const TrafficLights = ({ text = "", circleColor, size = "medium" }: props) => {
   );
 };
 
-export { TrafficLights };
+export { TrafficLight };

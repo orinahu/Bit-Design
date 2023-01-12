@@ -1,5 +1,5 @@
 import "./MainListLeftItem.css";
-import { TrafficLights } from "../../in";
+import { TrafficLight } from "../../in";
 import { Icon, IconSize, IconStyle } from "../../in";
 import { Text, Size } from "../../in";
 
@@ -28,7 +28,7 @@ const MainListLeftItem = ({
 }: props) => {
   return (
     <div className="main-list-right-container">
-      <TrafficLights circleColor={circleColor} size={circleSize} />
+      <TrafficLight circleColor={circleColor} size={circleSize} />
       <Icon
         iconName={iconName}
         iconStyle={iconStyle}

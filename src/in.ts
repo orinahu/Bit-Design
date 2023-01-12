@@ -1,6 +1,5 @@
 export { Text } from "./components/Text/Text";
-export { TrafficLights } from "./components/TrafficLights/TrafficLights";
-export { TrafficLightsText } from "./components/TrafficLightsText/TrafficLightsText";
+export { TrafficLight } from "./components/TrafficLight/TrafficLight";
 export { Icon } from "./components/Icon/Icon";
 export { MainListLeftItem } from "./components/MainListLeftItem/MainListLeftItem";
 export { MainListUpperRightItem } from "./components/MainListUpperRightItem/MainListUpperRightItem";

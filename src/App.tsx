@@ -1,8 +1,7 @@
 import "./App.css";
 import {
   Text,
-  TrafficLights,
-  TrafficLightsText,
+  TrafficLight,
   Icon,
   MainListLeftItem,
   MainListUpperRightItem,
@@ -35,25 +34,15 @@ function App() {
           <PropertiesDisplay propertiesObject={propertiesData.Text} />
         </div>
 
-        {/* TrafficLights */}
-        <div className="grid-item">TrafficLights</div>
+        {/* TrafficLight */}
+        <div className="grid-item">TrafficLight</div>
         <div className="grid-item">
-          <TrafficLights circleColor="green" size="medium" text="80" />
+          <TrafficLight circleColor="green" size="medium" text="80" />
         </div>
         <div className="grid-item">
-          <PropertiesDisplay propertiesObject={propertiesData.TrafficLights} />
+          <PropertiesDisplay propertiesObject={propertiesData.TrafficLight} />
         </div>
 
-        {/* TrafficLightsText */}
-        <div className="grid-item">TrafficLightsText</div>
-        <div className="grid-item">
-          <TrafficLightsText textValue="80" size="small" circleColor="red" />
-        </div>
-        <div className="grid-item">
-          <PropertiesDisplay
-            propertiesObject={propertiesData.TrafficLightsText}
-          />
-        </div>
 
         {/* Icon */}
         <div className="grid-item">Icon</div>

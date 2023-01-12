@@ -229,15 +229,7 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.textSize,
     AllDataOptions.style,
   ],
-  TrafficLights: [AllDataOptions.circleColor, AllDataOptions.circleSize],
-  TrafficLightsText: [
-    AllDataOptions.circleColor,
-    AllDataOptions.circleSize,
-
-    AllDataOptions.textValue,
-    AllDataOptions.textSize,
-    AllDataOptions.textColor,
-  ],
+  TrafficLight: [AllDataOptions.circleColor, AllDataOptions.circleSize],
   Icon: [
     AllDataOptions.iconName,
     AllDataOptions.iconColor,
