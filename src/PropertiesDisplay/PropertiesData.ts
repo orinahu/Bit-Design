@@ -18,6 +18,13 @@ const AllDataOptions = {
     isRequired: "true",
     defaultValue: "-",
   },
+  className: {
+    name: "className",
+    type: "string",
+    typeOptions: "-",
+    isRequired: "false",
+    defaultValue: "-",
+  },
   textSize: {
     name: "size",
     type: "Size",
@@ -47,7 +54,7 @@ const AllDataOptions = {
     defaultValue: "",
   },
   circleSize: {
-    name: "circleSize",
+    name: "size",
     type: "Size",
     typeOptions: `'small' | 'medium' | 'large'`,
     isRequired: "false",
@@ -228,17 +235,24 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.textValue,
     AllDataOptions.textSize,
     AllDataOptions.style,
+    AllDataOptions.className,
   ],
-  TrafficLight: [AllDataOptions.circleColor, AllDataOptions.circleSize],
+  TrafficLight: [
+    AllDataOptions.circleColor,
+    AllDataOptions.textValue,
+    AllDataOptions.className,
+    AllDataOptions.circleSize,
+    AllDataOptions.style,
+    AllDataOptions.className,
+  ],
   Icon: [
     AllDataOptions.iconName,
     AllDataOptions.iconColor,
     AllDataOptions.iconSize,
     AllDataOptions.iconStyle,
+    AllDataOptions.className,
   ],
-  MainListBottom: [
-    AllDataOptions.MainListItem
-  ],
+  MainListBottom: [AllDataOptions.MainListItem],
   MainListLeftItem: [
     AllDataOptions.circleColor,
     AllDataOptions.circleSize,

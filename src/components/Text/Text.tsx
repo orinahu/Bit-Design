@@ -5,6 +5,7 @@ export type Size = "small" | "medium" | "large";
 
 interface props {
   text: string;
+  className?: string;
   size?: Size;
   color?: string;
   style?: React.CSSProperties 
@@ -13,14 +14,15 @@ interface props {
 const Text = ({
   text,
   size = "medium",
-  style
+  style,
+  className
 }: props) => {
   const propStyle: React.CSSProperties = {
     ...style
   };
 
   return (
-    <span style={propStyle} className={`bit-text ${size}`}>
+    <span style={propStyle} className={`bit-text ${className} ${size}`}>
       {text}
     </span>
   );
