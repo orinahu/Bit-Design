@@ -1,6 +1,6 @@
 import {
-  MainListBottomRightItem,
-  MainListUpperRightItem,
+  DateTime,
+  Id,
   Status,
 } from "../../in";
 import { Size, IconSize, IconForm } from "../../in";
@@ -67,18 +67,18 @@ const MainListItem = ({
       </div>
       <div className="main-list-right-item-container">
         <div className="main-list-upper-right-item">
-          <MainListUpperRightItem
+          <Id
             iconColor={upperRightIconColor}
             iconSize={upperRightIconSize}
-            iconStyle={upperRightIconStyle}
+            iconForm={upperRightIconStyle}
             iconName={upperRightIconName}
-            textValue={upperRightTextValue}
-            textSize={upperRightTextSize}
+            text={upperRightTextValue}
+            size={upperRightTextSize}
           />
         </div>
         <div className="main-list-right-item-divider"></div>
         <div className="main-list-bottom-right-item">
-        <MainListBottomRightItem
+        <DateTime
           iconColor={bottomRightIconColor}
           iconSize={bottomRightIconSize}
           iconStyle={bottomRightIconStyle}

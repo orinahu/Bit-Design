@@ -4,8 +4,8 @@ import {
   TrafficLight,
   Icon,
   Status,
-  MainListUpperRightItem,
-  MainListBottomRightItem,
+  Id,
+  DateTime,
   MainListItem,
   MainListBottom,
   Dropdown,
@@ -68,21 +68,21 @@ function App() {
           />
         </div>
 
-        {/* MainListUpperRightItem */}
-        <div className="grid-item">Main List Upper Left Item</div>
+        {/* Id */}
+        <div className="grid-item">Id</div>
         <div className="grid-item">
-          <MainListUpperRightItem textValue="347A" />
+          <Id text="347A" />
         </div>
         <div className="grid-item">
           <PropertiesDisplay
-            propertiesObject={propertiesData.MainListUpperRightItem}
+            propertiesObject={propertiesData.Id}
           />
         </div>
 
-        {/* MainListBottomRightItem */}
-        <div className="grid-item">Main List Bottom Left Item</div>
+        {/* DateTime */}
+        <div className="grid-item">DateTime</div>
         <div className="grid-item">
-          <MainListBottomRightItem
+          <DateTime
             mainListDate={new Date()}
             iconStyle="regular"
             iconColor="green"
@@ -90,7 +90,7 @@ function App() {
         </div>
         <div className="grid-item">
           <PropertiesDisplay
-            propertiesObject={propertiesData.MainListBottomRightItem}
+            propertiesObject={propertiesData.DateTime}
           />
         </div>
         {/* MainListItem */}

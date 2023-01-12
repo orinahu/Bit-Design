@@ -1,22 +1,23 @@
-import "./MainListUpperRightItem.css";
+import "./DateTime.css";
 import { Icon, IconSize, IconForm } from "../../in";
 import { Text, Size } from "../../in";
+import { dateFormatMainList } from "../../helper/helper";
 
 interface props {
   iconName?: string;
-  iconColor?: string;
+  iconColor: string;
   iconSize?: IconSize;
   iconStyle?: IconForm;
-  textValue: string;
   textSize?: Size;
+  mainListDate: Date;
 }
 
-const MainListUpperRightItem = ({
-  iconColor = "#52517A",
+const DateTime = ({
+  iconColor = "red",
   iconSize = "lg",
   iconStyle,
-  iconName = "id-card",
-  textValue,
+  iconName = "calendar",
+  mainListDate,
   textSize = "small",
 }: props) => {
   return (
@@ -27,9 +28,12 @@ const MainListUpperRightItem = ({
         iconSize={iconSize}
         iconColor={iconColor}
       />
-      <Text text={textValue} size={textSize} />
+      <Text
+        text={dateFormatMainList(mainListDate)}
+        size={textSize}
+      />
     </div>
   );
 };
 
-export { MainListUpperRightItem };
+export { DateTime };

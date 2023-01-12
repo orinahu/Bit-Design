@@ -112,7 +112,7 @@ const AllDataOptions = {
 };
 
 const diffDefaultValue = {
-  MainListUpperRightItem: {
+  Id: {
     iconColor: { defaultValue: "#52517A" },
     iconSize: { defaultValue: "lg" },
     iconName: { defaultValue: "id-card", isRequired: "false" },
@@ -123,7 +123,7 @@ const diffDefaultValue = {
     iconSize: { defaultValue: "lg" },
     iconName: { defaultValue: "image", isRequired: "false" },
   },
-  MainListBottomRightItem: {
+  DateTime: {
     iconColor: { defaultValue: "red", isRequired: "true" },
     iconSize: { defaultValue: "lg" },
     iconName: { defaultValue: "calendar", isRequired: "false" },
@@ -260,7 +260,7 @@ export const propertiesData: AllPropertiesData = {
 
     AllDataOptions.textValue,
     AllDataOptions.textSize,
-    AllDataOptions.className,
+        AllDataOptions.className,
 
     {
       ...AllDataOptions.iconName,
@@ -273,51 +273,51 @@ export const propertiesData: AllPropertiesData = {
     },
     AllDataOptions.iconStyle,
   ],
-  MainListUpperRightItem: [
+  Id: [
     {
       ...AllDataOptions.iconName,
-      ...diffDefaultValue.MainListUpperRightItem.iconName,
+      ...diffDefaultValue.Id.iconName,
     },
     {
       ...AllDataOptions.iconSize,
-      ...diffDefaultValue.MainListUpperRightItem.iconSize,
+      ...diffDefaultValue.Id.iconSize,
     },
     {
       ...AllDataOptions.iconColor,
-      ...diffDefaultValue.MainListUpperRightItem.iconColor,
+      ...diffDefaultValue.Id.iconColor,
     },
     AllDataOptions.iconStyle,
     {
       ...AllDataOptions.textColor,
-      ...diffDefaultValue.MainListUpperRightItem.textColor,
+      ...diffDefaultValue.Id.textColor,
     },
     {
       ...AllDataOptions.textSize,
-      ...diffDefaultValue.MainListUpperRightItem.textSize,
+      ...diffDefaultValue.Id.textSize,
     },
     AllDataOptions.textValue,
   ],
-  MainListBottomRightItem: [
+  DateTime: [
     {
       ...AllDataOptions.iconName,
-      ...diffDefaultValue.MainListBottomRightItem.iconName,
+      ...diffDefaultValue.DateTime.iconName,
     },
     {
       ...AllDataOptions.iconSize,
-      ...diffDefaultValue.MainListBottomRightItem.iconSize,
+      ...diffDefaultValue.DateTime.iconSize,
     },
     {
       ...AllDataOptions.iconColor,
-      ...diffDefaultValue.MainListBottomRightItem.iconColor,
+      ...diffDefaultValue.DateTime.iconColor,
     },
     AllDataOptions.iconStyle,
     {
       ...AllDataOptions.textColor,
-      ...diffDefaultValue.MainListBottomRightItem.textColor,
+      ...diffDefaultValue.DateTime.textColor,
     },
     {
       ...AllDataOptions.textSize,
-      ...diffDefaultValue.MainListBottomRightItem.textSize,
+      ...diffDefaultValue.DateTime.textSize,
     },
     AllDataOptions.mainListDate,
   ],
