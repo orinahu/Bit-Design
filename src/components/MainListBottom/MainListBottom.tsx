@@ -1,11 +1,18 @@
 import React from "react";
 import "./MainListBottom.css";
 interface MainListItem {
-  children: JSX.Element[] | JSX.Element;
+  items: Array<any>,
+  children: any | JSX.Element[] | JSX.Element;
 }
 
-const MainListBottom = ({ children }: MainListItem) => {
-  return <div className="main-list-bottom">{children}</div>;
+const MainListBottom = ({ items, children }: MainListItem) => {
+  return <div className="main-list-bottom">
+    {items.map((item, index) => {
+      return <div key={index}>
+        {children(item)}
+      </div>;
+    })}
+  </div>;
 };
 
 export { MainListBottom };

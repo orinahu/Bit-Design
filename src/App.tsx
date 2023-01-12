@@ -15,6 +15,7 @@ import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
 import { propertiesData } from "./PropertiesDisplay/PropertiesData";
 import { randomListItem } from "./helper/helper";
+const items: any[] = randomListItem(10);
 
 function App() {
   return (
@@ -124,7 +125,18 @@ function App() {
         </div>
         <div className="grid-item">Main List Bottom</div>
         <div className="grid-item">
-          <MainListBottom>{randomListItem(10)}</MainListBottom>
+          <MainListBottom items={items}>
+            {({ color, date, id, text }: any) => (
+              <MainListItem
+                key={id}
+                bottomRightIconColor={color}
+                bottomRightMainListDate={date}
+                upperRightTextValue={id}
+                leftItemCircleColor={color}
+                leftItemTextValue={text}
+              />
+            )}
+          </MainListBottom>
         </div>
         <div className="grid-item table">
           {" "}

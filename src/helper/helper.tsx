@@ -14,18 +14,16 @@ export const dateFormatMainList = (date: Date): string => {
 };
 
 export const randomListItem = (n = 10) => {
-  const array: JSX.Element[] = [];
+  const array: any[] = [];
   for (let i = 0; i < n; i++) {
-    const color =randomColor();
-    array.push(
-      <MainListItem
-        bottomRightIconColor={color}
-        bottomRightMainListDate={new Date()}
-        upperRightTextValue={`id${Math.floor(Math.random() * 201 + 100)}`}
-        leftItemCircleColor={color}
-        leftItemTextValue={`component ${i + 1}`}
-      />
-    );
+    const color = randomColor();
+
+    array.push({
+      color,
+      date: new Date(),
+      id: `id${Math.floor(Math.random() * 201 + 100)}`,
+      text: `component ${i + 1}`,
+    });
   }
   return array;
 };
