@@ -8,6 +8,8 @@ interface props {
   iconSize?: IconSize;
   iconForm?: IconForm;
   iconName: string;
+  style?: React.CSSProperties;
+  className?: string;
 }
 
 const Icon = ({
@@ -15,13 +17,16 @@ const Icon = ({
   iconSize = "sm",
   iconForm = "solid",
   iconName,
+  style,
+  className,
 }: props) => {
   const iconDesign: React.CSSProperties = {
     color: iconColor,
+    ...style,
   };
 
   return (
-    <span className="icon-container" style={iconDesign}>
+    <span className={`icon-container ${className}`} style={iconDesign}>
       <i className={`fa-${iconForm} fa-${iconName}  fa-${iconSize}`}></i>
     </span>
   );

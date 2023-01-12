@@ -82,8 +82,8 @@ const AllDataOptions = {
     defaultValue: "-",
   },
   iconStyle: {
-    name: "iconStyle",
-    type: "IconStyle",
+    name: "iconForm",
+    type: "IconForm",
     typeOptions: `"solid" | "regular" | "light"`,
     isRequired: "false",
     defaultValue: "solid",
@@ -251,6 +251,7 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.iconSize,
     AllDataOptions.iconStyle,
     AllDataOptions.className,
+    AllDataOptions.style,
   ],
   MainListBottom: [AllDataOptions.MainListItem],
   MainListLeftItem: [

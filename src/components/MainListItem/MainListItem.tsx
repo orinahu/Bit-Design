@@ -12,7 +12,6 @@ interface props {
   bottomRightIconSize?: IconSize;
   bottomRightIconStyle?: IconForm;
   bottomRightTextSize?: Size;
-  bottomRightTextColor?: string;
   bottomRightMainListDate: Date;
   upperRightIconName?: string;
   upperRightIconColor?: string;
@@ -20,7 +19,6 @@ interface props {
   upperRightIconStyle?: IconForm;
   upperRightTextValue: string;
   upperRightTextSize?: Size;
-  upperRightTextColor?: string;
   leftItemCircleColor: string;
   leftItemIconColor?: string;
   leftItemIconSize?: IconSize;
@@ -29,7 +27,6 @@ interface props {
   leftItemTextValue: string;
   leftItemTextSize?: Size;
   leftItemCircleSize?: Size;
-  leftItemTextColor?: string;
   selected?: boolean;
 }
 
@@ -39,7 +36,6 @@ const MainListItem = ({
   bottomRightIconSize,
   bottomRightIconStyle,
   bottomRightTextSize,
-  bottomRightTextColor,
   bottomRightMainListDate,
   upperRightIconName,
   upperRightIconColor,
@@ -47,7 +43,6 @@ const MainListItem = ({
   upperRightIconStyle,
   upperRightTextValue,
   upperRightTextSize,
-  upperRightTextColor,
   leftItemCircleColor,
   leftItemIconColor,
   leftItemIconSize,
@@ -55,8 +50,6 @@ const MainListItem = ({
   leftItemIconName,
   leftItemTextValue,
   leftItemTextSize,
-  leftItemCircleSize,
-  leftItemTextColor,
   selected = false,
 }: props) => {
   return (
@@ -68,9 +61,7 @@ const MainListItem = ({
           iconStyle={leftItemIconStyle}
           iconName={leftItemIconName}
           textValue={leftItemTextValue}
-          textSize={leftItemTextSize}
-          circleSize={leftItemCircleSize}
-          textColor={leftItemTextColor}
+          size={leftItemTextSize}
           iconSize={leftItemIconSize}
         />
       </div>
@@ -83,7 +74,6 @@ const MainListItem = ({
             iconName={upperRightIconName}
             textValue={upperRightTextValue}
             textSize={upperRightTextSize}
-            textColor={upperRightTextColor}
           />
         </div>
         <div className="main-list-right-item-divider"></div>
@@ -95,7 +85,6 @@ const MainListItem = ({
           iconName={bottomRightIconName}
           mainListDate={bottomRightMainListDate}
           textSize={bottomRightTextSize}
-          textColor={bottomRightTextColor}
         />
         </div>
       </div>

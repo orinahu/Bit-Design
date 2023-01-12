@@ -9,7 +9,6 @@ interface props {
   iconSize?: IconSize;
   iconStyle?: IconForm;
   textSize?: Size;
-  textColor?: string;
   mainListDate: Date;
 }
 
@@ -20,7 +19,6 @@ const MainListBottomRightItem = ({
   iconName = "calendar",
   mainListDate,
   textSize = "small",
-  textColor = "#606060",
 }: props) => {
   return (
     <div className="main-list-upper-left-container">
@@ -31,7 +29,6 @@ const MainListBottomRightItem = ({
         iconColor={iconColor}
       />
       <Text
-        color={textColor}
         text={dateFormatMainList(mainListDate)}
         size={textSize}
       />

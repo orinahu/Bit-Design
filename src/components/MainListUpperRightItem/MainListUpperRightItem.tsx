@@ -9,7 +9,6 @@ interface props {
   iconStyle?: IconForm;
   textValue: string;
   textSize?: Size;
-  textColor?: string;
 }
 
 const MainListUpperRightItem = ({
@@ -19,7 +18,6 @@ const MainListUpperRightItem = ({
   iconName = "id-card",
   textValue,
   textSize = "small",
-  textColor = "#606060",
 }: props) => {
   return (
     <div className="main-list-upper-left-container">
@@ -29,7 +27,7 @@ const MainListUpperRightItem = ({
         iconSize={iconSize}
         iconColor={iconColor}
       />
-      <Text color={textColor} text={textValue} size={textSize} />
+      <Text text={textValue} size={textSize} />
     </div>
   );
 };

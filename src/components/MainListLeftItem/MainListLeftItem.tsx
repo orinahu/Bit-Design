@@ -10,9 +10,8 @@ interface props {
   iconStyle?: IconForm;
   iconName?: string;
   textValue: string;
-  textSize?: Size;
+  size?: Size;
   circleSize?: Size;
-  textColor?: string;
 }
 
 const MainListLeftItem = ({
@@ -22,20 +21,18 @@ const MainListLeftItem = ({
   iconStyle,
   iconName = "image",
   textValue,
-  textSize,
-  circleSize,
-  textColor,
+  size,
 }: props) => {
   return (
     <div className="main-list-right-container">
-      <TrafficLight circleColor={circleColor} size={circleSize} />
+      <TrafficLight circleColor={circleColor} size={size} />
       <Icon
         iconName={iconName}
         iconForm={iconStyle}
         iconSize={iconSize}
         iconColor={iconColor}
       />
-      <Text color={textColor} text={textValue} size={textSize} />
+      <Text text={textValue} size={size} />
     </div>
   );
 };
