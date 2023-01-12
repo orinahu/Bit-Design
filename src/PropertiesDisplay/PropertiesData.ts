@@ -254,13 +254,13 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.style,
   ],
   MainListBottom: [AllDataOptions.MainListItem],
-  MainListLeftItem: [
+  Status: [
     AllDataOptions.circleColor,
     AllDataOptions.circleSize,
 
     AllDataOptions.textValue,
     AllDataOptions.textSize,
-    AllDataOptions.textColor,
+    AllDataOptions.className,
 
     {
       ...AllDataOptions.iconName,

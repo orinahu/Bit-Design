@@ -3,7 +3,7 @@ import {
   Text,
   TrafficLight,
   Icon,
-  MainListLeftItem,
+  Status,
   MainListUpperRightItem,
   MainListBottomRightItem,
   MainListItem,
@@ -53,18 +53,18 @@ function App() {
           <PropertiesDisplay propertiesObject={propertiesData.Icon} />
         </div>
 
-        {/* MainListLeftItem */}
-        <div className="grid-item">Main List Left Item</div>
+        {/* Status */}
+        <div className="grid-item">Status</div>
         <div className="grid-item">
-          <MainListLeftItem
+          <Status
             circleColor="red"
-            textValue="component 1"
-            iconStyle="regular"
+            text="component 1"
+            iconForm="regular"
           />
         </div>
         <div className="grid-item">
           <PropertiesDisplay
-            propertiesObject={propertiesData.MainListLeftItem}
+            propertiesObject={propertiesData.Status}
           />
         </div>
 

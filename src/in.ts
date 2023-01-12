@@ -1,7 +1,7 @@
 export { Text } from "./components/Text/Text";
 export { TrafficLight } from "./components/TrafficLight/TrafficLight";
 export { Icon } from "./components/Icon/Icon";
-export { MainListLeftItem } from "./components/MainListLeftItem/MainListLeftItem";
+export { Status } from "./components/Status/Status";
 export { MainListUpperRightItem } from "./components/MainListUpperRightItem/MainListUpperRightItem";
 export { MainListBottomRightItem } from "./components/MainListBottomRightItem/MainListBottomRightItem";
 export { MainListItem } from "./components/MainListItem/MainListItem";

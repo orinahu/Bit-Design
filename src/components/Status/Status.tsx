@@ -1,4 +1,4 @@
-import "./MainListLeftItem.css";
+import "./Status.css";
 import { TrafficLight } from "../../in";
 import { Icon, IconSize, IconForm } from "../../in";
 import { Text, Size } from "../../in";
@@ -7,34 +7,35 @@ interface props {
   circleColor: string;
   iconColor?: string;
   iconSize?: IconSize;
-  iconStyle?: IconForm;
+  iconForm?: IconForm;
   iconName?: string;
-  textValue: string;
+  text: string;
   size?: Size;
-  circleSize?: Size;
+  className?: string;
 }
 
-const MainListLeftItem = ({
+const Status = ({
   circleColor,
   iconColor,
   iconSize = "lg",
-  iconStyle,
+  iconForm,
   iconName = "image",
-  textValue,
+  text,
   size,
+  className,
 }: props) => {
   return (
-    <div className="main-list-right-container">
+    <div className={`main-list-right-container ${className}`}>
       <TrafficLight circleColor={circleColor} size={size} />
       <Icon
         iconName={iconName}
-        iconForm={iconStyle}
+        iconForm={iconForm}
         iconSize={iconSize}
         iconColor={iconColor}
       />
-      <Text text={textValue} size={size} />
+      <Text text={text} size={size} />
     </div>
   );
 };
 
-export { MainListLeftItem };
+export { Status };

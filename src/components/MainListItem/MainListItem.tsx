@@ -1,7 +1,7 @@
 import {
   MainListBottomRightItem,
   MainListUpperRightItem,
-  MainListLeftItem,
+  Status,
 } from "../../in";
 import { Size, IconSize, IconForm } from "../../in";
 import "./MainListItem.css";
@@ -55,12 +55,12 @@ const MainListItem = ({
   return (
     <div className={`main-list-item-container ${selected && "selected"}`}>
       <div className="main-list-left-item-container">
-        <MainListLeftItem
+        <Status
           circleColor={leftItemCircleColor}
           iconColor={leftItemIconColor}
-          iconStyle={leftItemIconStyle}
+          iconForm={leftItemIconStyle}
           iconName={leftItemIconName}
-          textValue={leftItemTextValue}
+          text={leftItemTextValue}
           size={leftItemTextSize}
           iconSize={leftItemIconSize}
         />
