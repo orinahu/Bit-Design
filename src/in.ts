@@ -4,7 +4,7 @@ export { Icon } from "./components/Icon/Icon";
 export { Status } from "./components/Status/Status";
 export { Id } from "./components/Id/Id";
 export { DateTime } from "./components/DateTime/DateTime";
-export { MainListItem } from "./components/MainListItem/MainListItem";
+export { ListItem } from "./components/ListItem/ListItem";
 export { MainListBottom } from "./components/MainListBottom/MainListBottom";
 export { Dropdown } from "./components/Dropdown/Dropdown";
 

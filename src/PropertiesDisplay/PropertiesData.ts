@@ -39,13 +39,6 @@ const AllDataOptions = {
     isRequired: "false",
     defaultValue: "-",
   },
-  textColor: {
-    name: "textColor",
-    type: "string",
-    typeOptions: "-",
-    isRequired: "false",
-    defaultValue: "black",
-  },
   circleColor: {
     name: "circleColor",
     type: "string",
@@ -89,7 +82,7 @@ const AllDataOptions = {
     defaultValue: "solid",
   },
   mainListDate: {
-    name: "mainListDate",
+    name: "date",
     type: "Date",
     typeOptions: `-`,
     isRequired: "true",
@@ -102,7 +95,7 @@ const AllDataOptions = {
     isRequired: "false",
     defaultValue: "false",
   },
-  MainListItem: {
+  ListItem: {
     name: "react-children",
     type: "JSX.Element[] | JSX.Element",
     typeOptions: `-`,
@@ -117,7 +110,6 @@ const diffDefaultValue = {
     iconSize: { defaultValue: "lg" },
     iconName: { defaultValue: "id-card", isRequired: "false" },
     textSize: { defaultValue: "small" },
-    textColor: { defaultValue: "#606060" },
   },
   MainListRightItem: {
     iconSize: { defaultValue: "lg" },
@@ -128,104 +120,100 @@ const diffDefaultValue = {
     iconSize: { defaultValue: "lg" },
     iconName: { defaultValue: "calendar", isRequired: "false" },
     textSize: { defaultValue: "small" },
-    textColor: { defaultValue: "#606060" },
   },
-  MainListItem: {
-    bottomRightIconName: {
+  ListItem: {
+    DateTimeIconName: {
       ...AllDataOptions.iconName,
-      name: "bottomRightIconName",
+      name: "DateTimeIconName",
       isRequired: "false",
     },
-    bottomRightIconColor: {
+    DateTimeIconColor: {
       ...AllDataOptions.iconColor,
-      name: "bottomRightIconColor",
+      name: "DateTimeIconColor",
       isRequired: "true",
     },
-    bottomRightIconSize: {
+    DateTimeIconSize: {
       ...AllDataOptions.iconSize,
-      name: "bottomRightIconSize",
+      name: "DateTimeIconSize",
     },
-    bottomRightIconStyle: {
+    DateTimeIconForm: {
       ...AllDataOptions.iconStyle,
-      name: "bottomRightIconStyle",
+      name: "DateTimeIconForm",
     },
-    bottomRightTextSize: {
+    DateTimeSize: {
       ...AllDataOptions.textSize,
-      name: "bottomRightTextSize",
+      name: "DateTimeSize",
     },
-    bottomRightTextColor: {
-      ...AllDataOptions.textColor,
-      name: "bottomRightTextColor",
+    DateTimeTextColor: {
+      name: "DateTimeSize",
     },
-    bottomRightMainListDate: {
+    DateTimeMainListDate: {
       ...AllDataOptions.mainListDate,
-      name: "bottomRightMainListDate",
+      name: "date",
     },
-    upperRightIconName: {
+    IdIconName: {
       ...AllDataOptions.iconName,
-      name: "upperRightIconName",
+      name: "IdIconName",
       isRequired: "false",
     },
-    upperRightIconColor: {
+    IdIconColor: {
       ...AllDataOptions.iconColor,
-      name: "upperRightIconColor",
+      name: "IdIconColor",
     },
-    upperRightIconSize: {
+    IdIconSize: {
       ...AllDataOptions.iconSize,
-      name: "upperRightIconSize",
+      name: "IdIconSize",
     },
-    upperRightIconStyle: {
+    IdIconForm: {
       ...AllDataOptions.iconStyle,
-      name: "upperRightIconStyle",
+      name: "IdIconForm",
     },
-    upperRightTextValue: {
+    IdText: {
       ...AllDataOptions.textValue,
-      name: "upperRightTextValue",
+      name: "IdText",
     },
-    upperRightTextSize: {
+    IdSize: {
       ...AllDataOptions.textSize,
-      name: "upperRightTextSize",
+      name: "IdSize",
     },
-    upperRightTextColor: {
-      ...AllDataOptions.textColor,
-      name: "upperRightTextColor",
+    IdTextColor: {
+      name: "IdTextColor",
     },
-    leftItemCircleColor: {
+    statusCircleColor: {
       ...AllDataOptions.circleColor,
-      name: "leftItemCircleColor",
+      name: "statusCircleColor",
     },
-    leftItemIconColor: {
+    statusIconColor: {
       ...AllDataOptions.iconColor,
-      name: "leftItemIconColor",
+      name: "statusIconColor",
     },
-    leftItemIconSize: {
+    statusIconSize: {
       ...AllDataOptions.iconSize,
-      name: "leftItemIconSize",
+      name: "statusIconSize",
     },
-    leftItemIconStyle: {
+    statusIconForm: {
       ...AllDataOptions.iconStyle,
-      name: "leftItemIconStyle",
+      name: "statusIconForm",
     },
-    leftItemIconName: {
+    statusIconName: {
       ...AllDataOptions.iconName,
-      name: "leftItemIconName",
+      name: "statusIconName",
       isRequired: "false",
     },
-    leftItemTextValue: {
+    statusText: {
       ...AllDataOptions.textValue,
-      name: "leftItemTextValue",
+      name: "statusText",
     },
-    leftItemTextSize: {
+    statusSize: {
       ...AllDataOptions.textSize,
-      name: "leftItemTextSize",
+      name: "statusSize",
     },
-    leftItemCircleSize: {
+    statusCircleSize: {
       ...AllDataOptions.circleSize,
-      name: "leftItemCircleSize",
+      name: "statusCircleSize",
     },
-    leftItemTextColor: {
-      ...AllDataOptions.textColor,
-      name: "leftItemTextColor",
+    statusTextColor: {
+      name: "statusTextColor",
     },
   },
 };
@@ -253,8 +241,9 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.className,
     AllDataOptions.style,
   ],
-  MainListBottom: [AllDataOptions.MainListItem],
+  MainListBottom: [AllDataOptions.ListItem],
   Status: [
+    AllDataOptions.className,
     AllDataOptions.circleColor,
     AllDataOptions.circleSize,
 
@@ -262,7 +251,7 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.textSize,
         AllDataOptions.className,
 
-    {
+  {
       ...AllDataOptions.iconName,
       ...diffDefaultValue.MainListRightItem.iconName,
     },
@@ -274,6 +263,7 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.iconStyle,
   ],
   Id: [
+    AllDataOptions.className,
     {
       ...AllDataOptions.iconName,
       ...diffDefaultValue.Id.iconName,
@@ -287,10 +277,7 @@ export const propertiesData: AllPropertiesData = {
       ...diffDefaultValue.Id.iconColor,
     },
     AllDataOptions.iconStyle,
-    {
-      ...AllDataOptions.textColor,
-      ...diffDefaultValue.Id.textColor,
-    },
+
     {
       ...AllDataOptions.textSize,
       ...diffDefaultValue.Id.textSize,
@@ -298,6 +285,7 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.textValue,
   ],
   DateTime: [
+    AllDataOptions.className,
     {
       ...AllDataOptions.iconName,
       ...diffDefaultValue.DateTime.iconName,
@@ -311,41 +299,35 @@ export const propertiesData: AllPropertiesData = {
       ...diffDefaultValue.DateTime.iconColor,
     },
     AllDataOptions.iconStyle,
-    {
-      ...AllDataOptions.textColor,
-      ...diffDefaultValue.DateTime.textColor,
-    },
+
     {
       ...AllDataOptions.textSize,
       ...diffDefaultValue.DateTime.textSize,
     },
     AllDataOptions.mainListDate,
   ],
-  MainListItem: [
-    { ...diffDefaultValue.MainListItem.bottomRightIconColor },
-    { ...diffDefaultValue.MainListItem.bottomRightIconName },
-    { ...diffDefaultValue.MainListItem.bottomRightIconSize },
-    { ...diffDefaultValue.MainListItem.bottomRightIconStyle },
-    { ...diffDefaultValue.MainListItem.bottomRightMainListDate },
-    { ...diffDefaultValue.MainListItem.bottomRightTextColor },
-    { ...diffDefaultValue.MainListItem.bottomRightTextSize },
-    { ...diffDefaultValue.MainListItem.leftItemCircleColor },
-    { ...diffDefaultValue.MainListItem.leftItemCircleSize },
-    { ...diffDefaultValue.MainListItem.leftItemIconColor },
-    { ...diffDefaultValue.MainListItem.upperRightIconName },
-    { ...diffDefaultValue.MainListItem.leftItemIconSize },
-    { ...diffDefaultValue.MainListItem.leftItemTextValue },
-    { ...diffDefaultValue.MainListItem.leftItemIconStyle },
-    { ...diffDefaultValue.MainListItem.leftItemIconName },
-    { ...diffDefaultValue.MainListItem.leftItemTextSize },
-    { ...diffDefaultValue.MainListItem.leftItemTextColor },
+  ListItem: [
+    AllDataOptions.className,
+    { ...diffDefaultValue.ListItem.DateTimeIconColor },
+    { ...diffDefaultValue.ListItem.DateTimeIconName },
+    { ...diffDefaultValue.ListItem.DateTimeIconSize },
+    { ...diffDefaultValue.ListItem.DateTimeIconForm },
+    { ...diffDefaultValue.ListItem.DateTimeMainListDate },
+    { ...diffDefaultValue.ListItem.DateTimeSize },
+    { ...diffDefaultValue.ListItem.statusCircleColor },
+    { ...diffDefaultValue.ListItem.statusCircleSize },
+    { ...diffDefaultValue.ListItem.statusIconColor },
+    { ...diffDefaultValue.ListItem.IdIconName },
+    { ...diffDefaultValue.ListItem.statusIconSize },
+    { ...diffDefaultValue.ListItem.statusText },
+    { ...diffDefaultValue.ListItem.statusIconForm },
+    { ...diffDefaultValue.ListItem.statusIconName },
+    { ...diffDefaultValue.ListItem.statusSize },
     { ...AllDataOptions.selected },
-    { ...diffDefaultValue.MainListItem.upperRightIconColor },
-    { ...diffDefaultValue.MainListItem.upperRightIconSize },
-    { ...diffDefaultValue.MainListItem.upperRightIconStyle },
-    { ...diffDefaultValue.MainListItem.upperRightIconStyle },
-    { ...diffDefaultValue.MainListItem.upperRightTextColor },
-    { ...diffDefaultValue.MainListItem.upperRightTextSize },
-    { ...diffDefaultValue.MainListItem.upperRightTextValue },
+    { ...diffDefaultValue.ListItem.IdIconColor },
+    { ...diffDefaultValue.ListItem.IdIconSize },
+    { ...diffDefaultValue.ListItem.IdIconForm },
+    { ...diffDefaultValue.ListItem.IdSize },
+    { ...diffDefaultValue.ListItem.IdText },
   ],
 };

@@ -6,7 +6,7 @@ import {
   Status,
   Id,
   DateTime,
-  MainListItem,
+  ListItem,
   MainListBottom,
   Dropdown,
 } from "./in";
@@ -83,8 +83,8 @@ function App() {
         <div className="grid-item">DateTime</div>
         <div className="grid-item">
           <DateTime
-            mainListDate={new Date()}
-            iconStyle="regular"
+            date={new Date()}
+            iconForm="regular"
             iconColor="green"
           />
         </div>
@@ -93,31 +93,29 @@ function App() {
             propertiesObject={propertiesData.DateTime}
           />
         </div>
-        {/* MainListItem */}
-        <div className="grid-item">Main List Item</div>
+        {/* ListItem */}
+        <div className="grid-item">List Item</div>
         <div className="grid-item">
-          <MainListItem
-            bottomRightIconColor="red"
-            bottomRightMainListDate={new Date()}
-            upperRightTextValue="id123"
-            leftItemCircleColor="red"
-            leftItemTextValue="component 1"
+          <ListItem
+            date={new Date()}
+            IdText="id123"
+            statusCircleColor="red"
+            statusText="component 1"
           />
         </div>
         <div className="grid-item">
-          <PropertiesDisplay propertiesObject={propertiesData.MainListItem} />
+          <PropertiesDisplay propertiesObject={propertiesData.ListItem} />
         </div>
         <div className="grid-item">Main List Bottom</div>
         <div className="grid-item">
           <MainListBottom items={items}>
             {({ color, date, id, text }: any) => (
-              <MainListItem
+              <ListItem
                 key={id}
-                bottomRightIconColor={color}
-                bottomRightMainListDate={date}
-                upperRightTextValue={id}
-                leftItemCircleColor={color}
-                leftItemTextValue={text}
+                statusCircleColor={color}
+                date={date}
+                IdText={id}
+                statusText={text}
               />
             )}
           </MainListBottom>

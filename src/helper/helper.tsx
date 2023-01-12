@@ -1,5 +1,5 @@
 import React from "react";
-import { MainListItem } from "../in";
+import { ListItem } from "../in";
 
 export const dateFormatMainList = (date: Date): string => {
   let ye = new Intl.DateTimeFormat("en", { year: "numeric" }).format(date);

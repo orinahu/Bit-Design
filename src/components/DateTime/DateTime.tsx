@@ -5,32 +5,34 @@ import { dateFormatMainList } from "../../helper/helper";
 
 interface props {
   iconName?: string;
-  iconColor: string;
+  iconColor?: string;
   iconSize?: IconSize;
-  iconStyle?: IconForm;
-  textSize?: Size;
-  mainListDate: Date;
+  iconForm?: IconForm;
+  text?: Size;
+  date: Date;
+  className?: string;
 }
 
 const DateTime = ({
   iconColor = "red",
   iconSize = "lg",
-  iconStyle,
+  iconForm,
   iconName = "calendar",
-  mainListDate,
-  textSize = "small",
+  date,
+  text = "small",
+  className
 }: props) => {
   return (
-    <div className="main-list-upper-left-container">
+    <div className={`main-list-upper-left-container ${className}`}>
       <Icon
         iconName={iconName}
-        iconForm={iconStyle}
+        iconForm={iconForm}
         iconSize={iconSize}
         iconColor={iconColor}
       />
       <Text
-        text={dateFormatMainList(mainListDate)}
-        size={textSize}
+        text={dateFormatMainList(date)}
+        size={text}
       />
     </div>
   );
