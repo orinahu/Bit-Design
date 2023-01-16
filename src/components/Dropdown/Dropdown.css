@@ -17,7 +17,7 @@
 .dropbtn {
   color: white;
   cursor: pointer;
-  transition: 0.35s ease-out;
+  transition: 0.08s ease-out;
 }
 
 /* dd content */
@@ -31,7 +31,7 @@
   z-index: 100000;
   visibility: hidden;
   opacity: 0;
-  transition: 0.35s ease-out;
+  transition: 0.08s ease-out;
 }
 
 .dropdown-content > * {
@@ -39,8 +39,9 @@
   padding: 12px 12px;
   display: block;
   text-decoration: none;
-  transition: 0.35s ease-out;
+  transition: 0.08s ease-out;
 }
+
 .dropdown-content > *:hover {
   background-color: #eaeaea;
   cursor: pointer;
@@ -49,13 +50,13 @@
 /* show dd content */
 .dropdown:focus .dropdown-content {
   outline: none;
-  transform: translateY(20px);
+  transform: translateY(10px);
   visibility: visible;
   opacity: 1;
 }
 
 
-/* mask to close menu by clicking on the button */
+/* mask to close menu by clickinsg on the button */
 .dropdown .db2 {
   position: absolute;
   top: 0;

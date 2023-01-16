@@ -67,6 +67,27 @@ const AllDataOptions = {
     isRequired: "false",
     defaultValue: "sm",
   },
+  options: {
+    name: "options",
+    type: "string[]",
+    typeOptions: `-`,
+    isRequired: "true",
+    defaultValue: "-",
+  },
+  value: {
+    name: "value",
+    type: "string",
+    typeOptions: `-`,
+    isRequired: "true",
+    defaultValue: "-",
+  },
+  setDropdownValue: {
+    name: "setDropdownValue",
+    type: "usestateCallback",
+    typeOptions: `-`,
+    isRequired: "true",
+    defaultValue: "-",
+  },
   iconName: {
     name: "iconName",
     type: "string",
@@ -136,6 +157,7 @@ const diffDefaultValue = {
     iconName: { defaultValue: "calendar", isRequired: "false" },
     textSize: { defaultValue: "small" },
   },
+
   ListItem: {
     DateTimeIconName: {
       ...AllDataOptions.iconName,
@@ -255,6 +277,11 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.iconStyle,
     AllDataOptions.className,
     AllDataOptions.style,
+  ],
+  DropDown:[ 
+    AllDataOptions.options,
+    AllDataOptions.value,
+    AllDataOptions.setDropdownValue,
   ],
   MainListBottom: [AllDataOptions.ListItem, AllDataOptions.callback],
   Status: [

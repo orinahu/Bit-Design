@@ -29,6 +29,7 @@ interface props {
   statusCircleSize?: Size;
   selected?: boolean;
   className?: string;
+  key?: string | number
 }
 
 const ListItem = ({
@@ -52,10 +53,11 @@ const ListItem = ({
   statusText,
   statusSize,
   selected = false,
+  key,
   className,
 }: props) => {
   return (
-    <div className={`bit-list-item ${className} ${selected && "selected"}`}>
+    <div key={key} className={`bit-list-item ${className} ${selected && "selected"}`}>
       <div className="bit-list-item-status-container">
         <Status
           circleColor={statusCircleColor}

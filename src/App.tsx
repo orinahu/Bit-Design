@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState } from "react";
 import {
   Text,
   TrafficLight,
@@ -17,6 +18,10 @@ import { randomListItem } from "./helper/helper";
 const items: any[] = randomListItem(10);
 
 function App() {
+  // dropDown
+  const options = ["status", "lastTimeCheck", "adventStatus"];
+  const [dropdownValue, setDropdownValue] = useState(options[0]);
+
   return (
     <div className="App">
       <h1>Display Bit design components: </h1>
@@ -43,7 +48,6 @@ function App() {
           <PropertiesDisplay propertiesObject={propertiesData.TrafficLight} />
         </div>
 
-
         {/* Icon */}
         <div className="grid-item">Icon</div>
         <div className="grid-item">
@@ -56,16 +60,10 @@ function App() {
         {/* Status */}
         <div className="grid-item">Status</div>
         <div className="grid-item">
-          <Status
-            circleColor="red"
-            text="component 1"
-            iconForm="regular"
-          />
+          <Status circleColor="red" text="component 1" iconForm="regular" />
         </div>
         <div className="grid-item">
-          <PropertiesDisplay
-            propertiesObject={propertiesData.Status}
-          />
+          <PropertiesDisplay propertiesObject={propertiesData.Status} />
         </div>
 
         {/* Id */}
@@ -74,24 +72,16 @@ function App() {
           <Id text="347A" />
         </div>
         <div className="grid-item">
-          <PropertiesDisplay
-            propertiesObject={propertiesData.Id}
-          />
+          <PropertiesDisplay propertiesObject={propertiesData.Id} />
         </div>
 
         {/* DateTime */}
         <div className="grid-item">DateTime</div>
         <div className="grid-item">
-          <DateTime
-            date={new Date()}
-            iconForm="regular"
-            iconColor="green"
-          />
+          <DateTime date={new Date()} iconForm="regular" iconColor="green" />
         </div>
         <div className="grid-item">
-          <PropertiesDisplay
-            propertiesObject={propertiesData.DateTime}
-          />
+          <PropertiesDisplay propertiesObject={propertiesData.DateTime} />
         </div>
         {/* ListItem */}
         <div className="grid-item">List Item</div>
@@ -129,9 +119,13 @@ function App() {
 
         <div className="grid-item">DropDown</div>
         <div className="grid-item">
-          <Dropdown options={["status", "name"]} />
+          <Dropdown
+            options={options}
+            value={dropdownValue}
+            setDropdownValue={setDropdownValue}
+          />
         </div>
-        <div className="grid-item">7</div>
+        <div className="grid-item">      <PropertiesDisplay propertiesObject={propertiesData.DropDown} /></div>
         {/* <div className="grid-item">7</div> */}
       </div>
     </div>
