@@ -1,0 +1,81 @@
+:root {
+    --bit-popover-border: 1px solid gray;
+    --bit-popover-card-container: 155px
+}
+
+.bit-popover-container {
+    position: relative;
+}
+
+.bit-popover-card-container {
+    position: absolute;
+    z-index: 10;
+    width: var(--bit-popover-card-container);
+}
+
+.bit-popover-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.bit-popover-card-content {
+    position: relative;
+    top: 8px;
+    right: calc(var(--bit-popover-card-container)/2 - 10px);
+    background-color: #f7f7f7;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transition: 0.08s ease-out;
+}
+
+.bit-popover-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: var(--bit-popover-border);
+}
+
+.bit-popover-title-close-button {
+    cursor: pointer;
+}
+
+.bit-popover-body {
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 3px;
+    border-bottom: var(--bit-popover-border);
+
+}
+
+.check-boxs-container {
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bit-popover-bottom {
+    display: flex;
+    padding: 7px;
+    justify-content: space-around;
+}
+
+.bit-popover-buttom {
+    height: 35px;
+    width: 50px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#reset-button {
+    background-color: lightgray;
+}
+
+#filter-button {
+    background-color: blue;
+    color: white;
+}

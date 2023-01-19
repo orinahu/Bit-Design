@@ -7,6 +7,7 @@ export { DateTime } from "./components/DateTime/DateTime";
 export { ListItem } from "./components/ListItem/ListItem";
 export { MainListBottom } from "./components/MainListBottom/MainListBottom";
 export { Dropdown } from "./components/Dropdown/Dropdown";
+export { Filter } from "./components/Filter/Filter";
 
 // Types
 export type { Size } from "./components/Text/Text";

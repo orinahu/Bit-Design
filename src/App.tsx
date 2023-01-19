@@ -10,6 +10,7 @@ import {
   ListItem,
   MainListBottom,
   Dropdown,
+  Filter
 } from "./in";
 import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
@@ -126,6 +127,7 @@ function App() {
           />
         </div>
         <div className="grid-item">      <PropertiesDisplay propertiesObject={propertiesData.DropDown} /></div>
+        <div className="grid-item"><Filter /></div>
         {/* <div className="grid-item">7</div> */}
       </div>
     </div>
