@@ -5,7 +5,7 @@ export { Status } from "./components/Status/Status";
 export { Id } from "./components/Id/Id";
 export { DateTime } from "./components/DateTime/DateTime";
 export { ListItem } from "./components/ListItem/ListItem";
-export { MainListBottom } from "./components/MainListBottom/MainListBottom";
+export { InnerListItems } from "./components/InnerListItems/InnerListItems";
 export { Dropdown } from "./components/Dropdown/Dropdown";
 export { Filter } from "./components/Filter/Filter";
 

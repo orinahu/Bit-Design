@@ -8,7 +8,7 @@ import {
   Id,
   DateTime,
   ListItem,
-  MainListBottom,
+  InnerListItems,
   Dropdown,
   Filter
 } from "./in";
@@ -99,7 +99,7 @@ function App() {
         </div>
         <div className="grid-item">Main List Bottom</div>
         <div className="grid-item">
-          <MainListBottom items={items}>
+          <InnerListItems items={items}>
             {({ color, date, id, text }: any) => (
               <ListItem
                 key={id}
@@ -109,7 +109,7 @@ function App() {
                 statusText={text}
               />
             )}
-          </MainListBottom>
+          </InnerListItems>
         </div>
         <div className="grid-item table">
           {" "}

@@ -4,7 +4,7 @@ interface ListItem {
   children: any | JSX.Element[] | JSX.Element;
 }
 
-const MainListBottom = ({ items, children }: ListItem) => {
+const InnerListItems = ({ items, children }: ListItem) => {
   return <div className="bit-item-list-bottom">
     {items.map((item, index) => {
       return <div key={index}>
@@ -14,4 +14,4 @@ const MainListBottom = ({ items, children }: ListItem) => {
   </div>;
 };
 
-export { MainListBottom };
+export { InnerListItems };
