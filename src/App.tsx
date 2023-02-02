@@ -127,7 +127,10 @@ function App() {
           />
         </div>
         <div className="grid-item">      <PropertiesDisplay propertiesObject={propertiesData.DropDown} /></div>
+        <div className="grid-item">Filter</div>
+        {/* <div className="grid-item">7</div> */}
         <div className="grid-item"><Filter /></div>
+        <div className="grid-item">      <PropertiesDisplay propertiesObject={propertiesData.Filter} /></div>
         {/* <div className="grid-item">7</div> */}
       </div>
     </div>

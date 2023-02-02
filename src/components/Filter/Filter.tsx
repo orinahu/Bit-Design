@@ -3,11 +3,23 @@ import { Icon, IconSize, IconForm } from "../../in";
 import { Popover } from '@headlessui/react'
 import './Filter.css'
 
-
-const filtersO = { status: { damaged: false, warning: true, undamaged: false }, time: { '3': false, '6': true, '24': false, 'week': false } }
+// todo: check one atribute can be forced (title) and genric all another propeties 
+// take title from filters
+const filtersO = { status: { title: 'Component Status', damaged: false, warning: true, undamaged: false }, time: { title: 'Advent Status:', '3': false, '6': true, '24': false, 'week': false } }
 const titles = { status: 'Component Status:', time: 'Advent Status:' }
 
-const Filter = () => {
+interface props {
+    buttonIconForm?: IconForm;
+    buttonIconSize?: IconSize;
+    className?: string;
+    style?: React.CSSProperties
+}
+
+
+const Filter = ({ buttonIconForm,
+    buttonIconSize,
+    className,
+    style }: props) => {
     const [filters, setFilters] = useState<any>(filtersO)
 
     // render check box item
@@ -39,7 +51,6 @@ const Filter = () => {
             }
             resetFilters = { ...resetFilters, [subject]: resetObject }
         }
-        console.log(resetFilters)
         setFilters({ ...resetFilters })
     }
 
@@ -47,13 +58,12 @@ const Filter = () => {
 
 
     return (
-        <Popover className="bit-popover-container">
-
-            <Popover.Button className='bit-popover-icon'><Icon iconName='filter' /></Popover.Button>
-
+        <Popover className={`bit-popover-container ${className}`} style={style} >
+            <Popover.Button className='bit-popover-icon'><Icon iconName='filter' iconForm={buttonIconForm} iconSize={buttonIconSize} /></Popover.Button>
             <Popover.Panel className="bit-popover-card-container">
                 {({ close }) => (
                     <div className='bit-popover-card-content'>
+
                         {/* title */}
                         <div className='bit-popover-title'>
                             <Icon iconName='filter' />
@@ -74,7 +84,7 @@ const Filter = () => {
                             })}
                         </div>
 
-                        {/* bottom */}
+                        {/* bottons */}
                         <div className='bit-popover-bottom'>
                             <button onClick={() => close()} id='filter-button' className='bit-popover-buttom'>Filter</button>
                             <button onClick={() => resetHandler()} id='reset-button' className='bit-popover-buttom'>Reset</button>

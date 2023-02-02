@@ -158,6 +158,18 @@ const diffDefaultValue = {
     textSize: { defaultValue: "small" },
   },
 
+  Filter: {
+    buttonIconForm: {
+      ...AllDataOptions.iconName,
+      name: "DateTimeIconName",
+      isRequired: "false",
+    },
+    DateTimeIconSize: {
+      ...AllDataOptions.iconSize,
+      name: "DateTimeIconSize",
+    },
+  },
+
   ListItem: {
     DateTimeIconName: {
       ...AllDataOptions.iconName,
@@ -278,7 +290,7 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.className,
     AllDataOptions.style,
   ],
-  DropDown:[ 
+  DropDown: [
     AllDataOptions.options,
     AllDataOptions.value,
     AllDataOptions.setDropdownValue,
@@ -291,9 +303,9 @@ export const propertiesData: AllPropertiesData = {
 
     AllDataOptions.textValue,
     AllDataOptions.textSize,
-        AllDataOptions.className,
+    AllDataOptions.className,
 
-  {
+    {
       ...AllDataOptions.iconName,
       ...diffDefaultValue.MainListRightItem.iconName,
     },
@@ -347,6 +359,12 @@ export const propertiesData: AllPropertiesData = {
       ...diffDefaultValue.DateTime.textSize,
     },
     AllDataOptions.mainListDate,
+  ],
+  Filter: [
+    AllDataOptions.className,
+    AllDataOptions.iconStyle,
+    AllDataOptions.iconSize,
+    AllDataOptions.style
   ],
   ListItem: [
     AllDataOptions.className,
