@@ -9,30 +9,36 @@ interface props {
 }
 
 const Dropdown = ({ options, value, setDropdownValue }: props) => {
-  useEffect(() => {}, []);
+  useEffect(() => { }, []);
 
   return (
-    <div className="dropdown" tabIndex={1}>
-      <div className="db2" tabIndex={1}></div>
-      {value}
-      <a href="javascript:void(0)" className="dropbtn">
-        <Icon iconName="angle-down" />
-      </a>
+    <div className="dropdown-container">
+      <text className="dropdown-title">sort by:</text>
+      <div className="dropdown" tabIndex={1}>
+        {/* dorpdown body */}
+        <div className="db2" tabIndex={1}></div>
+        {value}
+        <a href="javascript:void(0)" className="dropbtn">
+          <Icon iconName="angle-down" />
+        </a>
 
-      <div className="dropdown-content">
-        {options.map((option) => {
-          return (
-            <div
-              tabIndex={1}
-              key={option}
-              onClick={() => {
-                console.log(option) 
-                return setDropdownValue(option)}}
-            >
-              <a href="#">{option}</a>
-            </div>
-          );
-        })}
+        {/* dorpdown content */}
+        <div className="dropdown-content">
+          {options.map((option) => {
+            return (
+              <div
+                tabIndex={1}
+                key={option}
+                onClick={() => {
+                  console.log(option)
+                  return setDropdownValue(option)
+                }}
+              >
+                <a href="#">{option}</a>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,16 @@
-/* dd container */
+/* dropdown container */
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.dropdown-title {
+  padding-bottom: 6px;
+  padding-left: 3px;
+}
+
+/* dd  */
 .dropdown {
   display: flex;
   flex-direction: row;
