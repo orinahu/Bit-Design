@@ -9,7 +9,7 @@ export { InnerListItems } from "./components/InnerListItems/InnerListItems";
 export { Dropdown } from "./components/Dropdown/Dropdown";
 export { Filter } from "./components/Filter/Filter";
 export { InnerListFilter } from "./components/InnerListFilter/InnerListFilter";
-export { InnerListTitle } from "./components/InnerListTitle/InnerListTitle";
+export { ListTitle } from "./components/ListTitle/ListTitle";
 
 // Types
 export type { Size } from "./components/Text/Text";

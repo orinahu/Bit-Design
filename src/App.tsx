@@ -12,7 +12,7 @@ import {
   Dropdown,
   Filter,
   InnerListFilter,
-  InnerListTitle
+  ListTitle
 } from "./in";
 import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
@@ -154,9 +154,9 @@ function App() {
         </div>
 
         {/* InnerListTitle */}
-        <div className="grid-item">InnerListTitle</div>
+        <div className="grid-item">ListTitle</div>
         <div className="grid-item">
-          <InnerListTitle />
+          <ListTitle number={10} name={'engine'} />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.Filter} />
