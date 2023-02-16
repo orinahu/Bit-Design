@@ -10,7 +10,9 @@ import {
   ListItem,
   InnerListItems,
   Dropdown,
-  Filter
+  Filter,
+  InnerListFilter,
+  InnerListTitle
 } from "./in";
 import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
@@ -97,7 +99,7 @@ function App() {
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.ListItem} />
         </div>
-        <div className="grid-item">Main List Bottom</div>
+        <div className="grid-item">Inner List items</div>
         <div className="grid-item">
           <InnerListItems items={items}>
             {({ color, date, id, text }: any) => (
@@ -126,13 +128,43 @@ function App() {
             setDropdownValue={setDropdownValue}
           />
         </div>
-        <div className="grid-item">      <PropertiesDisplay propertiesObject={propertiesData.DropDown} /></div>
+        <div className="grid-item">
+          <PropertiesDisplay propertiesObject={propertiesData.DropDown} />
+        </div>
+
+        {/* Filter */}
         <div className="grid-item">Filter</div>
-        {/* <div className="grid-item">7</div> */}
-        <div className="grid-item"><Filter /></div>
-        <div className="grid-item">      <PropertiesDisplay propertiesObject={propertiesData.Filter} /></div>
-        {/* <div className="grid-item">7</div> */}
+        <div className="grid-item">
+          <Filter />
+        </div>
+        <div className="grid-item">
+          <PropertiesDisplay propertiesObject={propertiesData.Filter} />
+        </div>
+
+        {/* InnerListFilter */}
+        <div className="grid-item">InnerListFilter</div>
+        <div className="grid-item">
+          <InnerListFilter
+            options={options}
+            value={dropdownValue}
+            setDropdownValue={setDropdownValue} />
+        </div>
+        <div className="grid-item">
+          <PropertiesDisplay propertiesObject={propertiesData.Filter} />
+        </div>
+
+        {/* InnerListTitle */}
+        <div className="grid-item">InnerListTitle</div>
+        <div className="grid-item">
+          <InnerListTitle />
+        </div>
+        <div className="grid-item">
+          <PropertiesDisplay propertiesObject={propertiesData.Filter} />
+        </div>
+
+
       </div>
+
     </div>
   );
 }

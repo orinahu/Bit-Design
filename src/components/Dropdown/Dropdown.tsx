@@ -30,7 +30,7 @@ const Dropdown = ({ options, value, setDropdownValue }: props) => {
                 tabIndex={1}
                 key={option}
                 onClick={() => {
-                  console.log(option)
+                  console.log(`${option} clicked`)
                   return setDropdownValue(option)
                 }}
               >

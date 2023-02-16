@@ -1,0 +1,11 @@
+.inner-list-filter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-list-filter {
+    padding-top: 25px;
+    margin-left: 15px;
+}

@@ -5,18 +5,21 @@
 
 .bit-popover-container {
     position: relative;
+
 }
 
 .bit-popover-card-container {
     position: absolute;
     z-index: 10;
     width: var(--bit-popover-card-container);
+    
 }
 
 .bit-popover-icon {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    height: 30px;
 }
 
 

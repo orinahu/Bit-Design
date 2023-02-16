@@ -55,11 +55,11 @@ const Filter = ({ buttonIconForm,
     }
 
 
-
-
     return (
         <Popover className={`bit-popover-container ${className}`} style={style} >
-            <Popover.Button className='bit-popover-icon'><Icon iconName='filter' iconForm={buttonIconForm} iconSize={buttonIconSize} /></Popover.Button>
+            <Popover.Button className='bit-popover-icon'>
+                <Icon iconName='filter' iconForm={buttonIconForm} iconSize="xl" />
+            </Popover.Button>
             <Popover.Panel className="bit-popover-card-container">
                 {({ close }) => (
                     <div className='bit-popover-card-content'>
