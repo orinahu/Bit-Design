@@ -12,7 +12,6 @@ interface props {
   date: Date;
   className?: string;
   style?: React.CSSProperties;
-
 }
 
 const DateTime = ({
