@@ -13,7 +13,8 @@ import {
   Filter,
   InnerListFilter,
   ListTitle,
-  InnerList
+  InnerList,
+  RootItemText
 } from "./in";
 import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
@@ -176,24 +177,31 @@ function App() {
             renderItemsFunction={
               ({ color, date, id, text }: any) => (
                 <ListItem
-                    key={id}
-                    statusCircleColor={color}
-                    date={date}
-                    IdText={id}
-                    statusText={text}
+                  key={id}
+                  statusCircleColor={color}
+                  date={date}
+                  IdText={id}
+                  statusText={text}
                 />
-            )
+              )
             }
           />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
         </div>
-
+        {/* rootItemText */}
+        <div className="grid-item">RootItemText</div>
+        <div className="grid-item">
+          <RootItemText number={10} name={'engine'} />
+        </div>
+        <div className="grid-item">
+          <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
+        </div>
 
       </div>
-
     </div>
+
   );
 }
 
