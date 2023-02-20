@@ -14,13 +14,17 @@ import {
   InnerListFilter,
   ListTitle,
   InnerList,
-  RootItemText
+  RootItemText,
+  TrafficLights,
+  RootListItem
 } from "./in";
 import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
 import { propertiesData } from "./PropertiesDisplay/PropertiesData";
 import { randomListItem } from "./helper/helper";
 const items: any[] = randomListItem(10);
+
+const trafficlightsData = [{ ComponentStatus: 'ERROR' as const, counter: 4 }, { ComponentStatus: 'WARN' as const, counter: 2 }, { ComponentStatus: 'OK' as const, counter: 6 },]
 
 function App() {
   // dropDown
@@ -190,6 +194,7 @@ function App() {
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
         </div>
+
         {/* rootItemText */}
         <div className="grid-item">RootItemText</div>
         <div className="grid-item">
@@ -197,6 +202,24 @@ function App() {
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
+        </div>
+
+        {/* TrafficLights */}
+        <div className="grid-item">TrafficLights</div>
+        <div className="grid-item">
+          <TrafficLights SDerivedStatusCounter={trafficlightsData} />
+        </div>
+        <div className="grid-item">
+          <PropertiesDisplay propertiesObject={propertiesData.TrafficLights} />
+        </div>
+
+        {/* RootListItem */}
+        <div className="grid-item">RootListItem</div>
+        <div className="grid-item">
+          <RootListItem  textNumber={10} textName={'engine'} SDerivedStatusCounter={trafficlightsData}/>
+        </div>
+        <div className="grid-item">
+          {/* <PropertiesDisplay propertiesObject={propertiesData.TrafficLights} /> */}
         </div>
 
       </div>

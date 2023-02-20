@@ -1,4 +1,4 @@
-import './rootItemText.css'
+import './RootItemText.css'
 import { Icon, IconSize, IconForm } from "../../in";
 import { Text, Size } from "../../in";
 

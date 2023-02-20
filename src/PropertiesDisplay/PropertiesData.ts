@@ -152,6 +152,14 @@ const AllDataOptions = {
     isRequired: "false",
     defaultValue: "",
   },
+  SDerivedStatusCounter: {
+    name: "SDerivedStatusCounter",
+    type: `[{ ComponentStatus: 'ComponentStatusType' , counter: number }, { ComponentStatus: ComponentStatusType , counter: number }, { ComponentStatus: ComponentStatusType , counter: number },]
+    )`,
+    typeOptions: `ComponentStatusType = "ERROR" | "WARN" | "OK"`,
+    isRequired: "true",
+    defaultValue: "-",
+  },
 };
 
 const diffDefaultValue = {
@@ -189,7 +197,6 @@ const diffDefaultValue = {
       name: "DateTimeIconSize",
     },
   },
-
   ListItem: {
     DateTimeIconName: {
       ...AllDataOptions.iconName,
@@ -316,6 +323,11 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.className,
     AllDataOptions.circleSize,
     AllDataOptions.style,
+    AllDataOptions.className,
+  ],
+  TrafficLights: [
+    AllDataOptions.textSize,
+    AllDataOptions.SDerivedStatusCounter,
     AllDataOptions.className,
   ],
   Icon: [

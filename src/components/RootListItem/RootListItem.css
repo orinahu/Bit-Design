@@ -1,0 +1,20 @@
+:root {
+    --main-list-item-container-border: 1px solid #cfcfda;
+    --main-list-item-container-border-selected: 2px solid #4e75f6;
+  }
+
+.bit-root-list-item {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border-bottom: var(--main-list-item-container-border);
+    border-top: var(--main-list-item-container-border);
+    height: 60px;
+    padding: 7px;
+}
+
+.bit-root-list-item-divider {
+    width: 5px;
+    height: 40px;
+    border-right: 1px solid #CFCFDA;
+}

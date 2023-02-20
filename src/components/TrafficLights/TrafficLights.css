@@ -1,0 +1,9 @@
+.trafficlights-container {
+    display: flex;
+    gap: 7px
+}
+
+.bit-traffic-lights {
+    display: flex;
+    
+}
