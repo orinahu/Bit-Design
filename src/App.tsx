@@ -12,7 +12,8 @@ import {
   Dropdown,
   Filter,
   InnerListFilter,
-  ListTitle
+  ListTitle,
+  InnerList
 } from "./in";
 import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
@@ -159,7 +160,34 @@ function App() {
           <ListTitle number={10} name={'engine'} />
         </div>
         <div className="grid-item">
-          <PropertiesDisplay propertiesObject={propertiesData.Filter} />
+          <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
+        </div>
+
+        {/* InnerList */}
+        <div className="grid-item">InnerList</div>
+        <div className="grid-item">
+          <InnerList
+            titleNumber={10}
+            titleName={'engine'}
+            filterOptions={options}
+            filterValue={dropdownValue}
+            filterSetDropdownValue={setDropdownValue}
+            InnerItems={items}
+            renderItemsFunction={
+              ({ color, date, id, text }: any) => (
+                <ListItem
+                    key={id}
+                    statusCircleColor={color}
+                    date={date}
+                    IdText={id}
+                    statusText={text}
+                />
+            )
+            }
+          />
+        </div>
+        <div className="grid-item">
+          <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
         </div>
 
 

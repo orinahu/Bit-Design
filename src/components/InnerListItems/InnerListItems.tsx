@@ -1,4 +1,3 @@
-import React from "react";
 interface ListItem {
   items: Array<any>,
   children: any | JSX.Element[] | JSX.Element;

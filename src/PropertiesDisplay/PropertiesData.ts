@@ -109,6 +109,20 @@ const AllDataOptions = {
     isRequired: "true",
     defaultValue: "-",
   },
+  ListTitleName: {
+    name: "name",
+    type: "string",
+    typeOptions: `-`,
+    isRequired: "true",
+    defaultValue: "-",
+  },
+  ListTitleNumber: {
+    name: "number",
+    type: "number",
+    typeOptions: `-`,
+    isRequired: "true",
+    defaultValue: "-",
+  },
   selected: {
     name: "selected",
     type: "boolean",
@@ -156,6 +170,12 @@ const diffDefaultValue = {
     iconSize: { defaultValue: "lg" },
     iconName: { defaultValue: "calendar", isRequired: "false" },
     textSize: { defaultValue: "small" },
+  },
+
+  ListTitle: {
+    iconSize: { defaultValue: "xl" },
+    iconName: { defaultValue: "image" },
+    textSize: { defaultValue: "large" },
   },
 
   Filter: {
@@ -274,6 +294,22 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.style,
     AllDataOptions.className,
   ],
+  ListTitle: [
+    AllDataOptions.iconColor,
+    AllDataOptions.iconStyle,
+    AllDataOptions.className,
+    {
+      ...AllDataOptions.iconName,
+      ...diffDefaultValue.MainListRightItem.iconName,
+    },
+    AllDataOptions.textSize,
+    AllDataOptions.className,
+    AllDataOptions.style,
+    AllDataOptions.ListTitleName,
+    AllDataOptions.ListTitleNumber
+
+
+  ],
   TrafficLight: [
     AllDataOptions.circleColor,
     AllDataOptions.textValue,
@@ -289,6 +325,7 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.iconStyle,
     AllDataOptions.className,
     AllDataOptions.style,
+
   ],
   DropDown: [
     AllDataOptions.options,
