@@ -18,7 +18,7 @@ const Dropdown = ({ options, value, setDropdownValue }: props) => {
         {/* dorpdown body */}
         <div className="db2" tabIndex={1}></div>
         {value}
-        <a href="javascript:void(0)" className="dropbtn">
+        <a className="dropbtn">
           <Icon iconName="angle-down" />
         </a>
 
