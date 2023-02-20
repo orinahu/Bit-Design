@@ -27,7 +27,7 @@ const ListTitle = ({
 }: props) => {
     return (
 
-        <div className={`bit-inner-list-title-container ${className}`} style={style}>
+        <div className={`bit-list-title-container ${className}`} style={style}>
             <Icon
                 iconName={iconName}
                 iconForm={iconForm}
