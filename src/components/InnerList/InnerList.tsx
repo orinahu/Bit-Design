@@ -6,7 +6,7 @@ import {
     IconForm,
     ListTitle,
     InnerListFilter,
-    InnerListItems,
+    ListItems,
     Text,
     Size,
     ListItem
@@ -76,9 +76,9 @@ const InnerList = ({
             </div>
             {/* items */}
             <div className='bit-inner-item-container'>
-                <InnerListItems items={InnerItems}>
+                <ListItems items={InnerItems}>
                     {renderItemsFunction}
-                </InnerListItems>
+                </ListItems>
             </div>
         </div>
     )
