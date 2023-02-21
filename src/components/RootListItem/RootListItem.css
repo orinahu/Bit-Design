@@ -1,20 +1,29 @@
 :root {
     --main-list-item-container-border: 1px solid #cfcfda;
-    --main-list-item-container-border-selected: 2px solid #4e75f6;
+    --main-list-item-container-border-selected: 1px solid #4e75f6;
   }
 
-.bit-root-list-item {
+.bit-root-list-item-container {
     display: flex;
-    gap: 5px;
+    gap: 6px;
     align-items: center;
     border-bottom: var(--main-list-item-container-border);
     border-top: var(--main-list-item-container-border);
     height: 60px;
-    padding: 7px;
+    padding: 5px;
 }
+
+.bit-root-list-item-container.selected {
+    border: var(--main-list-item-container-border-selected);
+    border-radius: 10px;
+    box-shadow: 0px, 2px, 10px, 0px, rgba(23, 23, 70, 0.16);
+  }
+  
 
 .bit-root-list-item-divider {
     width: 5px;
     height: 40px;
     border-right: 1px solid #CFCFDA;
+    padding-right: 3px;
 }
+
