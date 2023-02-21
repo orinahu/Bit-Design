@@ -28,6 +28,26 @@ export const randomListItem = (n = 10) => {
   return array;
 };
 
+export const randomListRootItem = (n = 10) => {
+  const array: any[] = [];
+  for (let i = 0; i < n; i++) {
+    const number1 = Math.floor(Math.random() * 10);
+    const number2 = Math.floor(Math.random() * 10);
+    const number3 = Math.floor(Math.random() * 10);
+
+    array.push({
+      trafficlightsData: [
+        { ComponentStatus: "ERROR" as const, counter: number1 },
+        { ComponentStatus: "WARN" as const, counter: number2 },
+        { ComponentStatus: "OK" as const, counter: number3 },
+      ],
+      textNumber: number1 + number2 + number3,
+      textName: `component ${i + 1}`,
+    });
+  }
+  return array;
+};
+
 const randomColor = () => {
   const colors = ["red", "orange", "green"];
   return colors[Math.floor(Math.random() * 3)];

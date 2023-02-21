@@ -10,7 +10,7 @@ interface statusComponents {
 
 interface props {
     SDerivedStatusCounter: statusComponents[]
-    textSize?: Size;
+    size?: Size;
     className?: string;
 }
 
@@ -25,7 +25,7 @@ const statusToColor = (status: componenetsStatus) => {
     }
 }
 
-const TrafficLights = ({ SDerivedStatusCounter, className, textSize }: props) => {
+const TrafficLights = ({ SDerivedStatusCounter, className, size="small" }: props) => {
     return (
         <div className={`trafficlights-container ${className}`} >
             {SDerivedStatusCounter.map(({ ComponentStatus, counter }) => {
@@ -34,7 +34,7 @@ const TrafficLights = ({ SDerivedStatusCounter, className, textSize }: props) =>
                         <TrafficLight
                             text={counter.toString()}
                             circleColor={statusToColor(ComponentStatus)}
-                            size={textSize}
+                            size={size}
                         />
 
                     </div>

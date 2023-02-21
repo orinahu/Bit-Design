@@ -18,7 +18,7 @@ const ListTitle = ({
     iconColor,
     name,
     number,
-    iconSize = "xl",
+    iconSize = "sm",
     iconForm,
     iconName = "image",
     textSize = "large",

@@ -16,15 +16,20 @@ import {
   InnerList,
   RootItemText,
   TrafficLights,
-  RootListItem
+  RootListItem,
 } from "./in";
 import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
 import { propertiesData } from "./PropertiesDisplay/PropertiesData";
-import { randomListItem } from "./helper/helper";
+import { randomListItem, randomListRootItem } from "./helper/helper";
 const items: any[] = randomListItem(10);
+const rootItems: any[] = randomListRootItem(10);
 
-const trafficlightsData = [{ ComponentStatus: 'ERROR' as const, counter: 4 }, { ComponentStatus: 'WARN' as const, counter: 2 }, { ComponentStatus: 'OK' as const, counter: 6 },]
+const trafficlightsData = [
+  { ComponentStatus: "ERROR" as const, counter: 4 },
+  { ComponentStatus: "WARN" as const, counter: 2 },
+  { ComponentStatus: "OK" as const, counter: 6 },
+];
 
 function App() {
   // dropDown
@@ -105,7 +110,9 @@ function App() {
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.ListItem} />
         </div>
-        <div className="grid-item">Inner List items</div>
+
+        {/* ListItems */}
+        <div className="grid-item">ListItems</div>
         <div className="grid-item">
           <ListItems items={items}>
             {({ color, date, id, text }: any) => (
@@ -125,7 +132,6 @@ function App() {
         </div>
 
         {/* DropDown */}
-
         <div className="grid-item">DropDown</div>
         <div className="grid-item">
           <Dropdown
@@ -153,7 +159,8 @@ function App() {
           <InnerListFilter
             options={options}
             value={dropdownValue}
-            setDropdownValue={setDropdownValue} />
+            setDropdownValue={setDropdownValue}
+          />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.Filter} />
@@ -162,7 +169,7 @@ function App() {
         {/* InnerListTitle */}
         <div className="grid-item">ListTitle</div>
         <div className="grid-item">
-          <ListTitle number={10} name={'engine'} />
+          <ListTitle number={10} name={"engine"} />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
@@ -173,22 +180,23 @@ function App() {
         <div className="grid-item">
           <InnerList
             titleNumber={10}
-            titleName={'engine'}
+            titleName={"engine"}
+
             filterOptions={options}
             filterValue={dropdownValue}
             filterSetDropdownValue={setDropdownValue}
+
             InnerItems={items}
-            renderItemsFunction={
-              ({ color, date, id, text }: any) => (
-                <ListItem
-                  key={id}
-                  statusCircleColor={color}
-                  date={date}
-                  IdText={id}
-                  statusText={text}
-                />
-              )
-            }
+            
+            renderItemsFunction={({ color, date, id, text }: any) => (
+              <ListItem
+                key={id}
+                statusCircleColor={color}
+                date={date}
+                IdText={id}
+                statusText={text}
+              />
+            )}
           />
         </div>
         <div className="grid-item">
@@ -198,7 +206,7 @@ function App() {
         {/* rootItemText */}
         <div className="grid-item">RootItemText</div>
         <div className="grid-item">
-          <RootItemText number={10} name={'engine'} />
+          <RootItemText number={10} name={"engine"} />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
@@ -216,15 +224,35 @@ function App() {
         {/* RootListItem */}
         <div className="grid-item">RootListItem</div>
         <div className="grid-item">
-          <RootListItem  textNumber={10} textName={'engine'} SDerivedStatusCounter={trafficlightsData}/>
+          <RootListItem
+            textNumber={10}
+            textName={"engine"}
+            SDerivedStatusCounter={trafficlightsData}
+          />
         </div>
         <div className="grid-item">
           {/* <PropertiesDisplay propertiesObject={propertiesData.TrafficLights} /> */}
         </div>
 
+        {/* ListItems */}
+        <div className="grid-item">ListItems</div>
+        <div className="grid-item">
+          <ListItems items={rootItems}>
+            {({ trafficlightsData, textNumber, textName }: any) => (
+              <RootListItem
+                textNumber={textNumber}
+                textName={textName}
+                SDerivedStatusCounter={trafficlightsData}
+              />
+            )}
+          </ListItems>
+        </div>
+        <div className="grid-item table">
+          {" "}
+          <PropertiesDisplay propertiesObject={propertiesData.MainListBottom} />
+        </div>
       </div>
     </div>
-
   );
 }
 

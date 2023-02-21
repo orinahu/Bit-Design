@@ -1,5 +1,9 @@
 .bit-list-item-root-name {
     display: flex;
     align-items: center;
-    gap: 6px;
+
+}
+
+.bit-list-item-root-name-text-container {
+    padding-left: 2px;
 }

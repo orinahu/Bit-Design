@@ -66,7 +66,7 @@ const RootListItem = ({
       <div>
         <TrafficLights
           className={TraficLightsClassName}
-          textSize={TraficLightsTextSize}
+          size={TraficLightsTextSize}
           SDerivedStatusCounter={SDerivedStatusCounter}
         />
       </div>

@@ -21,7 +21,7 @@ const RootItemText = ({
   iconSize = "lg",
   iconForm,
   iconName = "image",
-  textSize = "medium",
+  textSize = "small",
   className,
   style,
 }: props) => {
@@ -33,12 +33,14 @@ const RootItemText = ({
         iconSize={iconSize}
         iconColor={iconColor}
       />
-      <Text
-        size={textSize}
-        text={`${
-          name[0].toUpperCase() + name.slice(1)
-        } (${number.toString()} components)`}
-      />
+      <div className="bit-list-item-root-name-text-container">
+        <Text
+          size={textSize}
+          text={`${
+            name[0].toUpperCase() + name.slice(1)
+          } (${number.toString()} components)`}
+        />
+      </div>
     </div>
   );
 };
