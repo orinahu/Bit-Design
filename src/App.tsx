@@ -1,5 +1,4 @@
 import "./App.css";
-import React, { useState } from "react";
 import {
   Text,
   TrafficLight,
@@ -17,6 +16,7 @@ import {
   SystemItemText,
   TrafficLights,
   SystemListItem,
+  ListMenu,
 } from "./in";
 import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
@@ -231,8 +231,8 @@ function App() {
           <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
         </div>
 
-        {/* rootItemText */}
-        <div className="grid-item">RootItemText</div>
+        {/* SystemItemText */}
+        <div className="grid-item">SystemItemText</div>
         <div className="grid-item">
           <SystemItemText number={10} name={"engine"} />
         </div>
@@ -249,8 +249,8 @@ function App() {
           <PropertiesDisplay propertiesObject={propertiesData.TrafficLights} />
         </div>
 
-        {/* RootListItem */}
-        <div className="grid-item">RootListItem</div>
+        {/* SystemListItem */}
+        <div className="grid-item">SystemListItem</div>
         <div className="grid-item">
           <SystemListItem
             textNumber={10}
@@ -277,7 +277,103 @@ function App() {
         </div>
         <div className="grid-item table">
           {" "}
-          <PropertiesDisplay propertiesObject={propertiesData.MainListBottom} />
+          {/* <PropertiesDisplay propertiesObject={propertiesData.MainListBottom} /> */}
+        </div>
+
+        {/* ListMenu */}
+        <div className="grid-item">ListMenu for Components</div>
+        <div className="grid-item">
+          <ListMenu
+            renderTitle={() => {
+              return (
+                <div>
+                  {" "}
+                  <ListTitle number={10} name={"engine"} />{" "}
+                </div>
+              );
+            }}
+            renderFilters={() => {
+              return (
+                <ComponentsListFilter
+                  options={options}
+                  onChange={(option) =>
+                    console.log(option.value, " from onChange")
+                  }
+                  filterItem={filters}
+                />
+              );
+            }}
+            renderItems={() => {
+              return (
+                <div>
+                  {" "}
+                  <ListItems items={items}>
+                    {({ color, date, id, text }: any) => (
+                      <ListItem
+                        key={id}
+                        statusCircleColor={color}
+                        date={date}
+                        IdText={id}
+                        statusText={text}
+                      />
+                    )}
+                  </ListItems>
+                </div>
+              );
+            }}
+          />
+        </div>
+        <div className="grid-item table">
+          {" "}
+          {/* <PropertiesDisplay propertiesObject={propertiesData.MainListBottom} /> */}
+        </div>
+
+        {/* ListMenu */}
+        <div className="grid-item">ListMenu for System</div>
+        <div className="grid-item">
+          <ListMenu
+            renderTitle={() => {
+              return (
+                <div>
+                  {" "}
+                  <ListTitle number={10} name={"engine"} />{" "}
+                </div>
+              );
+            }}
+            renderFilters={() => {
+              return (
+                <ComponentsListFilter
+                  options={options}
+                  onChange={(option) =>
+                    console.log(option.value, " from onChange")
+                  }
+                  filterItem={filters}
+                />
+              );
+            }}
+            renderItems={() => {
+              return (
+                <div>
+                  {" "}
+                  <ListItems items={items}>
+                    {({ color, date, id, text }: any) => (
+                      <ListItem
+                        key={id}
+                        statusCircleColor={color}
+                        date={date}
+                        IdText={id}
+                        statusText={text}
+                      />
+                    )}
+                  </ListItems>
+                </div>
+              );
+            }}
+          />
+        </div>
+        <div className="grid-item table">
+          {" "}
+          {/* <PropertiesDisplay propertiesObject={propertiesData.MainListBottom} /> */}
         </div>
       </div>
     </div>

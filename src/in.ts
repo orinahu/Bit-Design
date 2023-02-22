@@ -16,6 +16,7 @@ export { ComponentsList } from "./components/ComponentsList/ComponentsList";
 export { SystemItemText } from "./components/SystemItemText/SystemItemText";
 export { TrafficLights } from "./components/TrafficLights/TrafficLights";
 export { SystemListItem } from "./components/SystemListItem/SystemListItem";
+export { ListMenu } from "./components/ListMenu/ListMenu";
 
 // Types
 export type { Size } from "./components/Text/Text";
