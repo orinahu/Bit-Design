@@ -152,8 +152,8 @@ const AllDataOptions = {
     isRequired: "false",
     defaultValue: "",
   },
-  SDerivedStatusCounter: {
-    name: "SDerivedStatusCounter",
+  statusComponents: {
+    name: "statusComponents",
     type: `[{ ComponentStatus: 'ComponentStatusType' , counter: number }, { ComponentStatus: ComponentStatusType , counter: number }, { ComponentStatus: ComponentStatusType , counter: number },]
     )`,
     typeOptions: `ComponentStatusType = "ERROR" | "WARN" | "OK"`,
@@ -327,7 +327,7 @@ export const propertiesData: AllPropertiesData = {
   ],
   TrafficLights: [
     AllDataOptions.textSize,
-    AllDataOptions.SDerivedStatusCounter,
+    AllDataOptions.statusComponents,
     AllDataOptions.className,
   ],
   Icon: [

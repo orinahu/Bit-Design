@@ -20,7 +20,5 @@ export { ListMenu } from "./components/ListMenu/ListMenu";
 // Types
 export type { Size } from "./components/Text/Text";
 export type { IconSize, IconForm } from "./components/Icon/Icon";
-export type { componenetsStatus } from "./components/TrafficLights/TrafficLights";
-
-// Interface
+export type { StatusComponents } from "./components/TrafficLights/TrafficLights";
 export type { ItemStatus, FilterItem } from "./components/Filter/Filter";

@@ -217,7 +217,7 @@ function App() {
         {/* TrafficLights */}
         <div className="grid-item">TrafficLights</div>
         <div className="grid-item">
-          <TrafficLights SDerivedStatusCounter={trafficlightsData} />
+          <TrafficLights statusComponents={trafficlightsData} />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.TrafficLights} />
@@ -229,7 +229,7 @@ function App() {
           <SystemListItem
             textNumber={10}
             textName={"engine"}
-            SDerivedStatusCounter={trafficlightsData}
+            statusComponents={trafficlightsData}
           />
         </div>
         <div className="grid-item">
@@ -244,7 +244,7 @@ function App() {
               <SystemListItem
                 textNumber={textNumber}
                 textName={textName}
-                SDerivedStatusCounter={trafficlightsData}
+                statusComponents={trafficlightsData}
               />
             )}
           </ListItems>
@@ -323,7 +323,7 @@ function App() {
                       <SystemListItem
                         textNumber={textNumber}
                         textName={textName}
-                        SDerivedStatusCounter={trafficlightsData}
+                        statusComponents={trafficlightsData}
                       />
                     )}
                   </ListItems>

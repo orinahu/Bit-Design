@@ -1,11 +1,6 @@
 import "./SystemListItem.css";
 import { SystemItemText, TrafficLights } from "../../in";
-import { Text, Size, IconSize, IconForm, componenetsStatus } from "../../in";
-
-interface statusComponents {
-  ComponentStatus: componenetsStatus;
-  counter: number;
-}
+import { Size, IconSize, IconForm, StatusComponents } from "../../in";
 
 interface props {
   textName: string;
@@ -18,7 +13,7 @@ interface props {
   textClassName?: string;
   textStyle?: React.CSSProperties;
 
-  SDerivedStatusCounter: statusComponents[];
+  statusComponents: StatusComponents[];
   TraficLightsTextSize?: Size;
   TraficLightsClassName?: string;
 
@@ -38,7 +33,7 @@ const SystemListItem = ({
   textClassName,
   textStyle,
 
-  SDerivedStatusCounter,
+  statusComponents,
   TraficLightsTextSize,
   TraficLightsClassName,
 
@@ -67,7 +62,7 @@ const SystemListItem = ({
         <TrafficLights
           className={TraficLightsClassName}
           size={TraficLightsTextSize}
-          SDerivedStatusCounter={SDerivedStatusCounter}
+          statusComponents={statusComponents}
         />
       </div>
     </div>
