@@ -10,7 +10,7 @@ export { ListItem } from "./components/ListItem/ListItem";
 export { ListItems } from "./components/ListItems/ListItems";
 export { Dropdown } from "./components/Dropdown/Dropdown";
 export { Filter } from "./components/Filter/Filter";
-export { InnerListFilter } from "./components/InnerListFilter/InnerListFilter";
+export { ComponentsListFilter } from "./components/ComponentsListFilter/ComponentsListFilter";
 export { ListTitle } from "./components/ListTitle/ListTitle";
 export { ComponentsList } from "./components/ComponentsList/ComponentsList";
 export { RootItemText } from "./components/RootItemText/RootItemText";

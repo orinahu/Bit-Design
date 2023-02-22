@@ -5,7 +5,7 @@ import {
   IconSize,
   IconForm,
   ListTitle,
-  InnerListFilter,
+  ComponentsListFilter,
   ListItems,
   Text,
   Size,
@@ -78,7 +78,7 @@ const ComponentsList = ({
       <div className="bit-components-list-divider"></div>
       {/* sort */}
       <div className="bit-components-list-sort-container">
-        <InnerListFilter
+        <ComponentsListFilter
           options={filterOptions}
           onChange={(option) => console.log(option.value, " from onChange")}
           filterItem={filterItem}

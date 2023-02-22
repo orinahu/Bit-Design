@@ -1,6 +1,6 @@
 import { Filter, Dropdown } from "../../in";
 import { FilterItem } from "../../in";
-import "./InnerListFilter.css";
+import "./ComponentsListFilter.css";
 
 interface Option {
   key: string;
@@ -12,7 +12,7 @@ interface props {
   filterItem: FilterItem[];
 }
 
-const InnerListFilter = ({ options, onChange, filterItem }: props) => {
+const ComponentsListFilter = ({ options, onChange, filterItem }: props) => {
   return (
     <div className="inner-list-filter-container">
       <Dropdown options={options} onChange={onChange} />
@@ -29,4 +29,4 @@ const InnerListFilter = ({ options, onChange, filterItem }: props) => {
   );
 };
 
-export { InnerListFilter };
+export { ComponentsListFilter };

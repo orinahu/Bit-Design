@@ -11,7 +11,7 @@ import {
   ListItems,
   Dropdown,
   Filter,
-  InnerListFilter,
+  ComponentsListFilter,
   ListTitle,
   ComponentsList,
   RootItemText,
@@ -184,10 +184,10 @@ function App() {
           <PropertiesDisplay propertiesObject={propertiesData.Filter} />
         </div>
 
-        {/* InnerListFilter */}
-        <div className="grid-item">ComponentsListListFilter</div>
+        {/* ComponentsListFilter */}
+        <div className="grid-item">ComponentsListFilter</div>
         <div className="grid-item">
-          <InnerListFilter
+          <ComponentsListFilter
             options={options}
             onChange={(option) => console.log(option.value, " from onChange")}
             filterItem={filters}
