@@ -1,25 +1,24 @@
-import { Filter, Dropdown } from '../../in'
-import './InnerListFilter.css'
+import { Filter, Dropdown } from "../../in";
+import "./InnerListFilter.css";
 
+interface Option {
+  key: string;
+  value: string;
+}
 interface props {
-    options: string[];
-    value: string;
-    setDropdownValue: (value: string) => void;
+  options: Option[];
+  onChange: (option: Option) => any;
 }
 
-const InnerListFilter = ({ options, value, setDropdownValue }: props) => {
-    return (
-        <div className="inner-list-filter-container">
-            <Dropdown
-                options={options}
-                value={value}
-                setDropdownValue={setDropdownValue}
-            />
-            <div className='inner-list-filter'>
-                <Filter />
-            </div>
-        </div>
-    )
-}
+const InnerListFilter = ({ options, onChange }: props) => {
+  return (
+    <div className="inner-list-filter-container">
+      <Dropdown options={options} onChange={onChange} />
+      <div className="inner-list-filter">
+        <Filter />
+      </div>
+    </div>
+  );
+};
 
-export { InnerListFilter }
+export { InnerListFilter };

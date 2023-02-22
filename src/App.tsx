@@ -22,6 +22,7 @@ import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
 import { propertiesData } from "./PropertiesDisplay/PropertiesData";
 import { randomListItem, randomListRootItem } from "./helper/helper";
+
 const items: any[] = randomListItem(10);
 const rootItems: any[] = randomListRootItem(10);
 
@@ -33,8 +34,11 @@ const trafficlightsData = [
 
 function App() {
   // dropDown
-  const options = ["status", "lastTimeCheck", "adventStatus"];
-  const [dropdownValue, setDropdownValue] = useState(options[0]);
+  const options = [
+    { key: "status", value: "Status" },
+    { key: "lastTimeCheck", value: "Last Time Check" },
+    { key: "adventStatus", value: "Advent Status" },
+  ];
 
   return (
     <div className="App">
@@ -136,8 +140,7 @@ function App() {
         <div className="grid-item">
           <Dropdown
             options={options}
-            value={dropdownValue}
-            setDropdownValue={setDropdownValue}
+            onChange={(option) => console.log(option.value, " from onChange")}
           />
         </div>
         <div className="grid-item">
@@ -158,8 +161,7 @@ function App() {
         <div className="grid-item">
           <InnerListFilter
             options={options}
-            value={dropdownValue}
-            setDropdownValue={setDropdownValue}
+            onChange={(option) => console.log(option.value, " from onChange")}
           />
         </div>
         <div className="grid-item">
@@ -181,13 +183,9 @@ function App() {
           <InnerList
             titleNumber={10}
             titleName={"engine"}
-
             filterOptions={options}
-            filterValue={dropdownValue}
-            filterSetDropdownValue={setDropdownValue}
-
+            onChange={(option) => console.log(option.value, " from onChange")}
             InnerItems={items}
-            
             renderItemsFunction={({ color, date, id, text }: any) => (
               <ListItem
                 key={id}
