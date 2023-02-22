@@ -22,7 +22,7 @@ const Status = ({
   iconForm,
   iconName = "image",
   text,
-  size,
+  size ='small',
   className,
   style,
 }: props) => {

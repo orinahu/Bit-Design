@@ -34,7 +34,6 @@ interface props {
 
 const ListItem = ({
   DateTimeIconName,
-  DateTimeIconColor,
   DateTimeIconSize,
   DateTimeIconForm,
   DateTimeTextSize,
@@ -83,7 +82,7 @@ const ListItem = ({
         <div className="bit-list-item-right-divider"></div>
         <div className="bit-list-item-DateTime-container">
         <DateTime
-          iconColor={DateTimeIconColor}
+          iconColor={statusCircleColor}
           iconSize={DateTimeIconSize}
           iconForm={DateTimeIconForm}
           iconName={DateTimeIconName}
