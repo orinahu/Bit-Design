@@ -1,11 +1,11 @@
-.bit-inner-list-container {
+.bit-components-list-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
 }
 
-.bit-inner-list-divider {
+.bit-components-list-divider {
     width: 98%;
     border-bottom: 1px solid #8D8FAC;
 }

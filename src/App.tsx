@@ -13,7 +13,7 @@ import {
   Filter,
   InnerListFilter,
   ListTitle,
-  InnerList,
+  ComponentsList,
   RootItemText,
   TrafficLights,
   RootListItem,
@@ -121,7 +121,7 @@ function App() {
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.DateTime} />
         </div>
-        {/* ListItem */}
+        {/* ListItem */} 
         <div className="grid-item">List Item</div>
         <div className="grid-item">
           <ListItem
@@ -185,7 +185,7 @@ function App() {
         </div>
 
         {/* InnerListFilter */}
-        <div className="grid-item">InnerListFilter</div>
+        <div className="grid-item">ComponentsListListFilter</div>
         <div className="grid-item">
           <InnerListFilter
             options={options}
@@ -206,10 +206,10 @@ function App() {
           <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
         </div>
 
-        {/* InnerList */}
-        <div className="grid-item">InnerList</div>
+        {/* ComponentsList */}
+        <div className="grid-item">ComponentsList</div>
         <div className="grid-item">
-          <InnerList
+          <ComponentsList
             titleNumber={10}
             titleName={"engine"}
             filterOptions={options}

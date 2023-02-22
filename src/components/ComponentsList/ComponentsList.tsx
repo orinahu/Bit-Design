@@ -1,4 +1,4 @@
-import "./InnerList.css";
+import "./ComponentsList.css";
 
 import {
   Icon,
@@ -40,7 +40,7 @@ interface props {
   renderItemsFunction: any | JSX.Element[] | JSX.Element;
 }
 
-const InnerList = ({
+const ComponentsList = ({
   titleName,
   titleNumber,
   titleIconName,
@@ -59,11 +59,11 @@ const InnerList = ({
 }: props) => {
   return (
     <div
-      className={`bit-inner-list-container ${titleClassName}`}
+      className={`bit-components-list-container ${titleClassName}`}
       style={titleStyle}
     >
       {/* title */}
-      <div className="bit-inner-list-title-container">
+      <div className="bit-components-list-title-container">
         <ListTitle
           number={titleNumber}
           name={titleName}
@@ -75,9 +75,9 @@ const InnerList = ({
         />
       </div>
       {/* divider */}
-      <div className="bit-inner-list-divider"></div>
+      <div className="bit-components-list-divider"></div>
       {/* sort */}
-      <div className="bit-inner-list-sort-container">
+      <div className="bit-components-list-sort-container">
         <InnerListFilter
           options={filterOptions}
           onChange={(option) => console.log(option.value, " from onChange")}
@@ -85,11 +85,11 @@ const InnerList = ({
         />
       </div>
       {/* items */}
-      <div className="bit-inner-item-container">
+      <div className="bit-components-item-container">
         <ListItems items={InnerItems}>{renderItemsFunction}</ListItems>
       </div>
     </div>
   );
 };
 
-export { InnerList };
+export { ComponentsList };

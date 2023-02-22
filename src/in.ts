@@ -12,7 +12,7 @@ export { Dropdown } from "./components/Dropdown/Dropdown";
 export { Filter } from "./components/Filter/Filter";
 export { InnerListFilter } from "./components/InnerListFilter/InnerListFilter";
 export { ListTitle } from "./components/ListTitle/ListTitle";
-export { InnerList } from "./components/InnerList/InnerList";
+export { ComponentsList } from "./components/ComponentsList/ComponentsList";
 export { RootItemText } from "./components/RootItemText/RootItemText";
 export { TrafficLights } from "./components/TrafficLights/TrafficLights";
 export { RootListItem } from "./components/RootListItem/RootListItem";
