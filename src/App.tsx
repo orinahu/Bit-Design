@@ -121,7 +121,7 @@ function App() {
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.DateTime} />
         </div>
-        {/* ListItem */} 
+        {/* ListItem */}
         <div className="grid-item">List Item</div>
         <div className="grid-item">
           <ListItem
