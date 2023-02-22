@@ -23,7 +23,7 @@ const ListMenu = ({
       <div className="bit-components-list-divider"></div>
       {/* sort */}
       <div className="bit-components-list-sort-container">
-        {renderFilters()}
+        {renderFilters && renderFilters()}
       </div>
       {/* items */}
       <div className="bit-components-item-container">{renderItems()}</div>

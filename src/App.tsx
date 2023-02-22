@@ -336,33 +336,20 @@ function App() {
               return (
                 <div>
                   {" "}
-                  <ListTitle number={10} name={"engine"} />{" "}
+                  <ListTitle number={15} name={"System"} />{" "}
                 </div>
-              );
-            }}
-            renderFilters={() => {
-              return (
-                <ComponentsListFilter
-                  options={options}
-                  onChange={(option) =>
-                    console.log(option.value, " from onChange")
-                  }
-                  filterItem={filters}
-                />
               );
             }}
             renderItems={() => {
               return (
                 <div>
                   {" "}
-                  <ListItems items={items}>
-                    {({ color, date, id, text }: any) => (
-                      <ListItem
-                        key={id}
-                        statusCircleColor={color}
-                        date={date}
-                        IdText={id}
-                        statusText={text}
+                  <ListItems items={rootItems}>
+                    {({ trafficlightsData, textNumber, textName }: any) => (
+                      <SystemListItem
+                        textNumber={textNumber}
+                        textName={textName}
+                        SDerivedStatusCounter={trafficlightsData}
                       />
                     )}
                   </ListItems>
