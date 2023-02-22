@@ -251,7 +251,7 @@ function App() {
         </div>
         <div className="grid-item table">
           {" "}
-          {/* <PropertiesDisplay propertiesObject={propertiesData.MainListBottom} /> */}
+          <PropertiesDisplay propertiesObject={propertiesData.MainListBottom} />
         </div>
 
         {/* ListMenu */}
@@ -299,7 +299,7 @@ function App() {
         </div>
         <div className="grid-item table">
           {" "}
-          {/* <PropertiesDisplay propertiesObject={propertiesData.MainListBottom} /> */}
+          <PropertiesDisplay propertiesObject={propertiesData.MainList} />
         </div>
 
         {/* ListMenu */}
@@ -334,7 +334,7 @@ function App() {
         </div>
         <div className="grid-item table">
           {" "}
-          {/* <PropertiesDisplay propertiesObject={propertiesData.MainListBottom} /> */}
+          <PropertiesDisplay propertiesObject={propertiesData.MainList} />
         </div>
       </div>
     </div>

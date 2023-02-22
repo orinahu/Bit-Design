@@ -137,6 +137,27 @@ const AllDataOptions = {
     isRequired: "false",
     defaultValue: "",
   },
+  renderTitle: {
+    name: "renderTitle",
+    type: "render Function",
+    typeOptions: `-`,
+    isRequired: "yes",
+    defaultValue: "",
+  },
+  renderFilters: {
+    name: "renderFilters",
+    type: "render Function",
+    typeOptions: `-`,
+    isRequired: "no",
+    defaultValue: "",
+  },
+  renderItems: {
+    name: "renderItems",
+    type: "render Function",
+    typeOptions: `-`,
+    isRequired: "yes",
+    defaultValue: "",
+  },
   callback: {
     name: "items",
     type: `({ color, date, id, text }: any) => (
@@ -301,6 +322,11 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.style,
     AllDataOptions.className,
   ],
+  MainList: [
+    AllDataOptions.renderTitle,
+    AllDataOptions.renderFilters,
+    AllDataOptions.renderItems,
+  ],
   ListTitle: [
     AllDataOptions.iconColor,
     AllDataOptions.iconStyle,
@@ -313,9 +339,7 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.className,
     AllDataOptions.style,
     AllDataOptions.ListTitleName,
-    AllDataOptions.ListTitleNumber
-
-
+    AllDataOptions.ListTitleNumber,
   ],
   TrafficLight: [
     AllDataOptions.circleColor,
@@ -337,7 +361,6 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.iconStyle,
     AllDataOptions.className,
     AllDataOptions.style,
-
   ],
   DropDown: [
     AllDataOptions.options,
@@ -413,7 +436,7 @@ export const propertiesData: AllPropertiesData = {
     AllDataOptions.className,
     AllDataOptions.iconStyle,
     AllDataOptions.iconSize,
-    AllDataOptions.style
+    AllDataOptions.style,
   ],
   ListItem: [
     AllDataOptions.className,
