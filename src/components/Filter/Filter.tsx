@@ -37,6 +37,8 @@ interface props {
   className?: string;
   style?: React.CSSProperties;
   filterItem: FilterItem[];
+  onChange: (option: ItemStatus) => any;
+  onFiltered: (filterItem: FilterItem[]) => any;
 }
 
 const Filter = ({
@@ -45,6 +47,8 @@ const Filter = ({
   className,
   style,
   filterItem,
+  onChange,
+  onFiltered,
 }: props) => {
   const [filters, setFilters] = useState<any>(filterItem);
 
@@ -54,6 +58,8 @@ const Filter = ({
     mutableArray[subjectIndex].items[itemIndex].checked =
       !mutableArray[subjectIndex].items[itemIndex].checked;
     setFilters([...mutableArray]);
+    onChange(mutableArray[subjectIndex].items[itemIndex]);
+    return;
   };
 
   // reset all value to false - for reset button
@@ -65,7 +71,6 @@ const Filter = ({
       acc.push({ ...current, items });
       return acc;
     }, []);
-
     setFilters([...mutableArray]);
   };
 
@@ -101,7 +106,7 @@ const Filter = ({
                           <div key={item.name} className="checkbox-container">
                             <input
                               type="checkbox"
-                              onClick={() =>
+                              onChange={() =>
                                 checkboxChangeHandler(subjectIndex, itemIndex)
                               }
                               checked={item.checked}
@@ -122,7 +127,10 @@ const Filter = ({
             {/* bottons */}
             <div className="bit-popover-bottom">
               <button
-                onClick={() => close()}
+                onClick={() => {
+                  onFiltered(filters);
+                  close();
+                }}
                 id="filter-button"
                 className="bit-popover-buttom"
               >

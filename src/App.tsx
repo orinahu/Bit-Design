@@ -170,7 +170,15 @@ function App() {
         {/* Filter */}
         <div className="grid-item">Filter</div>
         <div className="grid-item">
-          <Filter filterItem={filters} />
+          <Filter
+            filterItem={filters}
+            onChange={(ChangeData) =>
+              console.log("on change data ", ChangeData)
+            }
+            onFiltered={(filterData) =>
+              console.log("on filter data ", filterData)
+            }
+          />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.Filter} />

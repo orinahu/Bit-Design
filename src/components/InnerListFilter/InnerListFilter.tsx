@@ -17,7 +17,13 @@ const InnerListFilter = ({ options, onChange, filterItem }: props) => {
     <div className="inner-list-filter-container">
       <Dropdown options={options} onChange={onChange} />
       <div className="inner-list-filter">
-        <Filter filterItem={filterItem} />
+        <Filter
+          filterItem={filterItem}
+          onChange={(ChangeData) => console.log("on change data ", ChangeData)}
+          onFiltered={(filterData) =>
+            console.log("on filter data ", filterData)
+          }
+        />
       </div>
     </div>
   );
