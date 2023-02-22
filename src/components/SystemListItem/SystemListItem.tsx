@@ -1,5 +1,5 @@
-import "./RootListItem.css";
-import { RootItemText, TrafficLights } from "../../in";
+import "./SystemListItem.css";
+import { SystemItemText, TrafficLights } from "../../in";
 import { Text, Size, IconSize, IconForm, componenetsStatus } from "../../in";
 
 interface statusComponents {
@@ -27,7 +27,7 @@ interface props {
   className?: string;
 }
 
-const RootListItem = ({
+const SystemListItem = ({
   textName,
   textNumber,
   textIconName,
@@ -51,7 +51,7 @@ const RootListItem = ({
         selected && "selected"
       }`}
     >
-      <RootItemText
+      <SystemItemText
         name={textName}
         number={textNumber}
         iconName={textIconName}
@@ -74,4 +74,4 @@ const RootListItem = ({
   );
 };
 
-export { RootListItem };
+export { SystemListItem };

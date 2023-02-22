@@ -1,4 +1,4 @@
-import "./RootItemText.css";
+import "./SystemItemText.css";
 import { Icon, IconSize, IconForm } from "../../in";
 import { Text, Size } from "../../in";
 
@@ -14,7 +14,7 @@ interface props {
   style?: React.CSSProperties;
 }
 
-const RootItemText = ({
+const SystemItemText = ({
   iconColor,
   name,
   number,
@@ -45,4 +45,4 @@ const RootItemText = ({
   );
 };
 
-export { RootItemText };
+export { SystemItemText };

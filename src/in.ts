@@ -13,9 +13,9 @@ export { Filter } from "./components/Filter/Filter";
 export { ComponentsListFilter } from "./components/ComponentsListFilter/ComponentsListFilter";
 export { ListTitle } from "./components/ListTitle/ListTitle";
 export { ComponentsList } from "./components/ComponentsList/ComponentsList";
-export { RootItemText } from "./components/RootItemText/RootItemText";
+export { SystemItemText } from "./components/SystemItemText/SystemItemText";
 export { TrafficLights } from "./components/TrafficLights/TrafficLights";
-export { RootListItem } from "./components/RootListItem/RootListItem";
+export { SystemListItem } from "./components/SystemListItem/SystemListItem";
 
 // Types
 export type { Size } from "./components/Text/Text";

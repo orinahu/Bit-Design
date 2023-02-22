@@ -14,9 +14,9 @@ import {
   ComponentsListFilter,
   ListTitle,
   ComponentsList,
-  RootItemText,
+  SystemItemText,
   TrafficLights,
-  RootListItem,
+  SystemListItem,
 } from "./in";
 import "font-awesome/css/font-awesome.min.css";
 import PropertiesDisplay from "./PropertiesDisplay/PropertiesDisplay";
@@ -234,7 +234,7 @@ function App() {
         {/* rootItemText */}
         <div className="grid-item">RootItemText</div>
         <div className="grid-item">
-          <RootItemText number={10} name={"engine"} />
+          <SystemItemText number={10} name={"engine"} />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
@@ -252,7 +252,7 @@ function App() {
         {/* RootListItem */}
         <div className="grid-item">RootListItem</div>
         <div className="grid-item">
-          <RootListItem
+          <SystemListItem
             textNumber={10}
             textName={"engine"}
             SDerivedStatusCounter={trafficlightsData}
@@ -267,7 +267,7 @@ function App() {
         <div className="grid-item">
           <ListItems items={rootItems}>
             {({ trafficlightsData, textNumber, textName }: any) => (
-              <RootListItem
+              <SystemListItem
                 textNumber={textNumber}
                 textName={textName}
                 SDerivedStatusCounter={trafficlightsData}
