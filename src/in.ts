@@ -12,7 +12,6 @@ export { Dropdown } from "./components/Dropdown/Dropdown";
 export { Filter } from "./components/Filter/Filter";
 export { ComponentsListFilter } from "./components/ComponentsListFilter/ComponentsListFilter";
 export { ListTitle } from "./components/ListTitle/ListTitle";
-export { ComponentsList } from "./components/ComponentsList/ComponentsList";
 export { SystemItemText } from "./components/SystemItemText/SystemItemText";
 export { TrafficLights } from "./components/TrafficLights/TrafficLights";
 export { SystemListItem } from "./components/SystemListItem/SystemListItem";

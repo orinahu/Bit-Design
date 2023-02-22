@@ -12,7 +12,6 @@ import {
   Filter,
   ComponentsListFilter,
   ListTitle,
-  ComponentsList,
   SystemItemText,
   TrafficLights,
   SystemListItem,
@@ -201,31 +200,6 @@ function App() {
         <div className="grid-item">ListTitle</div>
         <div className="grid-item">
           <ListTitle number={10} name={"engine"} />
-        </div>
-        <div className="grid-item">
-          <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
-        </div>
-
-        {/* ComponentsList */}
-        <div className="grid-item">ComponentsList</div>
-        <div className="grid-item">
-          <ComponentsList
-            titleNumber={10}
-            titleName={"engine"}
-            filterOptions={options}
-            onChange={(option) => console.log(option.value, " from onChange")}
-            InnerItems={items}
-            filterItem={filters}
-            renderItemsFunction={({ color, date, id, text }: any) => (
-              <ListItem
-                key={id}
-                statusCircleColor={color}
-                date={date}
-                IdText={id}
-                statusText={text}
-              />
-            )}
-          />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.ListTitle} />
