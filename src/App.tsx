@@ -32,6 +32,26 @@ const trafficlightsData = [
   { ComponentStatus: "OK" as const, counter: 6 },
 ];
 
+const filters = [
+  {
+    title: "Component Status",
+    items: [
+      { name: "damaged", checked: false },
+      { name: "warning", checked: true },
+      { name: "undamaged", checked: false },
+    ],
+  },
+  {
+    title: "Advent Status:",
+    items: [
+      { name: "3", checked: false },
+      { name: "6", checked: true },
+      { name: "24", checked: false },
+      { name: "week", checked: false },
+    ],
+  },
+];
+
 function App() {
   // dropDown
   const options = [
@@ -150,7 +170,7 @@ function App() {
         {/* Filter */}
         <div className="grid-item">Filter</div>
         <div className="grid-item">
-          <Filter />
+          <Filter filterItem={filters} />
         </div>
         <div className="grid-item">
           <PropertiesDisplay propertiesObject={propertiesData.Filter} />
@@ -162,6 +182,7 @@ function App() {
           <InnerListFilter
             options={options}
             onChange={(option) => console.log(option.value, " from onChange")}
+            filterItem={filters}
           />
         </div>
         <div className="grid-item">
@@ -186,6 +207,7 @@ function App() {
             filterOptions={options}
             onChange={(option) => console.log(option.value, " from onChange")}
             InnerItems={items}
+            filterItem={filters}
             renderItemsFunction={({ color, date, id, text }: any) => (
               <ListItem
                 key={id}

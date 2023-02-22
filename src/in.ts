@@ -1,3 +1,5 @@
+import { type } from "os";
+
 export { Text } from "./components/Text/Text";
 export { TrafficLight } from "./components/TrafficLight/TrafficLight";
 export { Icon } from "./components/Icon/Icon";
@@ -19,3 +21,6 @@ export { RootListItem } from "./components/RootListItem/RootListItem";
 export type { Size } from "./components/Text/Text";
 export type { IconSize, IconForm } from "./components/Icon/Icon";
 export type { componenetsStatus } from "./components/TrafficLights/TrafficLights";
+
+// Interface
+export type { ItemStatus, FilterItem } from "./components/Filter/Filter";

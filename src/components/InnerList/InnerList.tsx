@@ -12,6 +12,8 @@ import {
   ListItem,
 } from "../../in";
 
+import { FilterItem } from "../../in";
+
 interface dropdownOptions {
   key: string;
   value: string;
@@ -31,6 +33,7 @@ interface props {
   filterOptions: dropdownOptions[];
   onChange: (option: dropdownOptions) => any;
 
+  filterItem: FilterItem[];
 
   InnerItems: any[];
 
@@ -47,7 +50,7 @@ const InnerList = ({
   titleTextSize,
   titleClassName,
   titleStyle,
-
+  filterItem,
   filterOptions,
   onChange,
 
@@ -78,6 +81,7 @@ const InnerList = ({
         <InnerListFilter
           options={filterOptions}
           onChange={(option) => console.log(option.value, " from onChange")}
+          filterItem={filterItem}
         />
       </div>
       {/* items */}
