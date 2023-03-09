@@ -20,6 +20,7 @@ interface props {
   selected?: boolean;
 
   className?: string;
+  onClick: () => any;
 }
 
 const SystemListItem = ({
@@ -39,12 +40,14 @@ const SystemListItem = ({
 
   selected = false,
   className,
+  onClick,
 }: props) => {
   return (
     <div
       className={`bit-root-list-item-container ${className} ${
         selected && "selected"
       }`}
+      onClick={onClick}
     >
       <SystemItemText
         name={textName}

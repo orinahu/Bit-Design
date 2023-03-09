@@ -25,7 +25,7 @@ const Dropdown = ({ options, onChange }: props) => {
 
   return (
     <div className="dropdown-container">
-      <text className="dropdown-title">sort by:</text>
+      <span className="dropdown-title">sort by:</span>
       <div className="dropdown" tabIndex={1}>
         {/* dorpdown body */}
         <div className="db2" tabIndex={1}></div>
