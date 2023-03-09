@@ -1,8 +1,4 @@
-import {
-  DateTime,
-  Id,
-  Status,
-} from "../../in";
+import { DateTime, Id, Status } from "../../in";
 import { Size, IconSize, IconForm } from "../../in";
 import "./ListItem.css";
 
@@ -29,7 +25,8 @@ interface props {
   statusCircleSize?: Size;
   selected?: boolean;
   className?: string;
-  key?: string | number
+  key?: string | number;
+  onClick: () => any;
 }
 
 const ListItem = ({
@@ -54,9 +51,14 @@ const ListItem = ({
   selected = false,
   key,
   className,
+  onClick,
 }: props) => {
   return (
-    <div key={key} className={`bit-list-item ${className} ${selected && "selected"}`}>
+    <div
+      key={key}
+      className={`bit-list-item ${className} ${selected && "selected"}`}
+      onClick={onClick}
+    >
       <div className="bit-list-item-status-container">
         <Status
           circleColor={statusCircleColor}
@@ -81,14 +83,14 @@ const ListItem = ({
         </div>
         <div className="bit-list-item-right-divider"></div>
         <div className="bit-list-item-DateTime-container">
-        <DateTime
-          iconColor={statusCircleColor}
-          iconSize={DateTimeIconSize}
-          iconForm={DateTimeIconForm}
-          iconName={DateTimeIconName}
-          date={date}
-          text={DateTimeTextSize}
-        />
+          <DateTime
+            iconColor={statusCircleColor}
+            iconSize={DateTimeIconSize}
+            iconForm={DateTimeIconForm}
+            iconName={DateTimeIconName}
+            date={date}
+            text={DateTimeTextSize}
+          />
         </div>
       </div>
     </div>

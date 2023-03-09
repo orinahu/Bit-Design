@@ -124,6 +124,7 @@ function App() {
         <div className="grid-item">List Item</div>
         <div className="grid-item">
           <ListItem
+            onClick={() => console.log("Item Click")}
             date={new Date()}
             IdText="id123"
             statusCircleColor="red"
@@ -140,6 +141,7 @@ function App() {
           <ListItems items={items}>
             {({ color, date, id, text }: any) => (
               <ListItem
+                onClick={() => console.log("Item Click")}
                 key={id}
                 statusCircleColor={color}
                 date={date}
@@ -286,6 +288,7 @@ function App() {
                   <ListItems items={items}>
                     {({ color, date, id, text }: any) => (
                       <ListItem
+                        onClick={() => console.log("Item Click")}
                         key={id}
                         statusCircleColor={color}
                         date={date}
