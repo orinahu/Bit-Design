@@ -57,7 +57,7 @@ const SystemListItem = ({
         className={textClassName}
         style={textStyle}
       />
-      <div className="bit-root-list-item-divider"></div>
+      {/* <div className="bit-root-list-item-divider"></div> */}
       <div>
         <TrafficLights
           className={TraficLightsClassName}

@@ -6,6 +6,7 @@
 .bit-root-list-item-container {
     display: flex;
     gap: 6px;
+    justify-content: space-between;
     align-items: center;
     border-bottom: var(--main-list-item-container-border);
     border-top: var(--main-list-item-container-border);
