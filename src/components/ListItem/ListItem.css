@@ -5,7 +5,7 @@
 
 .bit-list-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border-bottom: var(--main-list-item-container-border);
   border-top: var(--main-list-item-container-border);
@@ -21,9 +21,11 @@
 
 .bit-list-item-status-container {
   border-right: var(--main-list-item-container-border);
+  padding-left: 5px;
+  width: 53%;
   height: 54px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   min-width: 200px;
 }
