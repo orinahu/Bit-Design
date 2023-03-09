@@ -227,6 +227,7 @@ function App() {
         <div className="grid-item">SystemListItem</div>
         <div className="grid-item">
           <SystemListItem
+            onClick={() => console.log("onClick clicked")}
             textNumber={10}
             textName={"engine"}
             statusComponents={trafficlightsData}
@@ -242,6 +243,7 @@ function App() {
           <ListItems items={rootItems}>
             {({ trafficlightsData, textNumber, textName }: any) => (
               <SystemListItem
+                onClick={() => console.log("onClick clicked")}
                 textNumber={textNumber}
                 textName={textName}
                 statusComponents={trafficlightsData}
@@ -321,6 +323,7 @@ function App() {
                   <ListItems items={rootItems}>
                     {({ trafficlightsData, textNumber, textName }: any) => (
                       <SystemListItem
+                        onClick={() => console.log("onClick clicked")}
                         textNumber={textNumber}
                         textName={textName}
                         statusComponents={trafficlightsData}
