@@ -22,3 +22,4 @@ export type { Size } from "./components/Text/Text";
 export type { IconSize, IconForm } from "./components/Icon/Icon";
 export type { StatusComponents } from "./components/TrafficLights/TrafficLights";
 export type { ItemStatus, FilterItem } from "./components/Filter/Filter";
+export type { Option } from "./components/ComponentsListFilter/ComponentsListFilter";

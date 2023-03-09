@@ -160,6 +160,7 @@ function App() {
         <div className="grid-item">DropDown</div>
         <div className="grid-item">
           <Dropdown
+            chosenOption={options[0]}
             options={options}
             onChange={(option) => console.log(option.value, " from onChange")}
           />
@@ -189,6 +190,7 @@ function App() {
         <div className="grid-item">ComponentsListFilter</div>
         <div className="grid-item">
           <ComponentsListFilter
+            chosenOption={options[0]}
             options={options}
             onChange={(option) => console.log(option.value, " from onChange")}
             filterItem={filters}
@@ -273,6 +275,7 @@ function App() {
             renderFilters={() => {
               return (
                 <ComponentsListFilter
+                  chosenOption={options[0]}
                   options={options}
                   onChange={(option) =>
                     console.log(option.value, " from onChange")

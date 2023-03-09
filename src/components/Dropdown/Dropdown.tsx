@@ -9,15 +9,14 @@ interface Option {
 }
 interface props {
   options: Option[];
+  chosenOption: Option;
   onChange: (option: Option) => any;
 }
 
-const Dropdown = ({ options, onChange }: props) => {
-  const [selectedOption, setSelectedOption] = useState(options[0]);
-
+const Dropdown = ({ options, chosenOption, onChange }: props) => {
   // onChange
   const onChangeHandler = (option: Option) => {
-    if (option.key === selectedOption.key) return;
+    if (option.key === chosenOption.key) return;
     onChange(option);
   };
 
@@ -29,7 +28,7 @@ const Dropdown = ({ options, onChange }: props) => {
       <div className="dropdown" tabIndex={1}>
         {/* dorpdown body */}
         <div className="db2" tabIndex={1}></div>
-        {selectedOption.value}
+        {chosenOption.value}
         <a className="dropbtn">
           <Icon iconName="angle-down" />
         </a>
@@ -42,7 +41,6 @@ const Dropdown = ({ options, onChange }: props) => {
                 tabIndex={1}
                 key={option.key}
                 onClick={() => {
-                  setSelectedOption(option);
                   return onChangeHandler(option);
                 }}
               >
