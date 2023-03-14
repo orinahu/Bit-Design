@@ -192,8 +192,15 @@ function App() {
           <ComponentsListFilter
             chosenOption={options[0]}
             options={options}
-            onChange={(option) => console.log(option.value, " from onChange")}
+            onChangeDropdown={(option) =>
+              console.log(option.value, " from onChange")
+            }
             filterItem={filters}
+            onChangeFilter={(ChangeData: any) =>
+              console.log("on change data ", ChangeData)
+            }
+            onFiltered={() => (filterData: any) =>
+              console.log("on filter data ", filterData)}
           />
         </div>
         <div className="grid-item">
@@ -277,10 +284,15 @@ function App() {
                 <ComponentsListFilter
                   chosenOption={options[0]}
                   options={options}
-                  onChange={(option) =>
+                  onChangeDropdown={(option) =>
                     console.log(option.value, " from onChange")
                   }
                   filterItem={filters}
+                  onChangeFilter={(ChangeData: any) =>
+                    console.log("on change data ", ChangeData)
+                  }
+                  onFiltered={() => (filterData: any) =>
+                    console.log("on filter data ", filterData)}
                 />
               );
             }}

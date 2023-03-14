@@ -1,5 +1,5 @@
 import { Filter, Dropdown } from "../../in";
-import { FilterItem } from "../../in";
+import { FilterItem, ItemStatus } from "../../in";
 import "./ComponentsListFilter.css";
 
 export interface Option {
@@ -9,21 +9,32 @@ export interface Option {
 interface props {
   options: Option[];
   chosenOption: Option;
-  onChange: (option: Option) => any;
+  onChangeDropdown: (option: Option) => any;
+  onChangeFilter: (option: ItemStatus) => any;
+  onFiltered: (filterItem: FilterItem[]) => any;
   filterItem: FilterItem[];
 }
 
-const ComponentsListFilter = ({ options, chosenOption, onChange, filterItem }: props) => {
+const ComponentsListFilter = ({
+  options,
+  chosenOption,
+  onChangeDropdown,
+  filterItem,
+  onFiltered,
+  onChangeFilter,
+}: props) => {
   return (
     <div className="inner-list-filter-container">
-      <Dropdown chosenOption={chosenOption} options={options} onChange={onChange} />
+      <Dropdown
+        chosenOption={chosenOption}
+        options={options}
+        onChange={onChangeDropdown}
+      />
       <div className="inner-list-filter">
         <Filter
           filterItem={filterItem}
-          onChange={(ChangeData) => console.log("on change data ", ChangeData)}
-          onFiltered={(filterData) =>
-            console.log("on filter data ", filterData)
-          }
+          onChange={onChangeFilter}
+          onFiltered={onFiltered}
         />
       </div>
     </div>
