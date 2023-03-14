@@ -2,27 +2,6 @@ import React, { useState } from "react";
 import { Icon, IconSize, IconForm } from "../../in";
 import { Popover } from "@headlessui/react";
 import "./Filter.css";
-
-const filtersO = [
-  {
-    title: "Component Status",
-    items: [
-      { name: "damaged", checked: false },
-      { name: "warning", checked: true },
-      { name: "undamaged", checked: false },
-    ],
-  },
-  {
-    title: "Advent Status:",
-    items: [
-      { name: "3", checked: false },
-      { name: "6", checked: true },
-      { name: "24", checked: false },
-      { name: "week", checked: false },
-    ],
-  },
-];
-
 export interface ItemStatus {
   name: string;
   checked: boolean;
@@ -39,6 +18,8 @@ interface props {
   filterItem: FilterItem[];
   onChange: (option: ItemStatus) => any;
   onFiltered: (filterItem: FilterItem[]) => any;
+  onReset: () => any;
+  onClose: () => any;
 }
 
 const Filter = ({
@@ -49,29 +30,16 @@ const Filter = ({
   filterItem,
   onChange,
   onFiltered,
+  onReset,
+  onClose,
 }: props) => {
-  const [filters, setFilters] = useState<any>(filterItem);
-
   // change checkbox handler
   const checkboxChangeHandler = (subjectIndex: number, itemIndex: number) => {
-    const mutableArray = [...filters];
+    const mutableArray = JSON.parse(JSON.stringify(filterItem));
     mutableArray[subjectIndex].items[itemIndex].checked =
       !mutableArray[subjectIndex].items[itemIndex].checked;
-    setFilters([...mutableArray]);
-    onChange(mutableArray[subjectIndex].items[itemIndex]);
+    onChange(mutableArray);
     return;
-  };
-
-  // reset all value to false - for reset button
-  const resetHandler = () => {
-    const mutableArray = filters.reduce((acc: any, current: any) => {
-      const items = current.items.map((item: any) => {
-        return { ...item, checked: false };
-      });
-      acc.push({ ...current, items });
-      return acc;
-    }, []);
-    setFilters([...mutableArray]);
   };
 
   return (
@@ -88,7 +56,10 @@ const Filter = ({
               <span>Filters</span>
               <div
                 className="bit-popover-title-close-button"
-                onClick={() => close()}
+                onClick={() => {
+                  onClose();
+                  close();
+                }}
               >
                 <Icon iconName="x" />
               </div>
@@ -96,7 +67,7 @@ const Filter = ({
 
             {/* content */}
             <div className="bit-popover-body">
-              {filters.map((subject: any, subjectIndex: number) => {
+              {filterItem.map((subject: any, subjectIndex: number) => {
                 return (
                   <>
                     <span>{subject.title}</span>
@@ -128,7 +99,8 @@ const Filter = ({
             <div className="bit-popover-bottom">
               <button
                 onClick={() => {
-                  onFiltered(filters);
+                  onFiltered([...filterItem]);
+                  onClose();
                   close();
                 }}
                 id="filter-button"
@@ -137,7 +109,7 @@ const Filter = ({
                 Filter
               </button>
               <button
-                onClick={() => resetHandler()}
+                onClick={onReset}
                 id="reset-button"
                 className="bit-popover-buttom"
               >

@@ -173,6 +173,8 @@ function App() {
         <div className="grid-item">Filter</div>
         <div className="grid-item">
           <Filter
+            onClose={() => console.log("onClose")}
+            onReset={() => console.log("onReset")}
             filterItem={filters}
             onChange={(ChangeData) =>
               console.log("on change data ", ChangeData)
@@ -195,6 +197,8 @@ function App() {
             onChangeDropdown={(option) =>
               console.log(option.value, " from onChange")
             }
+            onCloseFilters={() => console.log("onCloseFilters")}
+            onResetFilters={() => console.log("onResetFilters")}
             filterItem={filters}
             onChangeFilter={(ChangeData: any) =>
               console.log("on change data ", ChangeData)
@@ -287,6 +291,8 @@ function App() {
                   onChangeDropdown={(option) =>
                     console.log(option.value, " from onChange")
                   }
+                  onCloseFilters={() => console.log("onCloseFilters")}
+                  onResetFilters={() => console.log("onResetFilters")}
                   filterItem={filters}
                   onChangeFilter={(ChangeData: any) =>
                     console.log("on change data ", ChangeData)

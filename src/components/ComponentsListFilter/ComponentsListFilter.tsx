@@ -13,6 +13,8 @@ interface props {
   onChangeFilter: (option: ItemStatus) => any;
   onFiltered: (filterItem: FilterItem[]) => any;
   filterItem: FilterItem[];
+  onResetFilters: () => any;
+  onCloseFilters: () => any;
 }
 
 const ComponentsListFilter = ({
@@ -22,6 +24,8 @@ const ComponentsListFilter = ({
   filterItem,
   onFiltered,
   onChangeFilter,
+  onResetFilters,
+  onCloseFilters,
 }: props) => {
   return (
     <div className="inner-list-filter-container">
@@ -32,6 +36,8 @@ const ComponentsListFilter = ({
       />
       <div className="inner-list-filter">
         <Filter
+          onClose={onCloseFilters}
+          onReset={onResetFilters}
           filterItem={filterItem}
           onChange={onChangeFilter}
           onFiltered={onFiltered}
