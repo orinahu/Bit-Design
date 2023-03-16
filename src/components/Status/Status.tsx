@@ -1,3 +1,4 @@
+import React from "react";
 import "./Status.css";
 import { TrafficLight } from "../../in";
 import { Icon, IconSize, IconForm } from "../../in";

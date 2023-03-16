@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Icon, IconSize, IconForm } from "../../in";
 import { Popover } from "@headlessui/react";
 import "./Filter.css";

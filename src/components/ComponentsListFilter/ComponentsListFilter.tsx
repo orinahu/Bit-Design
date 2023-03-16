@@ -1,3 +1,4 @@
+import React from "react";
 import { Filter, Dropdown } from "../../in";
 import { FilterItem, ItemStatus } from "../../in";
 import "./ComponentsListFilter.css";

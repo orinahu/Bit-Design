@@ -1,3 +1,4 @@
+import React from "react";
 import "./SystemItemText.css";
 import { Icon, IconSize, IconForm } from "../../in";
 import { Text, Size } from "../../in";

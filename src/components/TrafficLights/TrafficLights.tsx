@@ -1,3 +1,4 @@
+import React from "react";
 import "./TrafficLights.css";
 import { TrafficLight, Text, Size } from "../../in";
 
